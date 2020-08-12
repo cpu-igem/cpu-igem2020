@@ -4,7 +4,7 @@ import fs from 'fs-extra';
 import glob from 'glob';
 import login from './login';
 import config from '../wiki-config.json';
-import { delay, concurrencyRestrictify } from './util';
+import { concurrencyRestrictify } from './util';
 
 const selector = '../dist/index.html';
 interface File2BeUploaded {

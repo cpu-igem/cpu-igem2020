@@ -64,3 +64,16 @@ assets/.track.json
   * npm 取消代理：
     * `npm config delete http`
     * `npm config delete https-proxy`
+
+## page.ts: 上传 assets 目录下的所有文件（不含以 . 开头的文件）
+把`index.html`中的代码上传至各个wiki页面
+```
+const pages: string[] = [
+   'Team:CPU_CHINA',
+   'Team:CPU_CHINA/',
+   'Team:CPU_CHINA/about',
+   'Team:CPU_CHINA/Project',
+   ...
+];
+
+```
