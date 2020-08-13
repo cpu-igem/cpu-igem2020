@@ -115,7 +115,6 @@ export default class App extends React.Component<{}, IAppState> {
     */
    public navToPath = (path: string) => {
       const newPage = queryPage(path);
-      console.log(path);
       if (newPage === this.nextPage) return;
       else if (this.nextPage === null && this.currPage === newPage) return;
       else {
