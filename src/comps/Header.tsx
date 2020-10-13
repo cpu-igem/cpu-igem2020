@@ -20,59 +20,63 @@ const links = [
    {
       h1: { text: 'Project' },
       h2: [
-         { text: 'Project Description', url: '/Description' },
+         { text: 'Project DDDDDD', url: '/Description' },
          { text: 'Project Design', url: '/Design' },
-         { text: 'Demonstrate', url: '/Demonstrate' },
-      ],
-   },
-   {
-      h1: { text: 'Lab Work' },
-      h2: [
          { text: 'Experiments', url: '/Experiments' },
-         { text: 'Results', url: '/Results' },
-         { text: 'Parts', url: '/Parts' },
-         // { text: 'Model', url: '/Model' },
-         // { text: 'Protocols', url: '/Protocols' },
-         // { text: 'Notebook', url: '/Notebook' },
-         // { text: 'Safety', url: '/Safety' },
+         { text: 'Notebook', url: '/Notebook' },
+         // { text: 'Contribution', url: '/Contribution' },
+         // { text: 'Result', url: '/Result' },
+         // { text: 'Demonstrate', url: '/Demonstrate' },
+         // { text: 'Improve', url: '/Improve' },
       ],
    },
    {
-      h1: { text: 'Product' },
+      h1: { text: 'Human Practices' },
       h2: [
-         { text: 'Product Design', url: '/Product_Design' },
-         { text: 'Entrepreneur-ship', url: '/Entrepreneurship' },
+         { text: 'Human Practices', url: '/Human_Practices' },
+         { text: 'Education & Engagement', url: '/Education_Engagement' },
+      ],
+   },
+   {
+      h1: { text: 'Modeling' },
+      h2: [
+         { text: 'Overview', url: '/Modeling_Overview' },
       ],
    },
    {
       h1: {
-         text: 'Practices',
-         plainText: 'Practice',
-      },
-      h2: [
-         { text: 'Human Practices', url: '/Human_Practices' },
-         { text: 'Public Engagement', url: '/Public_Engagement' },
-      ],
+         text: 'Safety',
+         plainText: 'Safety',
+      }
    },
    {
       h1: { text: 'Team' },
       h2: [
-         { text: 'Memeber', url: '/Member' },
+         { text: 'Members', url: '/Member' },
          { text: 'Attributions', url: '/Attributions' },
          { text: 'Collaborations', url: '/Collaborations' },
+         { text: 'Sponsors', url: '/Sponsors' },
+      ],
+   },
+   {
+      h1: { text: 'Parts' },
+      h2: [
+         { text: 'Overview', url: '/Parts_Overview' },
+         { text: 'Basic Part', url: '/Basic_Part' },
+         { text: 'Composite Part', url: '/Composite_Part' },
       ],
    },
    {
       h1: {
          text: <div style={{ display: 'flex', alignItems: 'center', fontSize: '.9em' }}>
-            <div>Medal<br />Criteria</div>
+            <div>Judging<br />Form</div>
             <Icon
                iconName='ArrowUpRight'
                style={{ width: 18, height: 18, fontSize: 18, marginLeft: 6 }} />
          </div>,
-         plainText: 'Medal Criteria',
+         plainText: 'Judging Form',
          icon: 'ArrowUpRight',
-         url: '/Criteria',
+         url: '/Judging_Form',
       },
    },
 ];

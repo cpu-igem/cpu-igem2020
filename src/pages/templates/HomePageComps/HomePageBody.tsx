@@ -2,7 +2,9 @@ import React from 'react';
 
 import { normalizeClassNames, delay } from '@/util';
 import { augmentCanvas } from './augment-canvas';
-import { assets } from '@/assets-path.json';
+// import { assets } from 'C:/Users/刘鑫/Desktop/iGEM/seu-igem2019/src/assets-path.json';
+import { Carousel } from 'antd';
+import 'antd/es/carousel/style/css';
 
 import { Image as MsImage, ImageFit } from 'office-ui-fabric-react/lib/Image';
 import { HomePageSpinner } from './HomePageSpinner';
@@ -63,25 +65,37 @@ export class HomePageBody extends React.Component<{}, IHomePageState> {
       isSection4Text1Hide: false,
       hasFishSlideIn: false,
    };
+
    render() {
-      return <>
+      const contentStyle = {
+         height: '450px',
+         color: '#fff',
+         lineHeight: '450px',
+         fontSize: '20px',
+         textAlign: 'center',
+         background: '#364d79',
+      } as React.CSSProperties;
+      return (<>
          <div>
-            <div
-               style={{
-                  width: '100%',
-                  height: '300px'
-               }}></div>
-            <h1
-               style={{
-                  color: 'white',
-                  fontSize: '30px',
-                  textAlign: 'center'
-               }}>This is Home Page</h1>
+            <Carousel autoplay>
+               <div>
+                  <h3 style={contentStyle}>This is Home Page Carousel 1</h3>
+               </div>
+               <div>
+                  <h3 style={contentStyle}>This is Home Page Carousel 2</h3>
+               </div>
+               <div>
+                  <h3 style={contentStyle}>This is Home Page Carousel 3</h3>
+               </div>
+               <div>
+                  <h3 style={contentStyle}>This is Home Page Carousel 4</h3>
+               </div>
+            </Carousel>
          </div>
-      </>
-   }
+      </>)}
 
    // private resize = () => {
+   //    console.log("resize");
    //    const width = this.$homeFixed.clientWidth;
    //    const height = this.$homeFixed.clientHeight;
    //    const logoRadius = height * .3;
@@ -233,42 +247,42 @@ export class HomePageBody extends React.Component<{}, IHomePageState> {
    //    // $s3Bg.style.transform = 'translateX(' + (x2 - 1.1) * 100 + '%)';
    // }
 
-   // public async enter() {
-   //    document.title = 'Home - CPU-CHINA - iGEM 2019';
-   //    this.$logoareaSpinner.startLengthening();
-   //    await delay(800);
-   //    this.$logoareaSpinner.stopRotating();
-   //    this.setState({
-   //       showLogo: true,
-   //       isLogoareaBlue: true,
-   //    });
-   //    await delay(100);
-   //    this.setState({
-   //       shouldApproach: true,
-   //       showHome1Bg: true,
-   //    });
-   //    await delay(1000);
-   //    this.setState({
-   //       showLogoWave: true,
-   //       showHome1Slogan: true,
-   //    });
-   //    await delay(300);
-   //    this.setState({
-   //       isHome1MaskNotDisplay: true,
-   //       showHome23: true,
-   //    }, () => {
-   //       this.resize();
-   //    });
-   // }
-   // public async exit() {
-   //    this.setState({
-   //       shouldHomePageLeave: true,
-   //    });
-   //    await delay(300);
-   //    window.scrollTo({
-   //       top: 0,
-   //    });
-   // }
+   public async enter() {
+      document.title = 'Home - CPU-CHINA - iGEM 2020';
+      this.$logoareaSpinner.startLengthening();
+      await delay(800);
+      this.$logoareaSpinner.stopRotating();
+      this.setState({
+         showLogo: true,
+         isLogoareaBlue: true,
+      });
+      await delay(100);
+      this.setState({
+         shouldApproach: true,
+         showHome1Bg: true,
+      });
+      await delay(1000);
+      this.setState({
+         showLogoWave: true,
+         showHome1Slogan: true,
+      });
+      await delay(300);
+      this.setState({
+         isHome1MaskNotDisplay: true,
+         showHome23: true,
+      }, () => {
+         // this.resize();
+      });
+   }
+   public async exit() {
+      this.setState({
+         shouldHomePageLeave: true,
+      });
+      await delay(300);
+      window.scrollTo({
+         top: 0,
+      });
+   }
 
    // public render() {
    //    const {
@@ -292,20 +306,23 @@ export class HomePageBody extends React.Component<{}, IHomePageState> {
    //    });
 
    //    return (
-   //       <div id='home' className={cns.home}
-   //          style={homeHeight ? { height: homeHeight + 'px' } : void 0}
-   //       >
-   //          <div className='home-fixed' ref={e => this.$homeFixed = e!}>
-   //             <div className='home-logoarea-container' ref={e => this.$logoareaContainer = e!}>
-   //                <div id='home-logoarea' className={cns.homeLogoarea}
-   //                   ref={e => this.$home1Logoarea = e!}>
-   //                   {this.renderLogoarea()}
-   //                </div>
-   //             </div>
-   //             {this.renderHome1()}
-   //             {this.renderHome2()}
-   //          </div>
-   //          {this.renderHome3()}
+   //       // <div id='home' className={cns.home}
+   //       //    style={homeHeight ? { height: homeHeight + 'px' } : void 0}
+   //       // >
+   //       //    <div className='home-fixed' ref={e => this.$homeFixed = e!}>
+   //       //       <div className='home-logoarea-container' ref={e => this.$logoareaContainer = e!}>
+   //       //          <div id='home-logoarea' className={cns.homeLogoarea}
+   //       //             ref={e => this.$home1Logoarea = e!}>
+   //       //             {this.renderLogoarea()}
+   //       //          </div>
+   //       //       </div>
+   //       //       {this.renderHome1()}
+   //       //       {this.renderHome2()}
+   //       //    </div>
+   //       //    {this.renderHome3()} 
+   //       // </div>
+   //       <div>
+   //          <h3>This Home Page</h3>
    //       </div>
    //    );
    // }

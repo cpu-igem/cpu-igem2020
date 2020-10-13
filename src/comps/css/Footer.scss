@@ -1,4 +1,5 @@
-$std-text-font: "Segoe UI",
+$std-text-font: "PingFang SC",
+"Segoe UI",
 "Segoe UI Web (West European)",
 "Segoe UI",
 -apple-system,
@@ -49,7 +50,8 @@ sans-serif;
 }
 
 #footer-1 {
-   background: black;
+   // background: black;
+   background: #f1faee;
    padding   : 2em 0;
 }
 
@@ -70,7 +72,8 @@ sans-serif;
 #footer-cont-logo {
    display  : flex;
    flex-flow: row wrap;
-   color    : #faf9f8;
+   // color    : #faf9f8;
+   color: #121212;
 }
 
 #footer-cta {
@@ -84,7 +87,8 @@ sans-serif;
 
    &>h3 {
       font-size    : 2.2em;
-      color        : #edebe9;
+      // color        : #edebe9;
+      color: #121212;
       user-select  : none;
       font-weight  : 100;
       margin-top   : .2em;

@@ -133,8 +133,8 @@ $bar-header-height    : $header-height+18px;
       0 4.8px 14.4px 0 rgba(0, 0, 0, .18);
 
    &.fixed-at-doc-top {
-      left : 25%;
-      width: 75%;
+      left : 17%;
+      width: 83%;
 
       @media(max-width: $no-aside-screen-width) {
          left : 0;

@@ -27,8 +27,10 @@
          "tnDescription$jpg": "https://2020.igem.org/wiki/images/e/e9/T--CPU_CHINA--ec1f8706.jpg"
       },
       "SkyLogoWhite$png": "https://2020.igem.org/wiki/images/8/8d/T--CPU_CHINA--2e353d13.png",
-      "CPUWithText$png": "https://2020.igem.org/wiki/images/1/1c/T--CPU_CHINA--54218843.png"
-
-
+      "CPUWithText$png": "https://2020.igem.org/wiki/images/1/1c/T--CPU_CHINA--54218843.png",
+      "safetyform": {
+         "SafetyFrom2$jpg": "https://2020.igem.org/wiki/images/1/1e/T--CPU_CHINA--94d2d6c7.jpg",
+         "SafetyFrom1$jpg": "https://2020.igem.org/wiki/images/5/56/T--CPU_CHINA--36821833.jpg"
+      }
    }
 }

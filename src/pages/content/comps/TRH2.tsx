@@ -20,7 +20,7 @@ const H2: React.FC<{
             {props.children}
          </span>
          &nbsp;
-         <a href={'#' + anchorName} className='h2-anchor'>#</a>
+         {/* <a href={'#' + anchorName} className='h2-anchor'>#</a> */}
       </h2>
    );
 };

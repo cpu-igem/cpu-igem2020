@@ -1,9 +1,12 @@
 #doc-aside-setting {
-   width: calc(9em + 80px);
+   display: flex;
+   font-size: 20px;
+   justify-content: center;
+   // width: calc(9em + 80px);
 }
 
 #doc-nav {
-   height                    : calc(100vh - 220px - 6em);
+   // height                    : calc(100vh - 220px - 6em);
    width                     : 100%;
    margin-top                : 1.5em;
    position                  : relative;
@@ -12,6 +15,8 @@
    -ms-overflow-style        : none;
    scrollbar-width           : none;
    overflow                  : -moz-scrollbars-none;
+   display: flex;
+   justify-content: center;
 
    &::-webkit-scrollbar {
       display: none;
@@ -94,4 +99,14 @@
    .darktheme-doc &>div {
       background: rgba(black, .4);
    }
+}
+
+
+.ant-anchor-ink-ball{
+   // border: 0 !important;
+   // border-radius: 0 !important;
+   // width: 8px !important;
+   // height: 8px !important;
+   // background:url(https://tse1-mm.cn.bing.net/th/id/OIP.GeFHWXe-SqWpS7NwecLHmwAAAA?pid=Api&rs=1)
+   // // background-color: #1890ff!important;
 }

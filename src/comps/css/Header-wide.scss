@@ -30,10 +30,11 @@ $wideheader-vp-width: 1080px;
    width           : calc(100%);
    height          : 100%;
    position        : relative;
-   transform-origin: center center -33px;
+   transform-origin: center center -27.5px;
    user-select     : none;
    transform-style : preserve-3d;
    transition      : transform .3s;
+   color: #121212;
 
    &.rotate {
       transform: rotateX(90deg);
@@ -42,37 +43,40 @@ $wideheader-vp-width: 1080px;
 
 .header-nav-1 {
    width          : 100%;
-   height         : 66px;
+   height         : 55px;
    display        : flex;
    justify-content: center;
    align-items    : center;
    cursor         : pointer;
    position       : relative;
-   background     : #000;
+   background     : #f1faee;
 
    &:hover {
-      background-color: #1A1A1A;
+      // background-color: #1A1A1A;
+      font-weight: bold;
    }
 
-   &:active {
-      background-color: #333;
-   }
+   // &:active {
+   //    background-color: #333;
+   // }
 
    >div {
-      font-size     : 20px;
+      font-size     : 13px;
       line-height   : 24px;
       letter-spacing: 2px;
    }
 }
 
 .header-nav-2 {
+   opacity: 0.8;
    width           : 100%;
    position        : absolute;
-   top             : 0;
+   top             : -2px;
    left            : 0;
-   transform-origin: center 32px -33px;
+   transform-origin: center 27px -27.5px;
    transform       : rotateX(-90deg);
-   border-radius   : 0 0 2px 2px;
+   border-radius   : 8px;
+   // border-radius   : 0 0 2px 2px;
    box-shadow      : rgba(0, 0, 0, 0.133) 0px 3.2px 7.2px 0px,
       rgba(0, 0, 0, 0.11) 0px 0.6px 1.8px 0px;
    background: white;
@@ -81,7 +85,7 @@ $wideheader-vp-width: 1080px;
 .header-nav-2-item {
    border-radius: 2px;
    min-width    : 100%;
-   height       : 60px;
+   height       : 55px;
    color        : rgb(50, 49, 48);
    cursor       : pointer;
 
@@ -89,7 +93,7 @@ $wideheader-vp-width: 1080px;
    align-items: center;
 
    >div {
-      font-size     : 16px;
+      font-size     : 13px;
       font-family   : "Segoe UI", "Segoe UI Web (West European)", "Segoe UI";
       font-weight   : 400;
       line-height   : 20px;

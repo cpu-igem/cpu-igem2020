@@ -1,6 +1,6 @@
 $wideheader-vp-width: 1080px;
-$header-height      : 66px;
-
+$header-height      : 55px;
+$header-footer: #f1faee;
 #header-container {
    width   : 100%;
    height  : $header-height;
@@ -12,17 +12,17 @@ $header-height      : 66px;
 }
 
 #header {
-   background : black;
+   background : $header-footer;
    width      : 100%;
    height     : $header-height;
-   font-family: 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif;
+   font-family: 'PingFang SC','Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif;
    font-size  : 24px;
    font-weight: 300;
-   color      : #FFF;
+   color      : #121212;
    line-height: 30px;
    position   : relative;
    z-index    : 50;
-   box-shadow : 0 -4px 15px black;
+   // box-shadow : 0 -4px 15px black;
    transition : box-shadow .3;
 
    .fixed-header>& {
@@ -59,7 +59,7 @@ $header-height      : 66px;
    >img {
       margin-left: 10px;
       // width      : 80px;
-      height     : 66px;
+      height     : 38px;
       user-select: none;
    }
 

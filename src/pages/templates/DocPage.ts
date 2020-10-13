@@ -3,6 +3,8 @@ import { lazy } from "@/util";
 import { LoadingState } from "@/types";
 import App from "@/App";
 
+//此页面是 DocPage组装页面，把Body Cover等复用组件主装在一起
+
 const getComps = lazy(() =>
    Promise.all([
       import(/* webpackPreload: true */ "./DocPageComps/_DocPageCover"),
@@ -51,6 +53,7 @@ export class DocPage implements Page {
       if (this.resrcState < LoadingState.Loading) {
          this.resrcState = LoadingState.Loading;
       }
+      // load Comps 、Resrc
       const promiseLoadComps = getComps();
       const promiseLoadResrc = this.getResrc();
       promiseLoadComps.then((comps) => {
@@ -91,7 +94,7 @@ export class DocPage implements Page {
 
       this.App!.setState(
          {
-            BeforeHeader: this.comps[0].default,
+            // BeforeHeader: this.comps[0].default,
             BeforeHeaderProps: this.beforeHeaderProps,
             Body: this.comps[1].default,
             BodyProps: {},

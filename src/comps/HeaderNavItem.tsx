@@ -188,8 +188,8 @@ export class HeaderNarrowNavItem extends React.Component<{ links: any }, { rotat
                   <Icon
                      iconName='GlobalNavButton'
                      style={{
-                        width: 66,
-                        height: 66,
+                        width: 55,
+                        height: 55,
                         fontSize: 27,
                         display: 'flex',
                         justifyContent: 'center',
@@ -201,13 +201,13 @@ export class HeaderNarrowNavItem extends React.Component<{ links: any }, { rotat
                   <Icon
                      iconName='GlobalNavButton'
                      style={{
-                        width: 66,
-                        height: 66,
+                        width: 55,
+                        height: 55,
                         fontSize: 27,
                         display: 'flex',
                         justifyContent: 'center',
                         alignItems: 'center',
-                        color: '#000',
+                        color: '#0077b6 ',
                      }}
                      onClick={this.onNavTwoClick}
                   />

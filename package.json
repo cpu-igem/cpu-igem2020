@@ -5,14 +5,14 @@
    "private": true,
    "scripts": {
       "start": "node scripts/start.js",
-      "build": "node scripts/build.js",
       "build:report": "cross-env REPORT_BUNDLE=true node scripts/build.js",
       "test": "node scripts/test.js",
       "proto": "serve ./prototype",
+      "build": "node scripts/build.js",
       "wiki:fix": "cd wiki-tools && ts-node fix.ts",
-      "wiki:upload": "cd wiki-tools && ts-node upload.ts",
-      "wiki:assets": "cd wiki-tools && ts-node assets.ts",
-      "wiki:page": "cd wiki-tools && ts-node page.ts",
+      "wiki:upload-css": "cd wiki-tools && ts-node upload.ts",
+      "wiki:upload-assets": "cd wiki-tools && ts-node assets.ts",
+      "wiki:upload-page": "cd wiki-tools && ts-node page.ts",
       "commit": "git-cz",
       "md": "cd tools/md2jsx && ts-node index.ts"
    },

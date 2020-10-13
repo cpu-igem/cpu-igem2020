@@ -19,13 +19,13 @@ export default class Footer extends React.Component<IFooterProps> {
    public render() {
       return (
          <div id='footer' style={{ display: this.props.showFooter ? 'block' : 'none' }}>
-            <div id='footer-strip-container'>
+            {/* <div id='footer-strip-container'>
                <div id='footer-strip-set'>
                   <div id='footer-strip-1' className='footer-strip'></div>
                   <div id='footer-strip-2' className='footer-strip'></div>
                   <div id='footer-strip-3' className='footer-strip'></div>
                </div>
-            </div>
+            </div> */}
             <div id='footer-1'>
                <div id='footer-2'>
                   <div className='footer-space'></div>

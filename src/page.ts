@@ -8,7 +8,7 @@ import { Description } from './pages/Description';
 import { Page404 } from './pages/Page404';
 // import { Attributions } from './pages/Attributions';
 // import { Safety } from './pages/Safety';
-// import { Design } from './pages/Design';
+import { Design } from './pages/Design';
 // import { Product_Design } from './pages/Product_Design';
 // import { Entrepreneurship } from './pages/Entrepreneurship';
 // import { Experiments } from './pages/Experiments';
@@ -19,7 +19,9 @@ import { Page404 } from './pages/Page404';
 // import { Collaborations } from './pages/Collaborations';
 // import { Criteria } from './pages/Criteria';
 // import { Notebook } from './pages/Notebook';
-// import { Member } from './pages/Member';
+import { Member } from './pages/Member';
+
+import { ModelOverview } from './pages/ModelOverview';
 
 export function queryPage(path: string): Page {
    const page404 = Page404;
@@ -27,13 +29,13 @@ export function queryPage(path: string): Page {
       '/': Home,
 
       '/Description': Description,
-      // '/Design': Design,
+      '/Design': Design,
       // '/Demonstrate': Demonstrate,
 
       // '/Experiments': Experiments,
       // '/Results': Results,
       // '/Parts': Parts,
-      // '/Model': Model,
+      '/Model': ModelOverview,
       // '/Protocols': Protocols,
       // '/Notebook': Notebook,
       // '/Safety': Safety,
@@ -44,7 +46,7 @@ export function queryPage(path: string): Page {
       // '/Human_Practices': HumanPractices,
       // '/Public_Engagement': PublicEngagement,
 
-      // '/Member': Member,
+      '/Member': Member,
       // '/Attributions': Attributions,
       // '/Collaborations': Collaborations,
 

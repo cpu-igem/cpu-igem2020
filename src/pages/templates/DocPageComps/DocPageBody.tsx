@@ -27,11 +27,11 @@ interface IDocPageProps {
 
 interface IDocPageContent {
    title: string;
-
+   docTitle: string;
    hasAside: boolean;
    hasInfobar: boolean;
    hasRating: boolean;
-   translatable: boolean;
+   // translatable: boolean;
 
    pageLocation?: Array<{ text: string; path: string; }>;
    editors?: IEditor[];
@@ -46,10 +46,10 @@ interface IDocPageState extends IDocPageContent {
    enableTranslate: boolean;
    lang: string;
 
-   translationMsgBar: {
-      show: boolean;
-      state: 'translating' | 'success' | 'error';
-   };
+   // translationMsgBar: {
+   //    show: boolean;
+   //    state: 'translating' | 'success' | 'error';
+   // };
 
    headings?: Array<{
       text: string;
@@ -70,20 +70,21 @@ export default class DocPageBody extends React.Component<IDocPageProps, IDocPage
 
    public state: IDocPageState = {
       title: '',
+      docTitle: '',
       hasAside: false,
       hasInfobar: false,
       hasRating: false,
-      translatable: true,
+      // translatable: true,
 
       pageLocation: void 0,
       editors: void 0,
       lastModified: void 0,
       headings: void 0,
 
-      translationMsgBar: {
-         show: false,
-         state: 'translating',
-      },
+      // translationMsgBar: {
+      //    show: false,
+      //    state: 'translating',
+      // },
 
       content: '',
 
@@ -138,7 +139,7 @@ export default class DocPageBody extends React.Component<IDocPageProps, IDocPage
       this.$doc1Bg.style.opacity = '1';
       this.$docPageBody.style.opacity = '1';
 
-      this.$docLoadedAni.style.opacity = '0';
+      // this.$docLoadedAni.style.opacity = '0';
       this.setState({
          hasAside: true,
          hasInfobar: true,
@@ -164,12 +165,12 @@ export default class DocPageBody extends React.Component<IDocPageProps, IDocPage
    }
 
    public refresh() {
-      context.translation = {
-         enableTranslate: false,
-         lang: detectDefaultLang(),
-      };
-      context.emit('translation', context.translation);
-      this.onTranslation(context.translation);
+      // context.translation = {
+      //    enableTranslate: false,
+      //    lang: detectDefaultLang(),
+      // };
+      // context.emit('translation', context.translation);
+      // this.onTranslation(context.translation);
 
       window.scrollTo({
          top: 0,
@@ -180,7 +181,7 @@ export default class DocPageBody extends React.Component<IDocPageProps, IDocPage
          hasAside: true,
          hasInfobar: true,
          hasRating: false,
-         translatable: true,
+         // translatable: true,
          content: '',
          pageLocation: void 0,
          editors: void 0,
@@ -222,74 +223,74 @@ export default class DocPageBody extends React.Component<IDocPageProps, IDocPage
 
    private doc3bgAt: 'doc-article' | 'doc-3-bg' = 'doc-article';
    private onScroll = () => {
-      if (!this.isHeaderFixed) {
-         if (this.doc3bgAt === 'doc-article') return;
-         this.doc3bgAt = 'doc-article';
-         this.$doc3Bg.classList.remove('show-doc-3-bg');
-         this.$docArticle.classList.add('show-doc-3-bg');
-      }
+      // if (!this.isHeaderFixed) {
+      //    if (this.doc3bgAt === 'doc-article') return;
+      //    this.doc3bgAt = 'doc-article';
+      //    this.$doc3Bg.classList.remove('show-doc-3-bg');
+      //    this.$docArticle.classList.add('show-doc-3-bg');
+      // }
 
-      if (this.$docArticle.getBoundingClientRect().top
-         < this.props.$header.$header!.getBoundingClientRect().bottom) {
-         if (this.doc3bgAt === 'doc-article') {
-            this.doc3bgAt = 'doc-3-bg';
-            this.$docArticle.classList.remove('show-doc-3-bg');
-            this.$doc3Bg.classList.add('show-doc-3-bg');
-         }
-      } else if (this.doc3bgAt === 'doc-3-bg') {
-         this.doc3bgAt = 'doc-article';
-         this.$doc3Bg.classList.remove('show-doc-3-bg');
-         this.$docArticle.classList.add('show-doc-3-bg');
-      }
+      // if (this.$docArticle.getBoundingClientRect().top
+      //    < this.props.$header.$header!.getBoundingClientRect().bottom) {
+      //    if (this.doc3bgAt === 'doc-article') {
+      //       this.doc3bgAt = 'doc-3-bg';
+      //       this.$docArticle.classList.remove('show-doc-3-bg');
+      //       this.$doc3Bg.classList.add('show-doc-3-bg');
+      //    }
+      // } else if (this.doc3bgAt === 'doc-3-bg') {
+      //    this.doc3bgAt = 'doc-article';
+      //    this.$doc3Bg.classList.remove('show-doc-3-bg');
+      //    this.$docArticle.classList.add('show-doc-3-bg');
+      // }
    }
 
    private onDarkMode = (darkMode: boolean) => this.setState({ darkMode });
 
-   private onTranslation = ({ enableTranslate, lang }: {
-      enableTranslate: boolean,
-      lang: string,
-   }) => {
-      this.setState({
-         translationMsgBar: {
-            show: enableTranslate,
-            state: 'translating',
-         },
-      });
+   // private onTranslation = ({ enableTranslate, lang }: {
+   //    enableTranslate: boolean,
+   //    lang: string,
+   // }) => {
+   //    this.setState({
+   //       translationMsgBar: {
+   //          show: enableTranslate,
+   //          state: 'translating',
+   //       },
+   //    });
 
-      this.setState({
-         enableTranslate,
-         lang,
-      }, () => {
-         this.resolveHeadings();
-      });
-   }
+   //    this.setState({
+   //       enableTranslate,
+   //       lang,
+   //    }, () => {
+   //       this.resolveHeadings();
+   //    });
+   // }
    private switchCallout = () => this.setState({
       showSettingCallout: !this.state.showSettingCallout,
    })
 
-   private onTranslationBackToIdle = (success: boolean) => {
-      this.resolveHeadings();
-      this.setState({
-         translationMsgBar: {
-            show: true,
-            state: success ? 'success' : 'error',
-         },
-      });
-   }
+   // private onTranslationBackToIdle = (success: boolean) => {
+   //    this.resolveHeadings();
+   //    this.setState({
+   //       translationMsgBar: {
+   //          show: true,
+   //          state: success ? 'success' : 'error',
+   //       },
+   //    });
+   // }
    public componentDidMount() {
       this.refresh();
 
-      translation.on('backToIdle', this.onTranslationBackToIdle);
+      // translation.on('backToIdle', this.onTranslationBackToIdle);
       context.on('headerFixed', this.onHeaderFixed);
       context.on('scroll', this.onScroll);
       context.on('darkMode', this.onDarkMode);
-      context.on('translation', this.onTranslation);
+      // context.on('translation', this.onTranslation);
    }
    public componentWillUnmount() {
-      translation.removeListener('backToIdle', this.onTranslationBackToIdle);
+      // translation.removeListener('backToIdle', this.onTranslationBackToIdle);
       context.removeListener('headerFixed', this.onHeaderFixed);
       context.removeListener('darkMode', this.onDarkMode);
-      context.removeListener('translation', this.onTranslation);
+      // context.removeListener('translation', this.onTranslation);
       context.removeListener('scroll', this.onScroll);
    }
    public render() {
@@ -298,10 +299,13 @@ export default class DocPageBody extends React.Component<IDocPageProps, IDocPage
       const hasAsideClassName = this.state.hasAside ? 'doc-has-aside' : 'doc-no-aside';
       const hasInfoBarClassName = this.state.hasInfobar ? 'doc-has-infobar' : 'doc-no-infobar';
       const shimmerColors = {
-         background: this.state.darkMode ? '#3B3A39' : '#FFFFFF',
-         shimmer: this.state.darkMode ? '#3B3A39' : '#FFFFFF',
+         background: this.state.darkMode ? 'red' : '#FFFFFF',
+         shimmer: this.state.darkMode ? 'red' : '#FFFFFF',
       };
-
+      // const shimmerColors = {
+      //    background: this.state.darkMode ? '#3B3A39' : '#FFFFFF',
+      //    shimmer: this.state.darkMode ? '#3B3A39' : '#FFFFFF',
+      // };
       const elementsInPortal = (<>
          <div id='doc-loaded-ani' ref={el => this.$docLoadedAni = el!} className={themeClassName}>
             <div>
@@ -314,9 +318,11 @@ export default class DocPageBody extends React.Component<IDocPageProps, IDocPage
                <div id='doc-aside-leftspace'></div>
                <div id='doc-aside'>
                   <DocPageAside
+                     title={this.state.title}
+                     docTitle={this.state.docTitle}
                      darkMode={this.state.darkMode}
-                     translatable={this.state.translatable}
-                     enableTranslate={this.state.enableTranslate}
+                     // translatable={this.state.translatable}
+                     // enableTranslate={this.state.enableTranslate}
                      lang={this.state.lang}
                      headings={this.state.headings}
                   />
@@ -325,7 +331,7 @@ export default class DocPageBody extends React.Component<IDocPageProps, IDocPage
             </aside>
 
             <div id='doc-2-bg' className={hasAsideClassName}>
-               <div id='doc-infobar'>
+               {/* <div id='doc-infobar'>
                   <DocPageInfobar
                      navs={
                         this.state.pageLocation
@@ -351,7 +357,7 @@ export default class DocPageBody extends React.Component<IDocPageProps, IDocPage
                         />
                      </div>
                   </Callout>
-               </div>
+               </div> */}
 
                <div id='doc-3-bg' ref={el => this.$doc3Bg = el!}></div>
             </div>
@@ -363,8 +369,9 @@ export default class DocPageBody extends React.Component<IDocPageProps, IDocPage
          <div id='doc-page-body' ref={el => this.$docPageBody = el!}
             className={themeClassName + ' ' + hasAsideClassName + ' ' + hasInfoBarClassName}>
             {ReactDOM.createPortal(elementsInPortal, $fixedBelowHeader)}
-            <article id='doc-article' ref={el => this.$docArticle = el!} className='show-doc-3-bg'>
-               {this.state.translationMsgBar.show &&
+            {/* <article id='doc-article' ref={el => this.$docArticle = el!} className='show-doc-3-bg'> */}
+            <article id='doc-article' ref={el => this.$docArticle = el!} >
+               {/* {this.state.translationMsgBar.show &&
                   <MessageBar
                      messageBarType={this.state.translationMsgBar.state === 'error' ? MessageBarType.error : MessageBarType.info}
                      isMultiline={false}
@@ -378,29 +385,29 @@ export default class DocPageBody extends React.Component<IDocPageProps, IDocPage
                            : 'There was an error with the translation service.'
                      }
                   </MessageBar>
-               }
+               } */}
                {this.state.content === '' ?
                   <>
-                     <Shimmer width='80%'
+                     <Shimmer width='85%'
                         shimmerElements={[
-                           { type: ShimmerElementType.line, height: 24 },
+                           { type: ShimmerElementType.line, height: 16 },
                         ]}
                         shimmerColors={shimmerColors}
                      />
                      {
                         range(1, 8).map(i =>
-                           <Shimmer key={i} width='95%'
+                           <Shimmer key={i} width='85%'
                               shimmerColors={shimmerColors}
                            />)
                      }
                   </> : this.state.content
                }
-               {this.state.hasRating && this.state.pageLocation &&
+               {/* {this.state.hasRating && this.state.pageLocation &&
                   <DocPageRating
                      pagePath={this.state.pageLocation[this.state.pageLocation.length - 1].path}
                      author={this.state.editors && this.state.editors[0] && this.state.editors[0].name}
                   />
-               }
+               } */}
                <div style={{ height: this.state.hasInfobar ? 'calc(107px + 1.071em)' : '0' }}></div>
             </article>
 

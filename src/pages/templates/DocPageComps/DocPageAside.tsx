@@ -5,11 +5,19 @@ import './css/DocPageAside.scss';
 import { Shimmer } from 'office-ui-fabric-react/lib/Shimmer';
 import { range } from '@/util';
 import { context } from '@/event/context';
+import { Anchor, Steps } from 'antd';
+import 'antd/es/anchor/style/css'
+import 'antd/es/steps/style/css'
+import { body } from '@/pages/content/Description';
+
+const { Link } = Anchor;
 
 interface IDocPageAsideProps {
+   title: string;
+   docTitle: string;
    darkMode: boolean;
-   translatable: boolean;
-   enableTranslate: boolean;
+   // translatable: boolean;
+   // enableTranslate: boolean;
    lang: string;
    headings?: Array<{
       text: string;
@@ -20,6 +28,7 @@ interface IDocPageAsideProps {
 export default class DocPageAside extends React.Component<IDocPageAsideProps> {
    private $indicator: HTMLDivElement | null;
    private $indicatorSlider: HTMLDivElement | null;
+   private item: string = '0';
    private onScroll = (() => {
       let canRun = true;
       const fn = () => {
@@ -33,8 +42,10 @@ export default class DocPageAside extends React.Component<IDocPageAsideProps> {
          const { headings } = this.props;
          if (!headings || headings.length === 0) return;
          const { nth, progress } = this.getPosition();
-         this.$indicator!.style.top = (nth * 4.33 + 0.5) + 'em';
-         this.$indicatorSlider!.style.top = progress * 0.5 + 'em';
+         this.item = (nth).toString();
+         // console.log(progress);
+         // this.$indicator!.style.top = (nth * 4.33 + 0.5) + 'em';
+         // this.$indicatorSlider!.style.top = progress * 0.5 + 'em';
       };
       return fn;
    })();
@@ -106,6 +117,22 @@ export default class DocPageAside extends React.Component<IDocPageAsideProps> {
       });
    }
 
+   public handleClick = (
+      e: React.MouseEvent<HTMLElement>,
+      link: {
+         title: React.ReactNode;
+         href: string;
+      },
+   ) => {
+      e.preventDefault();
+      let target = parseInt(link.href);
+      this.onClickNav(target);
+   };
+
+   public getCurrentAnchor = () => {
+      return this.item;
+   };
+
    public render() {
       const shimmerColors = {
          background: this.props.darkMode ? '#201F1E' : '#EDEBE9',
@@ -115,21 +142,24 @@ export default class DocPageAside extends React.Component<IDocPageAsideProps> {
 
       return (<>
          <div id='doc-aside-setting'>
-            <DocPageSetting
+         {/* <div>
+               <div>{this.props.docTitle}</div>
+            </div> */}
+            {/* <DocPageSetting
                darkMode={this.props.darkMode}
                translatable={this.props.translatable}
                enableTranslate={this.props.enableTranslate}
                lang={this.props.lang}
-            />
+            /> */}
          </div>
          <div id='doc-nav'>
-            {!this.props.headings &&
-               range(1, 8).map(i =>
+            {/* {!this.props.headings &&
+               range(1, 3).map(i =>
                   <Shimmer key={i}
                      shimmerColors={shimmerColors}
                   />)
-            }
-            {this.props.headings && <>
+            } */}
+            {/* {this.props.headings && <>
                {this.props.headings.length !== 0 &&
                   <div className='doc-nav-indicator' ref={el => this.$indicator = el}>
                      <div ref={el => this.$indicatorSlider = el}></div>
@@ -148,7 +178,28 @@ export default class DocPageAside extends React.Component<IDocPageAsideProps> {
                      }</div>
                   </div>);
                })}
-            </>}
+               <svg className="toc-marker" width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+                  <path stroke="#444" stroke-width="3" fill="transparent" stroke-dasharray="0, 0, 0, 1000"
+                     stroke-linecap="round" stroke-linejoin="round" transform="translate(-0.5, -0.5)" />
+               </svg>
+            </>} */}
+            <Anchor onClick={this.handleClick} getCurrentAnchor={this.getCurrentAnchor}>
+               {this.props.headings && <>
+                  {this.props.headings.map((h, i) => {
+                     const res = this.resolveText(h.text);
+                     const index: string = i.toString();
+                     return (<Link href={index} title={res.label + res.text} />)
+                  })}
+               </>}
+
+               {/* <Link href="1" title="Basic demo" />
+               <Link href="2" title="Static demo" />
+               <Link href="#components-anchor-demo-basic" title="Basic demo with Target" target="_blank" />
+               <Link href="#API" title="API">
+                  <Link href="#Anchor-Props" title="Anchor Props" />
+                  <Link href="#Link-Props" title="Link Props" />
+               </Link> */}
+            </Anchor>
          </div>
       </>);
    }

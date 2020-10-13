@@ -137,7 +137,7 @@ export default class App extends React.Component<{}, IAppState> {
                   />
                ) : (
                   this.state.showLoading && (
-                     <div id="bh-loading-placeholder"></div>
+                     <div id="bh-loading-placehold"></div>
                   )
                )}
             </div>
@@ -159,12 +159,12 @@ export default class App extends React.Component<{}, IAppState> {
                )}
             </div>
 
-            <AlertSafari
+            {/* <AlertSafari
                show={this.state.alertSafari}
                hide={() => {
                   this.setState({ alertSafari: false });
                }}
-            />
+            /> */}
 
             <Footer
                ref={(el) => (this.$footer = el!)}

@@ -12,10 +12,11 @@ interface File2BeUploaded {
    content: string;
 }
 const pages: string[] = [
-   'Team:CPU_CHINA',
-   'Team:CPU_CHINA/',
-   'Team:CPU_CHINA/about',
-   'Team:CPU_CHINA/Project'
+   // 'Team:CPU_CHINA',
+   // 'Team:CPU_CHINA/',
+   // 'Team:CPU_CHINA/about',
+   // 'Team:CPU_CHINA/Project',
+   'Team:CPU_CHINA/Model'
 ];
 
 (async () => {

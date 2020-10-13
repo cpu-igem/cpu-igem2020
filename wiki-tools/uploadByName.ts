@@ -6,7 +6,11 @@ import login from './login';
 import config from '../wiki-config.json';
 import { delay, concurrencyRestrictify } from './util';
 
-const selector = '../dist/**/*.{js,css}';
+const names = [
+   '../dist/static/js/2-1897f0b4-chunk.js'
+   // '../dist/static/js/11-21b755a3-chunk.js'
+];
+
 interface File2BeUploaded {
    path: string;
    content: string;
@@ -53,14 +57,14 @@ interface File2BeUploaded {
 
 function searchTargetFiles() {
    const targetFiles: File2BeUploaded[] = [];
-
-   glob.sync(selector)
+   names.forEach(selector =>{
+      glob.sync(selector)
       .forEach(path => {
          targetFiles.push({
             path: path.substring(8),
             content: fs.readFileSync(path, 'utf8')
          });
       });
-
+   })
    return targetFiles;
 }
