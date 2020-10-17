@@ -1,60 +1,239 @@
-.m-1 {
-   width          : 100%;
-   margin         : 0;
-   padding        : 0;
-   display        : flex;
-   justify-content: center;
+// @import "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css";
+// @import "https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css";
+/* @import "https://fonts.googleapis.com/css?family=Raleway:100,600";
+@import "https://fonts.googleapis.com/css?family=Open+Sans:300"; */
+// html,
+// body {
+//   width: 100%;
+//   height: 100%;
+// }
+
+// body {
+//   font-family:  "Helvetica Neue", Helvetica, Arial, sans-serif;
+//   font-weight: 300;
+//   color: #999;
+//   background-color: #fff;
+// }
+
+// h1,
+// h2,
+// h3,
+// h4,
+// h5,
+// h6 {
+//   margin: 0 0 20px 0 !important;
+//   text-transform: none !important;
+//   color: rgba(254, 82, 76, 1) !important;
+//   font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+//   font-weight: 600 !important;
+//   letter-spacing: 1px !important;
+//   line-height: 1.5 !important;
+// }
+
+// a:link,
+// a:active,
+// a:visited {
+//   color: rgba(255, 255, 255, 1);
+// }
+
+// a:hover {
+//   color: rgba(255, 255, 255, 0.6);
+// }
+
+#team {
+  margin: 0px;
 }
 
-.m-2 {
-   width         : 80%;
-   max-width     : 1200px;
-   display       : flex;
-   flex-direction: column;
+.team-member {
+  margin: 90px 0;
+  padding: 0;
 }
 
-.p-1 {
-   width           : 100%;
-   min-height      : 12em;
-   // background   : red;
-   display         : flex;
-   margin-bottom   : 2em;
-   align-items     : flex-start;
+.team-member figure {
+  position: relative;
+  overflow: hidden;
+  padding: 0;
+  margin: auto;
 }
 
-.p-l {
-   flex            : 0 0 auto;
-   width           : 12em;
-   height          : 12em;
-   overflow        : hidden;
-   border-radius   : .6em;
-   // background   : blue;
-   margin-right    : 2em;
-   box-shadow      : rgba(0, 0, 0, 0.4) 0px 16px 38px -12px, rgba(0, 0, 0, 0.4) 0px 4px 25px 0px, rgba(0, 0, 0, 0.4) 0px 8px 10px -5px;
+.team-member figure img {
+  min-width: 100%;
 }
 
-.p-r {
-   flex  : 0 1 auto;
-   height: 100%;
+.team-member figcaption p {
+  font-size: 16px;
+}
 
-   // background: green;
-   >.pr1 {
-      width      : auto;
-      font-size  : 1.6em;
-      margin-top : .4em;
-      line-height: 1.2;
+.team-member figcaption ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.team-member figcaption ul {
+  visibility: visible;
+  -webkit-transition: all 0.1s ease-in-out;
+  -moz-transition: all 0.1s ease-in-out;
+  -o-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+}
+
+.team-member figcaption ul li {
+  display: inline-block;
+  padding: 10px;
+}
+
+.team-member h4 {
+  margin: 10px 0 0;
+  padding: 0;
+}
+
+.team-member figcaption {
+  padding: 50px;
+  color: transparent;
+  background-color: transparent;
+  position: absolute;
+  z-index: 996;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  overflow: hidden;
+  visibility: hidden;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.team-member figure:hover figcaption {
+  visibility: visible;
+  color: #fff;
+  background: rgba(230, 78, 62, 0.9);
+  /* Primary color, can be changed via colors.css */
+
+  height: 100%;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.team-member figure:hover figcaption ul li a:hover {
+  color: rgba(49, 49, 49, 0.97);
+}
+
+.team-member figure img {
+  -webkit-transform: scale(1) rotate(0) translateY(0);
+  -moz-transform: scale(1) rotate(0) translateY(0);
+  -o-transform: scale(1) rotate(0) translateY(0);
+  -ms-transform: scale(1) rotate(0) translateY(0);
+  transform: scale(1) rotate(0) translateY(0);
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+.team-member figure:hover img {
+  -webkit-transform: scale(1.1) rotate(1deg) translateY(12px);
+  -moz-transform: scale(1.1) rotate(1deg) translateY(12px);
+  -o-transform: scale(1.1) rotate(1deg) translateY(12px);
+  -ms-transform: scale(1.1) rotate(1deg) translateY(12px);
+  transform: scale(1.1) rotate(1deg) translateY(12px);
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+figure{
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+}
+
+figcaption>p{
+  color: white !important;
+  font-size: 14px !important;
+}
+
+
+.col-md-4 {
+   @media(min-width: 992px){
+      width: 30%;
+      float: left;
    }
+}
 
-   >.pr2 {
-      width      : auto;
-      margin-top : .6em;
-      font-size  : 1.2em;
-      line-height: 1.2;
+.container {
+   padding-right: 15px;
+   padding-left: 15px;
+   margin-right: auto;
+   margin-left: auto;
+   @media (min-width: 768px){
+      width: 750px;
+     }
+   @media (min-width: 992px){
+   width: 970px;
    }
+   @media (min-width: 1200px){
+      width: 1170px;
+   }
+}
 
-   >.pr3 {
-      width      : auto;
-      margin-top : .4em;
-      line-height: 1.4;
+.team-member{
+   text-align: center !important;
+   img{
+      display: block;
+   max-width: 100%;
+   height: auto;
    }
+}
+
+.team-family-photos>img{
+  width: 100%;
+}
+
+.team-section{
+  margin-top: 100px;
+}
+
+.team-section-title{
+   color: red;
+   font-size: 30px;
+   font-weight: bold;
+   text-align: center;
+   margin-bottom: 60px;
+}
+
+.team-section-container{
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.member-intro{
+  text-align: center;
+  // display: flex;
+  // justify-content: center;
+  > h4{
+    font-size: 25px !important;
+  }
+  > span{
+    font-size: 15px !important;
+  }
+}
+
+figcaption>p{
+  color: white;
+    text-align: center !important;
+    font-family: 'Raleway' !important;
+    line-height: 1.6 !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    letter-spacing: .018em !important;
 }

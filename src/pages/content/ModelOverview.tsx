@@ -21,9 +21,11 @@ export const body = {
         },
     ],
     lastModified: 'July 19, 2020',
+    docTitle: 'Model OverView',
     content: (
         <>
             <div>
+                <h1>Model OverView</h1>
                 <p>Modeling is an essential aspect of every iGEM project. The mathematical model can deepen our team&#39;s understanding of the work, and can also carry out calculations to assist the selection of construction conditions of engineering bacteria such as promoters and plasmids.</p>
                 <p>Our aim is to establish a systematic model to reflect the in vivo metabolic processes of alcohol and the influence of engineered bacteria on alcohol metabolism after alcohol intake. With this systematic model, we can determine the therapeutic window of anti-inflammatory factors, antimicrobial peptides, the therapeutic dose of engineered bacteria, and the transcription efficiency required by engineered bacteria, among other key parameters. In this model, alcohol is divided into three main stages according to the time and space process of in vivo metabolism, namely, the pre-enteral stage, the enteral stage and the metabolic elimination stage.</p>
                 <p>The pre-enteral stage is the first stage in the body before alcohol is ingested into the intestine. In the first stage, alcohol undergoes a spatial shift from the mouth to the esophagus and then to the stomach. At this stage, the alcohol does not reach the intestinal tract, does not change the permeability of the intestinal epithelium to cause enterococcus faecalis to metastasize, and does not stimulate the protective effect of the engineered bacteria on the liver. Before alcohol enters the intestine, it is absorbed into the blood through the esophagus and stomach, and the alcohol after entering the blood will not pass through the liver first under the driving of blood circulation. In other words, the first stage is the first resorptive and metabolic stage of alcohol in the body, in which its resorptive metabolism will completely conform to the classical pharmacokinetic model. In the first stage, we can calculate the alcohol concentration in the blood before entering and leaving the intestine and the alcohol concentration in the digestive tract when entering the intestine, which will provide the calculation basis for the model in the following two stages.</p>

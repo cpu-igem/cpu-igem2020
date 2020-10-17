@@ -1,6 +1,6 @@
 $wideheader-vp-width: 1080px;
 $header-height      : 55px;
-$header-footer: #f1faee;
+$header-footer: #ebebeb;
 #header-container {
    width   : 100%;
    height  : $header-height;
@@ -15,7 +15,7 @@ $header-footer: #f1faee;
    background : $header-footer;
    width      : 100%;
    height     : $header-height;
-   font-family: 'PingFang SC','Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif;
+   font-family: 'Helvetica Neue','Segoe UI', 'Open Sans', sans-serif;
    font-size  : 24px;
    font-weight: 300;
    color      : #121212;
@@ -112,7 +112,7 @@ $header-footer: #f1faee;
 
    >div.header-logo-bg {
       position        : absolute;
-      width           : 210px;
+      width           : 135px;
       height          : 280px;
       border-radius   : 100%;
       background-color: rgba(255, 255, 255, .25);

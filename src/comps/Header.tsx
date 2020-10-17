@@ -12,6 +12,10 @@ import './css/Header.scss';
 import './css/Header-wide.scss';
 import './css/Header-narrow.scss';
 
+// import { Menu, Dropdown, message } from 'antd';
+// import 'antd/es/menu/style/css';
+// import 'antd/es/dropdown/style/css';
+
 // const assets = {
 //    TeamLogo$png: TeamLogo,
 // }
@@ -24,10 +28,10 @@ const links = [
          { text: 'Project Design', url: '/Design' },
          { text: 'Experiments', url: '/Experiments' },
          { text: 'Notebook', url: '/Notebook' },
-         // { text: 'Contribution', url: '/Contribution' },
-         // { text: 'Result', url: '/Result' },
-         // { text: 'Demonstrate', url: '/Demonstrate' },
-         // { text: 'Improve', url: '/Improve' },
+         { text: 'Contribution', url: '/Contribution' },
+         { text: 'Result', url: '/Result' },
+         { text: 'Demonstrate', url: '/Demonstrate' },
+         { text: 'Improve', url: '/Improve' },
       ],
    },
    {
@@ -82,14 +86,15 @@ const links = [
 ];
 
 export default class Header extends React.Component {
+   private handleClick = (e:any) => {
+      console.log('click ', e);
+      this.setState({ current: e.key });
+    };
+
    public render() {
       const logo = (
          <div className='header-logo' onClick={() => locaCtrl.navTo('/')}>
             <img src={assets.logos.TeamLogo$png} alt='Team Logo' />
-            {/* <div className='header-logo-txt'>
-               <div>ALGAE</div>
-               <div>TERMINATOR</div>
-            </div> */}
             <div className='header-logo-bg'></div>
             <div className='header-logo-mask'></div>
          </div>
@@ -97,7 +102,8 @@ export default class Header extends React.Component {
       const wide = (
          <div id='header-wide'>
             {logo}
-            <nav id='header-nav'>
+             <nav id='header-nav'>
+             {/* <div> */}
                {links.map((link, i) =>
                   <HeaderNavItem
                      key={i}
@@ -130,6 +136,7 @@ export default class Header extends React.Component {
    public $headerContainer?: HTMLDivElement | null;
    public $header?: HTMLHeadElement | null;
    private isHeaderFixed = false;
+   private current = 'mail';
 
    private onPageScroll = () => {
       const { $headerContainer } = this;

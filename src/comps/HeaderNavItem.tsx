@@ -4,6 +4,11 @@ import { EventEmitter } from '../util';
 import { Icon } from 'office-ui-fabric-react/lib/Icon';
 import { Nav, INavLink } from 'office-ui-fabric-react/lib/Nav';
 import { lightTheme } from '../theme';
+import { Menu, Dropdown, message } from 'antd';
+import 'antd/es/menu/style/css';
+import 'antd/es/dropdown/style/css';
+
+// import { DownOutlined } from '@ant-design/icons';
 
 const dissmiss = new EventEmitter<{
    press: [],
@@ -29,6 +34,8 @@ interface IHeaderNavItemProps {
 
 interface IHeaderNavItemState {
    rotate: boolean;
+   visible: boolean,
+   // current: string,
 }
 
 export class HeaderNavItem extends React.PureComponent<IHeaderNavItemProps, IHeaderNavItemState> {
@@ -41,6 +48,7 @@ export class HeaderNavItem extends React.PureComponent<IHeaderNavItemProps, IHea
 
    public state = {
       rotate: false,
+      visible: false,
    };
 
    private shouldDismiss = true;
@@ -70,38 +78,98 @@ export class HeaderNavItem extends React.PureComponent<IHeaderNavItemProps, IHea
          rotate: false,
       });
       locaCtrl.navTo(url);
-   }
+   };
+
+   private handleMenuClick = (e: any) => {
+      this.setState({ visible: false });
+      setTimeout(function(){locaCtrl.navTo(e.key);},500);
+      
+   };
+
+   private handleVisibleChange = (flag: boolean) => {
+      this.setState({
+         visible: flag
+      });
+   };
+
+   // private handleClick = (e:any) => {
+   //    console.log('click ', e);
+   //    this.setState({ current: e.key });
+   //  };
+
    public render() {
       const { h1, h2 } = this.props;
-      return (
-         <div className='header-nav-3d-container'>
-            <div
-               className={'header-nav-item' + (this.state.rotate ? ' rotate' : '')}
-               onMouseDown={this.onNavPress}
-               onTouchStart={this.onNavPress}
-            >
-               <div
-                  className='header-nav-1'
-                  style={this.props.h1style && this.props.h1style.root}
-                  onClick={this.onNavOneClick}
-               >
-                  <div>{h1.text}</div>
-               </div>
-               {h2 &&
-                  <div className='header-nav-2'>
-                     {
-                        h2.map((item, i) => <div
-                           key={i}
-                           className='header-nav-2-item'
-                           onClick={() => this.onNavTwoClick(item.url!)}
-                        >
-                           <div>{item.text}</div>
-                        </div>)
-                     }
-                  </div>
+      const menu = (
+         <>
+            {h2 && <Menu onClick={this.handleMenuClick}>
+               {
+                  h2.map((item, i) => <Menu.Item key={item.url}>{item.text}</Menu.Item>)
                }
-            </div>
-         </div>
+            </Menu>
+            }
+            {/* <Menu onClick={this.onClick}>
+               <Menu.Item key="1">1st menu item</Menu.Item>
+               <Menu.Item key="2">2nd memu item</Menu.Item>
+               <Menu.Item key="3">3rd menu item</Menu.Item>
+            </Menu> */}
+         </>
+      );
+      return (
+         <>
+            <Dropdown
+               overlay={menu}
+               onVisibleChange={this.handleVisibleChange}
+               visible={this.state.visible}>
+               <a className="ant-dropdown-link" onClick={e => e.preventDefault()}>
+                  <div id='nav-container'>
+                     <div id='nav-item'>
+                        {h1.text}
+                     </div>
+                  </div>
+               </a>
+            </Dropdown>
+         </>
+         // <Menu onClick={this.handleClick} selectedKeys={[this.state.current]} mode="horizontal">
+         //    <Menu.SubMenu key="SubMenu" title="Navigation Three - Submenu">
+         //       <Menu.ItemGroup title="Item 1">
+         //          <Menu.Item key="setting:1">Option 1</Menu.Item>
+         //          <Menu.Item key="setting:2">Option 2</Menu.Item>
+         //       </Menu.ItemGroup>
+         //       <Menu.ItemGroup title="Item 2">
+         //          <Menu.Item key="setting:3">Option 3</Menu.Item>
+         //          <Menu.Item key="setting:4">Option 4</Menu.Item>
+         //       </Menu.ItemGroup>
+         //    </Menu.SubMenu>
+         // </Menu>
+
+      // <div className='header-nav-3d-container'>
+      //    <div
+      //       className={'header-nav-item' + (this.state.rotate ? ' rotate' : '')}
+      //       onMouseDown={this.onNavPress}
+      //       onTouchStart={this.onNavPress}
+      //    >
+      //       <div
+      //          className='header-nav-1'
+      //          style={this.props.h1style && this.props.h1style.root}
+      //          onClick={this.onNavOneClick}
+      //       >
+      //          <div>{h1.text}</div>
+      //       </div>
+      //       {h2 &&
+      //          <div className='header-nav-2'>
+      //             {
+      //                h2.map((item, i) => <div
+      //                   key={i}
+      //                   className='header-nav-2-item'
+      //                   onClick={() => this.onNavTwoClick(item.url!)}
+      //                >
+      //                   <div>{item.text}</div>
+      //                </div>)
+      //             }
+      //          </div>
+      //       }
+      //    </div>
+      // </div>
       );
    }
 }

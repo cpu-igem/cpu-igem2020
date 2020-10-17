@@ -19,13 +19,16 @@ export default class Footer extends React.Component<IFooterProps> {
    public render() {
       return (
          <div id='footer' style={{ display: this.props.showFooter ? 'block' : 'none' }}>
-            {/* <div id='footer-strip-container'>
-               <div id='footer-strip-set'>
+            <div id='footer-strip-container'>
+            <img id='footer-glass' src={require("C:/Users/刘鑫/Desktop/iGEM/cpu-igem2020/assets/footer/glass.png")} alt=""/>
+               <div id="footer-strip-line">
+               </div>
+               {/* <div id='footer-strip-set'>
                   <div id='footer-strip-1' className='footer-strip'></div>
                   <div id='footer-strip-2' className='footer-strip'></div>
                   <div id='footer-strip-3' className='footer-strip'></div>
-               </div>
-            </div> */}
+               </div> */}
+            </div>
             <div id='footer-1'>
                <div id='footer-2'>
                   <div className='footer-space'></div>
@@ -44,11 +47,11 @@ export default class Footer extends React.Component<IFooterProps> {
                                     <div>@Lico~Health</div>
                                  </div>
                                  <div className='footer-cta-btn' onClick={() => this.onClickLogoBtn('https://weibo.com/u/6856701868')}>
-                                        <div>
-                                          {/* {svgWb} */}
-                                        </div>
-                                        <div>@CPU_CHINA_2019</div>
+                                    <div>
+                                       {/* {svgWb} */}
                                     </div>
+                                    <div>@CPU_CHINA_2019</div>
+                                 </div>
                               </div>
                            </div>
                         </div>

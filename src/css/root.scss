@@ -44,7 +44,7 @@ html {
 }
 
 body {
-   background                : #f1faee !important;
+   background                : #ebebeb !important;
    scroll-behavior           : smooth;
    -webkit-overflow-scrolling: touch;
    -ms-overflow-style        : none;
@@ -63,10 +63,9 @@ body::-webkit-scrollbar {
    width    : 100%;
    overflow : hidden;
    font-size: calc(10px + 0.33vw);
-   font-family: 'PingFang SC',Raleway, -apple-system,
+   font-family: 'Helvetica Neue',Raleway, -apple-system,
       BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
-      Ubuntu, Cantarell, 'Open Sans',
-      'Helvetica Neue', sans-serif;
+      Ubuntu, Cantarell, 'Open Sans', sans-serif;
 }
 
 #App {

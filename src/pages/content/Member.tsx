@@ -2,44 +2,168 @@ import React from 'react';
 import TRH2 from './comps/TRH2';
 import './css/Member.scss';
 import { assets } from '../../assets-path.json';
-import { Image, ImageFit } from 'office-ui-fabric-react/lib/Image';
-import { Popover, Button } from 'antd';
-import 'antd/es/popover/style/css';
-import 'antd/es/button/style/css';
+import { MemberListPeoplePicker } from 'office-ui-fabric-react';
+
 
 const pp = assets;
-const intro = (
-    <div>
-      <p>Content</p>
-      <p>Content</p>
-    </div>
-  );
-const content = (<>
-    <div className='m-1'>
-        
-        <div className='m-2'>
+const members = [
+    {
+        section: { text: 'Student Members' },
+        content: [
+            {
+                img: 'http://www.mauritiusdsilva.com/themes/hallooou/assets/images/jessie-barnett.jpg',
+                name: 'Liu Xin',
+                position: 'Wiki Develop',
+                intro: 'My name is Liu Xin, I am very like programing, this wiki is my work.'
+            },
+            {
+                img: 'http://www.mauritiusdsilva.com/themes/hallooou/assets/images/jessie-barnett.jpg',
+                name: 'Liu Xin',
+                position: 'Wiki Develop',
+                intro: 'My name is Liu Xin, I am very like programing, this wiki is my work.'
+            },
+            {
+                img: 'http://www.mauritiusdsilva.com/themes/hallooou/assets/images/jessie-barnett.jpg',
+                name: 'Liu Xin',
+                position: 'Wiki Develop',
+                intro: 'My name is Liu Xin, I am very like programing, this wiki is my work.'
+            },
+            {
+                img: 'http://www.mauritiusdsilva.com/themes/hallooou/assets/images/jessie-barnett.jpg',
+                name: 'Liu Xin',
+                position: 'Wiki Develop',
+                intro: 'My name is Liu Xin, I am very like programing, this wiki is my work.'
+            },
+            {
+                img: 'http://www.mauritiusdsilva.com/themes/hallooou/assets/images/jessie-barnett.jpg',
+                name: 'Liu Xin',
+                position: 'Wiki Develop',
+                intro: 'My name is Liu Xin, I am very like programing, this wiki is my work.'
+            },
+            {
+                img: 'http://www.mauritiusdsilva.com/themes/hallooou/assets/images/jessie-barnett.jpg',
+                name: 'Liu Xin',
+                position: 'Wiki Develop',
+                intro: 'My name is Liu Xin, I am very like programing, this wiki is my work.'
+            },
+            {
+                img: 'http://www.mauritiusdsilva.com/themes/hallooou/assets/images/jessie-barnett.jpg',
+                name: 'Liu Xin',
+                position: 'Wiki Develop',
+                intro: 'My name is Liu Xin, I am very like programing, this wiki is my work.'
+            },
+            {
+                img: 'http://www.mauritiusdsilva.com/themes/hallooou/assets/images/jessie-barnett.jpg',
+                name: 'Liu Xin',
+                position: 'Wiki Develop',
+                intro: 'My name is Liu Xin, I am very like programing, this wiki is my work.'
+            },
+            {
+                img: 'http://www.mauritiusdsilva.com/themes/hallooou/assets/images/jessie-barnett.jpg',
+                name: 'Liu Xin',
+                position: 'Wiki Develop',
+                intro: 'My name is Liu Xin, I am very like programing, this wiki is my work.'
+            },
+            {
+                img: 'http://www.mauritiusdsilva.com/themes/hallooou/assets/images/jessie-barnett.jpg',
+                name: 'Liu Xin',
+                position: 'Wiki Develop',
+                intro: 'My name is Liu Xin, I am very like programing, this wiki is my work.'
+            },
+            {
+                img: 'http://www.mauritiusdsilva.com/themes/hallooou/assets/images/jessie-barnett.jpg',
+                name: 'Liu Xin',
+                position: 'Wiki Develop',
+                intro: 'My name is Liu Xin, I am very like programing, this wiki is my work.'
+            },
+            {
+                img: 'http://www.mauritiusdsilva.com/themes/hallooou/assets/images/jessie-barnett.jpg',
+                name: 'Liu Xin',
+                position: 'Wiki Develop',
+                intro: 'My name is Liu Xin, I am very like programing, this wiki is my work.'
+            },
+            {
+                img: 'http://www.mauritiusdsilva.com/themes/hallooou/assets/images/jessie-barnett.jpg',
+                name: 'Liu Xin',
+                position: 'Wiki Develop',
+                intro: 'My name is Liu Xin, I am very like programing, this wiki is my work.'
+            }
+        ]
+    },
+    {
+        section: { text: 'Principle Investigators' },
+        content: [
+            {
+                img: 'http://www.mauritiusdsilva.com/themes/hallooou/assets/images/jessie-barnett.jpg',
+                name: 'Liu Xin',
+                position: 'Wiki Develop',
+                intro: 'My name is Liu Xin, I am very like programing, this wiki is my work.'
+            },
+            {
+                img: 'http://www.mauritiusdsilva.com/themes/hallooou/assets/images/jessie-barnett.jpg',
+                name: 'Liu Xin',
+                position: 'Wiki Develop',
+                intro: 'My name is Liu Xin, I am very like programing, this wiki is my work.'
+            }
+        ]
+    },
+    {
+        section: { text: 'Instructor and Advisors' },
+        content: [
+            {
+                img: 'http://www.mauritiusdsilva.com/themes/hallooou/assets/images/jessie-barnett.jpg',
+                name: 'Liu Xin',
+                position: 'Wiki Develop',
+                intro: 'My name is Liu Xin, I am very like programing, this wiki is my work.'
+            },
+            {
+                img: 'http://www.mauritiusdsilva.com/themes/hallooou/assets/images/jessie-barnett.jpg',
+                name: 'Liu Xin',
+                position: 'Wiki Develop',
+                intro: 'My name is Liu Xin, I am very like programing, this wiki is my work.'
+            },{
+                img: 'http://www.mauritiusdsilva.com/themes/hallooou/assets/images/jessie-barnett.jpg',
+                name: 'Liu Xin',
+                position: 'Wiki Develop',
+                intro: 'My name is Liu Xin, I am very like programing, this wiki is my work.'
+            },
+        ]
+    },
+]
 
-            <div className='p-1'>
-                <div className='p-l'>
-                    <Image src={pp.CPUWithText$png}
-                        imageFit={ImageFit.cover}
-                        styles={{ root: { width: '100%', height: '100%' } }} />
+const content = (<>
+    <div id="team" className="team content-section">
+        <div className="team-family-photos">
+            <img src={require('C:/Users/刘鑫/Desktop/iGEM/cpu-igem2020/assets/members/team1.jpg')} alt="" />
+        </div>
+        {members && members.map((member, i) => <>
+            <div className="team-section">
+                <div className="team-section-title">
+                    <span>{member.section.text}</span>
                 </div>
-                <div className='p-r'>
-                    <div className='pr1'>HanMei Xu</div>
-                    <div className='pr2'>Principle Investigator, Professor of School of Biological Science and medical Engineering, Southeast University</div>
-                    {/* <div className='pr3'>Abcde test test</div> */}
+                <div className="team-section-container">
+                    {member.content.map((item, i) => <>
+                        <div className="col-md-4">
+                            <div className="team-member">
+                                <figure>
+                                    <img src={item.img} alt="" className="img-responsive" />
+                                    <figcaption>
+                                        <p>{item.intro}</p>
+                                    </figcaption>
+                                </figure>
+                                <div className="member-intro">
+                                    <h4>{item.name}</h4>
+                                    <span>{item.position}</span>
+                                </div>
+                            </div>
+                        </div>
+                    </>)}
                 </div>
             </div>
-
-
-        </div>
+        </>
+        )}
     </div>
-    <Popover content={intro} title="Introduction" trigger="focus">
-      <img src="https://avatars0.githubusercontent.com/u/12101536?s=280&v=4" alt=""/>
-    </Popover>
 
-    
 </>);
 
 export const body = {

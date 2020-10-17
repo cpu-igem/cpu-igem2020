@@ -18,8 +18,16 @@ sans-serif;
 }
 
 #footer-strip-container {
+   align-items: flex-end;
    width : 100%;
-   height: 1.8em * 3;
+   display: flex;
+   justify-content: center;
+}
+
+#footer-strip-line{
+   width : 85%;
+   height: 0.05em;
+   background-color: #b5b7b7;
 }
 
 #footer-strip-set {
@@ -51,7 +59,7 @@ sans-serif;
 
 #footer-1 {
    // background: black;
-   background: #f1faee;
+   background: #ebebeb;
    padding   : 2em 0;
 }
 
@@ -172,4 +180,7 @@ sans-serif;
          background-color: rgba(255, 255, 255, .2);
       }
    }
+}
+#footer-glass{
+   width: 2em;
 }

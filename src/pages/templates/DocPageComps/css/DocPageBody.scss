@@ -47,7 +47,7 @@ $border-radius     : 18px 18px 0 0/#{12px};
 
 @mixin doc-bg {
    position     : absolute;
-   border-radius: $border-radius;
+   // border-radius: $border-radius;
    height       : 100%;
 }
 
@@ -66,7 +66,7 @@ $border-radius     : 18px 18px 0 0/#{12px};
    //    background: linear-gradient(to bottom, #E9F2EB 0%, #E9E6F0 500px, #EDEAE6 800px);
    // }   
    &.lighttheme-doc {
-      background: #FFF;
+      background: #ebebeb;
    }
 
    &.darktheme-doc {
@@ -172,8 +172,8 @@ $border-radius     : 18px 18px 0 0/#{12px};
    width   : 100%;
    height  : 100%;
    z-index : 64;
-   box-shadow: 0 3.2px 7.2px 0 rgba(0, 0, 0, .132),
-      0 0.6px 1.8px 0 rgba(0, 0, 0, .108);
+   // box-shadow: 0 3.2px 7.2px 0 rgba(0, 0, 0, .132),
+   //    0 0.6px 1.8px 0 rgba(0, 0, 0, .108);
    display: none;
 
    &.show-doc-3-bg {
@@ -224,8 +224,8 @@ $border-radius     : 18px 18px 0 0/#{12px};
 }
 
 .show-doc-3-bg {
-   box-shadow: 0 3.2px 7.2px 0 rgba(0, 0, 0, .132),
-      0 0.6px 1.8px 0 rgba(0, 0, 0, .108);
+   // box-shadow: 0 3.2px 7.2px 0 rgba(0, 0, 0, .132),
+   //    0 0.6px 1.8px 0 rgba(0, 0, 0, .108);
 
 
    // .lighttheme-doc & {
@@ -256,7 +256,7 @@ $border-radius     : 18px 18px 0 0/#{12px};
    // padding   : 1.6em 0 0 0;
 
    &>* {
-      margin-right: 1.4em;
+      margin-right: 2em;
       margin-left : 1.2em;
    }
 
@@ -300,6 +300,7 @@ $border-radius     : 18px 18px 0 0/#{12px};
       // font-style: italic;
       font-weight: bold;
       margin-top: 3em;
+      font-size: 25px;
    }
    
    & h1 {
@@ -309,10 +310,11 @@ $border-radius     : 18px 18px 0 0/#{12px};
       margin-top: 1em;
       font-weight: normal;
       text-align: center;
+      margin-bottom: 1.9em;
    }
 
    & h1:after {
-      border-bottom: 1px solid #2f2f2f;
+      border-bottom: 2px solid #121212;
       content: '';
       width: 100px;
       display: block;
@@ -359,13 +361,16 @@ $border-radius     : 18px 18px 0 0/#{12px};
 
    & p,
    & .text {
+      font-size: 20px;
+      font-weight: 400;
       text-align   : justify;
-      font-family  : 'Raleway';
+      // font-family  : 'Helvetica Neue';
+      font-family: 'Raleway';
       line-height  : 1.6;
       margin-top   : 1em;
       margin-bottom: 1em;
       padding-left : 1.2em;
-      padding-right: 2em;
+      padding-right: 3em;
 
       @media(max-width: $no-aside-vp-width) {
          text-align   : left;
