@@ -45,15 +45,15 @@ $wideheader-vp-width: 1080px;
 
 .ant-menu-item{
    text-align: center !important;
-   font-size: 10px !important;
+   font-size: 12px !important;
    font-weight: 400 !important;
    margin-top: 0px !important;
    font-family: 'Helvetica Neue';
    margin-bottom: 0px !important;
    &:hover{
       color:#121212 !important;
-      font-weight: bold;
-      background-color: red;
+      font-weight: bold !important;
+      // background-color: red;
    }
 }
 

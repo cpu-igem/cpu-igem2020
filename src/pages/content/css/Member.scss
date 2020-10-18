@@ -41,7 +41,7 @@
 // }
 
 #team {
-  margin: 0px;
+  margin: 0 !important; 
 }
 
 .team-member {
@@ -237,3 +237,4 @@ figcaption>p{
     padding-right: 0 !important;
     letter-spacing: .018em !important;
 }
+
