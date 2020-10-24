@@ -6,8 +6,10 @@ import login from './login';
 import config from '../wiki-config.json';
 import { delay, concurrencyRestrictify } from './util';
 
+//指定个别打包文件上传！
 const names = [
-   '../dist/static/js/2-1897f0b4-chunk.js'
+   '../dist/static/js/2-208b53e6-chunk.js',
+   '../dist/static/js/12-e43424ec-chunk.js'
    // '../dist/static/js/11-21b755a3-chunk.js'
 ];
 
@@ -22,7 +24,7 @@ interface File2BeUploaded {
 
    const files = searchTargetFiles();
    let succeedNum = 0;
-
+   console.log(files.length)
    const singleUpload = concurrencyRestrictify(_singleUpload, 2);
 
    await Promise.all(

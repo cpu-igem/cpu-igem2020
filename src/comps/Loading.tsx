@@ -20,10 +20,17 @@ export default class Loading extends React.Component<ILoadingProps> {
    public render() {
       return (
          <div id='loading' ref={el => this.$loading = el!} style={{ opacity: this.props.showLoading ? 1 : 0 }}>
-            <div id='loading-inner'>
+            {/* <div id='loading-inner'>
                <div></div>
                <div></div>
                <div></div>
+            </div> */}
+            <div className='loading-container'>
+               <div className='top-circle'></div>
+               <div className='red-circle'></div>
+               <div className='bottom-circle'>
+                  <div className='stem'></div>
+               </div>
             </div>
          </div>
       );

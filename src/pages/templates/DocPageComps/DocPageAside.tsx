@@ -188,7 +188,7 @@ export default class DocPageAside extends React.Component<IDocPageAsideProps> {
                   {this.props.headings.map((h, i) => {
                      const res = this.resolveText(h.text);
                      const index: string = i.toString();
-                     return (<Link href={index} title={res.label + res.text} />)
+                     return (<Link href={index} title={res.label + res.text} key={i} />)
                   })}
                </>}
 

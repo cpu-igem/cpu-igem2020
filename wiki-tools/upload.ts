@@ -6,6 +6,7 @@ import login from './login';
 import config from '../wiki-config.json';
 import { delay, concurrencyRestrictify } from './util';
 
+// 上传所有打包文件
 const selector = '../dist/**/*.{js,css}';
 interface File2BeUploaded {
    path: string;
@@ -17,6 +18,7 @@ interface File2BeUploaded {
    await login(browser);
 
    const files = searchTargetFiles();
+   console.log("有"+files.length + "个打包文件需要上传！")
    let succeedNum = 0;
 
    const singleUpload = concurrencyRestrictify(_singleUpload, 2);

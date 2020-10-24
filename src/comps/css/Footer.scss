@@ -1,11 +1,11 @@
-$std-text-font: "PingFang SC",
+$std-text-font: "Helvetica Neue",
+"PingFang SC",
 "Segoe UI",
 "Segoe UI Web (West European)",
 "Segoe UI",
 -apple-system,
 BlinkMacSystemFont,
 Roboto,
-"Helvetica Neue",
 sans-serif;
 
 #footer {
@@ -59,8 +59,11 @@ sans-serif;
 
 #footer-1 {
    // background: black;
-   background: #ebebeb;
-   padding   : 2em 0;
+   background: #fffffb;
+   padding   : 2em 0 4em 0;
+   @media (max-width:1023px){
+      padding   : 2em 0 6em 0;
+   }
 }
 
 #footer-2 {
@@ -70,7 +73,7 @@ sans-serif;
 
 .footer-space {
    flex : 1 1 auto;
-   width: 4em;
+   width: 7.5%;
 }
 
 #footer-content {
@@ -184,3 +187,118 @@ sans-serif;
 #footer-glass{
    width: 2em;
 }
+
+
+#footer-container{
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+}
+
+#footer-title-container{
+   margin-bottom: 1.6em;
+   width: 100%;
+   display: flex;
+   justify-content: center;
+   @media (max-width:1023){
+      margin-bottom: 1em;
+   }
+}
+
+#footer-title{
+   align-items: center;
+   width: 70%;
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+
+  
+}
+
+#footer-text{
+   font-size    : 2.2em;
+   // color        : #edebe9;
+   color: #121212;
+   user-select  : none;
+   font-weight  : 100;
+}
+
+#footer-divide{
+   background-color: #121212;
+   margin: 0 1.3em 0 1.3em;
+   width: 0.1em;
+   height: 3.5em;
+}
+
+#footer-cpu-logo > img{
+   width: 5em;
+   &:hover{
+      cursor:pointer;
+   }
+}
+
+#footer-contact-container{
+   height: 100px;
+   display: flex;
+   justify-content: center;
+   width: 75%;
+   flex-flow: row wrap;
+
+   @media (max-width:1023px){
+      display: flex;
+      width: 90%;
+      flex-wrap: wrap;
+      justify-content: space-between;
+   }
+}
+
+.footer-contact-item{
+   width: 25%;
+   display: flex;
+   justify-content: center;
+   flex-direction: column;
+   align-items: center;
+   font-weight: 100;
+
+   &:hover {
+      font-size: 1.1em;
+      .footer-contact-text{
+         font-weight: 500;
+      }
+      cursor:pointer;
+   }
+
+   @media (max-width:1023px){
+      width: 50%;
+      margin-bottom: 1em;
+      &:hover {
+         font-size: 1em;
+         font-weight:100;
+      }
+   }
+}
+
+.footer-contact-img {
+   display: flex;
+   justify-content: center;
+}
+
+.footer-contact-img img{
+      width: 4em;
+      height: 4em;
+}
+
+
+.footer-contact-text{
+   font-weight: 300;
+   margin-top: 0.3em;
+   color: #000000;
+}
+
+#footer-contact-container1{
+   display: flex;
+   justify-content: center;
+
+}
+

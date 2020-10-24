@@ -6,6 +6,7 @@ import login from './login';
 import config from '../wiki-config.json';
 import { merge } from 'lodash';
 
+// 上传assets中的资源 提出不上传的资源
 if (!fs.existsSync('../assets')) {
    fs.mkdir('../assets');
 }

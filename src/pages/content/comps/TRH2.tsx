@@ -2,9 +2,7 @@ import React from 'react';
 import './css/H2.css';
 import Translate from '../../../translation/Translate';
 
-const H2: React.FC<{
-   prefix?: string
-}> = props => {
+const H2: React.FC<{ prefix?: string}> = props => {
    if (typeof props.children !== 'string') throw new Error('Invalid children of H2.');
 
    const anchorName =
@@ -25,10 +23,10 @@ const H2: React.FC<{
    );
 };
 
-const TRH2: React.FC<{ TRkey: string; prefix?: string; }> = props => {
+const TRH2: React.FC<{ TRkey?: string; prefix?: string; }> = props => {
    if (typeof props.children !== 'string') throw new Error('Invalid children of TRH2.');
    return (
-      <Translate TRkey={props.TRkey}>
+      <Translate TRkey='key1'>
          <H2 prefix={props.prefix}>{props.children}</H2>
       </Translate>
    );

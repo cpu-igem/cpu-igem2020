@@ -238,3 +238,8 @@ figcaption>p{
     letter-spacing: .018em !important;
 }
 
+.team-member figure figcaption{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

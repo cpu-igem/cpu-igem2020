@@ -1,554 +1,730 @@
 import React from 'react';
 
-import { normalizeClassNames, delay } from '@/util';
-import { augmentCanvas } from './augment-canvas';
-// import { assets } from 'C:/Users/刘鑫/Desktop/iGEM/seu-igem2019/src/assets-path.json';
-import { Carousel } from 'antd';
-import 'antd/es/carousel/style/css';
+import { delay } from '@/util';
+// import { augmentCanvas } from './augment-canvas';
+import { assets } from 'assets-path.json';
+import Lottie from 'lottie-web'
 
-import { Image as MsImage, ImageFit } from 'office-ui-fabric-react/lib/Image';
-import { HomePageSpinner } from './HomePageSpinner';
+// import { Image as MsImage, ImageFit } from 'office-ui-fabric-react/lib/Image';
+// import { HomePageSpinner } from './HomePageSpinner';
 
-import './css/home.scss';
-import './css/home-1.scss';
-import './css/home-2.scss';
-import './css/home-3.scss';
+import { NavBox } from '../../content/comps/NavBox';
+
+// import './css/home.scss';
+// import './css/home-1.scss';
+// import './css/home-2.scss';
+// import './css/home-3.scss';
+import './css/homepage.scss';
+// import './css/home-nav.scss';
+import Data0 from 'C:/Users/刘鑫/Desktop/新建文件夹 (2)/Home Page/线条/output/output/主页动图/ch0.json'
+import Data1 from 'C:/Users/刘鑫/Desktop/新建文件夹 (2)/Home Page/线条/output/output/主页动图/ch1.json'
+import Data2 from 'C:/Users/刘鑫/Desktop/新建文件夹 (2)/Home Page/线条/output/output/主页动图/ch2.json'
+import Data3 from 'C:/Users/刘鑫/Desktop/新建文件夹 (2)/Home Page/线条/output/output/主页动图/ch3.json'
+import Data4 from 'C:/Users/刘鑫/Desktop/新建文件夹 (2)/Home Page/线条/output/output/主页动图/ch4.json'
+import Data5 from 'C:/Users/刘鑫/Desktop/新建文件夹 (2)/Home Page/线条/output/output/主页动图/ch5.json'
+import Data6 from 'C:/Users/刘鑫/Desktop/新建文件夹 (2)/Home Page/线条/output/output/主页动图/ch6.json'
+import Data7 from 'C:/Users/刘鑫/Desktop/新建文件夹 (2)/Home Page/线条/output/output/主页动图/ch7.json'
+import Line56 from 'C:/Users/刘鑫/Desktop/新建文件夹 (2)/Home Page/线条/output/output/主页动图/linedown.json'
+import Line234 from 'C:/Users/刘鑫/Desktop/新建文件夹 (2)/Home Page/线条/output/output/主页动图/line.json'
+// import { Data0, Data1, Data2, Data3, Data4, Data5, Data6, Data7, Line } from 'C:/Users/刘鑫/Desktop/新建文件夹 (2)/Home Page/线条/output/all.json'
+
 
 interface IHomePageState {
-   homeHeight: number | null;
-   shouldHomePageLeave: boolean;
-   isHome1MaskNotDisplay: boolean;
-   showLogo: boolean;
-   isLogoareaBlue: boolean;
-   isLogoareaTransparent: boolean;
-   showLogoWave: boolean;
-   shouldApproach: boolean;
-   showHome1Bg: boolean;
-   isHome1BgImgTooWide: boolean;
-   showHome1Slogan: boolean;
-   showHome23: boolean;
-   home2Width: number | null;
-   shouldShowSection2: boolean;
-   isHome2BgSmooth: boolean;
-   isSection4Text1Hide: boolean;
-   hasFishSlideIn: boolean;
+   ch0: any;
+   ch1: any;
+   ch2: any;
+   ch3: any;
+   ch4: any;
+   ch5: any;
+   ch6: any;
+   ch7: any;
+   ch2Line: any;
+   ch3Line: any;
+   ch4Line: any;
+   ch5Line: any;
+   ch6Line: any;
 }
 
 export class HomePageBody extends React.Component<{}, IHomePageState> {
-   private $homeFixed: HTMLDivElement;
-   private $home1Mask: HTMLCanvasElement;
-   private $home1MaskCtx: CanvasRenderingContext2D;
-   private $home1Logoarea: HTMLDivElement;
-   private $logoareaSpinner: HomePageSpinner;
-   private $home1BgImg: HTMLImageElement;
-   private $home2: HTMLDivElement;
-   private $home3: HTMLDivElement;
-   private $home2Content: HTMLElement;
-   private $logoareaContainer: HTMLDivElement;
+   private ch0: any;
+   private ch1: any;
+   private ch2: any;
+   private ch3: any;
+   private ch4: any;
+   private ch5: any;
+   private ch6: any;
+   private ch7: any;
+   private ch2Line: any;
+   private ch3Line: any;
+   private ch4Line: any;
+   private ch5Line: any;
+   private ch6Line: any;
+   private $galleryTrack: HTMLDivElement;
+   private $homePage: HTMLDivElement;
 
    public state: IHomePageState = {
-      homeHeight: null,
-      shouldHomePageLeave: false,
-      isHome1MaskNotDisplay: false,
-      showLogo: false,
-      isLogoareaBlue: false,
-      isLogoareaTransparent: false,
-      showLogoWave: false,
-      shouldApproach: false,
-      showHome1Bg: false,
-      isHome1BgImgTooWide: false,
-      showHome1Slogan: false,
-      showHome23: false,
-      isHome2BgSmooth: false,
-      home2Width: null,
-      shouldShowSection2: false,
-      isSection4Text1Hide: false,
-      hasFishSlideIn: false,
+      ch0: null,
+      ch1: null,
+      ch2: null,
+      ch3: null,
+      ch4: null,
+      ch5: null,
+      ch6: null,
+      ch7: null,
+      ch2Line: null,
+      ch3Line: null,
+      ch4Line: null,
+      ch5Line: null,
+      ch6Line: null,
    };
 
    render() {
-      const contentStyle = {
-         height: '450px',
-         color: '#fff',
-         lineHeight: '450px',
-         fontSize: '20px',
-         textAlign: 'center',
-         background: '#364d79',
-      } as React.CSSProperties;
+      const footerNavs = [
+         {
+            title: 'Project',
+            content: 'home-block home-blockhome-block home-blockhome-blockhome-blockhome-block',
+            url: '/Description'
+         },
+         {
+            title: 'Modeling',
+            content: 'home-block home-blockhome-block home-blockhome-blockhome-blockhome-block',
+            url: '/Model'
+         },
+         {
+            title: 'Human Practices',
+            content: 'home-block home-blockhome-block home-blockhome-blockhome-blockhome-block',
+            url: '/Human_Practices'
+         },
+         {
+            title: 'Team',
+            content: 'home-block home-blockhome-block home-blockhome-blockhome-blockhome-block',
+            url: '/Member'
+         }
+      ];
+
+
       return (<>
-         <div>
-            <Carousel autoplay>
-               <div>
-                  <h3 style={contentStyle}>This is Home Page Carousel 1</h3>
+         <div className='home-page' ref={e => this.$homePage = e!}>
+            <div className="home-block">
+               <div className="div-block">
+                  <div className="div-block-2">
+                     <div className="div-block-4">
+                        <div className="div-block-29">
+                           <h1 data-w-id="19ad981c-be28-8ced-0887-e41f6a62b4f1"
+                              style={{
+                                 transform: 'translate3d(0px, 0 %, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)',
+                                 transformStyle: 'preserve-3d'
+                              }}
+                              className="heading-italic">A Visual Summary of <a
+                                 href="https://www.mfe.govt.nz/Environment-Aotearoa-2019-Summary" target="_blank"
+                                 className="link-2">The Environment Aotearoa 2019 Report</a><br /></h1>
+                        </div>
+                        <div className="div-block-30">
+                           <h1 data-w-id="5c3a9a66-0bd4-8d3c-c79a-b29240c07b95"
+                              style={{
+                                 transform: 'translate3d(0px, 0 %, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)',
+                                 transformStyle: 'preserve-3d'
+                              }}
+                              className="title _1">9 Priority Issues Facing<br /><span className="text-span">Our
+                                    Environment</span></h1>
+                        </div>
+                        <div className="div-block-31">
+                           <p data-w-id="cd568a61-46fe-e407-4fb7-ab41d4e4e26d"
+                              style={{
+                                 transform: 'translate3d(0px, 0 %, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)',
+                                 transformStyle: 'preserve-3d'
+                              }}
+                              className="body-text">Environment Aotearoa is a report produced by the Ministry for the
+                              Environment and Stats NZ. Backed by a team of internationally recognised scientists, it
+                              &nbsp;highlights the most important issues affecting the health of our environment.
+                              Using the latest data on 60 environmental indicators, the report identifies the most
+                                wide-reaching, lasting and escalating problems for our country and culture.<br /></p>
+                        </div>
+                     </div>
+                  </div>
+                  <div className="div-block-3">
+                     <div id="ch0" className="lottie"></div>
+                  </div>
                </div>
-               <div>
-                  <h3 style={contentStyle}>This is Home Page Carousel 2</h3>
+            </div>
+
+            <div className="gallery-block desktop">
+               <div className="gallery-scroll-track">
+                  <div className="gallery-container">
+                     <div className="gallery-track" ref={e => this.$galleryTrack = e!}
+                        style={{
+                           transformStyle: 'preserve-3d',
+                           willChange: 'transform'
+                        }}>
+                        <div id='1' className="issue-div">
+                           <div className="text-div">
+                              <div className="text-wrapper tw-birds">
+                                 <div className="text-block1">
+                                    <h1 className="heading">
+                                       Chapter 1, <br />animals, and ecosystems <br />are under threat<br /></h1>
+                                 </div>
+                                 <div className="text-block2">
+                                    <p className="body-text _2">
+                                       Our unique native biodiversity is under significant pressure from introduced
+                                       species, pollution,
+                                       physical changes to our landscapes and coast, harvesting of wild species, and
+                                       other factors.
+                                       Almost 4,000 of our native species are currently threatened with or at risk of
+                                        extinction.<br />
+                                    </p>
+                                 </div>
+                              </div>
+                           </div>
+                           <div className="image-wrapper">
+                              <img src={assets.homepage.ch1$svg} alt="" className="color"
+                                 style={{
+                                    willChange: 'filter, opacity',
+                                    filter: 'saturate(100%)',
+                                    opacity: 1
+                                 }} />
+                              <div id="ch1" className="lottie"></div>
+                           </div>
+                        </div>
+                        <div className="issue-div">
+                           <div className="image-wrapper">
+                              <img src={assets.homepage.ch2$svg} alt="" className="color"
+                                 style={{
+                                    willChange: 'filter, opacity',
+                                    filter: 'saturate(100%)',
+                                    opacity: 1
+                                 }} />
+                              <div id="ch2" className="lottie"></div>
+                           </div>
+                           <div className="text-div">
+                              <div className="line-parent">
+                                 <div id="ch2-line" className="line"></div>
+                              </div>
+                              <div className="text-wrapper ">
+                                 <div className="text-block1">
+                                    <h1 className="heading">
+                                       Chapter 2, <br />animals, and ecosystems <br />are under threat<br /></h1>
+                                 </div>
+                                 <div className="text-block2">
+                                    <p className="body-text _2">
+                                       Our unique native biodiversity is under significant pressure from introduced
+                                       species, pollution,
+                                       physical changes to our landscapes and coast, harvesting of wild species, and
+                                       other factors.
+                                       Almost 4,000 of our native species are currently threatened with or at risk of
+                                        extinction.<br />
+                                    </p>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div className="issue-div">
+                           <div className="image-wrapper">
+                              <img src={assets.homepage.ch3$svg} alt="" className="color"
+                                 style={{
+                                    willChange: 'filter, opacity',
+                                    filter: 'saturate(100%)',
+                                    opacity: 1
+                                 }} />
+                              <div id="ch3" className="lottie"></div>
+                           </div>
+                           <div className="text-div">
+                              <div className="line-parent">
+                                 <div id="ch3-line" className="line"></div>
+                              </div>
+                              <div className="text-wrapper ">
+                                 <div className="text-block1">
+                                    <h1 className="heading">
+                                       Chapter 3, <br />animals, and ecosystems <br />are under threat<br /></h1>
+                                 </div>
+                                 <div className="text-block2">
+                                    <p className="body-text _2">
+                                       Our unique native biodiversity is under significant pressure from introduced
+                                       species, pollution,
+                                       physical changes to our landscapes and coast, harvesting of wild species, and
+                                       other factors.
+                                       Almost 4,000 of our native species are currently threatened with or at risk of
+                                        extinction.<br />
+                                    </p>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div className="issue-div">
+                           <div className="image-wrapper">
+                              <img src={assets.homepage.ch4$svg} alt="" className="color"
+                                 style={{
+                                    willChange: 'filter, opacity',
+                                    filter: 'saturate(100%)',
+                                    opacity: 1
+                                 }} />
+                              <div id="ch4" className="lottie"></div>
+                           </div>
+                           <div className="text-div">
+                              <div className="line-parent">
+                                 <div id="ch4-line" className="line"></div>
+                              </div>
+                              <div className="text-wrapper ">
+                                 <div className="text-block1">
+                                    <h1 className="heading">
+                                       Chapter 4, <br />animals, and ecosystems <br />are under threat<br /></h1>
+                                 </div>
+                                 <div className="text-block2">
+                                    <p className="body-text _2">
+                                       Our unique native biodiversity is under significant pressure from introduced
+                                       species, pollution,
+                                       physical changes to our landscapes and coast, harvesting of wild species, and
+                                       other factors.
+                                       Almost 4,000 of our native species are currently threatened with or at risk of
+                                        extinction.<br />
+                                    </p>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div className="issue-div">
+                           <div className="image-wrapper">
+                              <img src={assets.homepage.ch5$svg} alt="" className="color"
+                                 style={{
+                                    willChange: 'filter, opacity',
+                                    filter: 'saturate(100%)',
+                                    opacity: 1
+                                 }} />
+                              <div id="ch5" className="lottie"></div>
+                           </div>
+                           <div className="text-div">
+                              <div className="line-parent">
+                                 <div id="ch5-line" className="line"></div>
+                              </div>
+                              <div className="text-wrapper ">
+                                 <div className="text-block1">
+                                    <h1 className="heading">
+                                       Chapter 5, <br />animals, and ecosystems <br />are under threat<br /></h1>
+                                 </div>
+                                 <div className="text-block2">
+                                    <p className="body-text _2">
+                                       Our unique native biodiversity is under significant pressure from introduced
+                                       species, pollution,
+                                       physical changes to our landscapes and coast, harvesting of wild species, and
+                                       other factors.
+                                       Almost 4,000 of our native species are currently threatened with or at risk of
+                                        extinction.<br />
+                                    </p>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div className="issue-div">
+                           <div className="image-wrapper">
+                              <img src={assets.homepage.ch6$svg} alt="" className="color"
+                                 style={{
+                                    willChange: 'filter, opacity',
+                                    filter: 'saturate(100%)',
+                                    opacity: 1
+                                 }} />
+                              <div id="ch6" className="lottie"></div>
+                           </div>
+                           <div className="text-div">
+                              <div className="line-parent">
+                                 <div id="ch6-line" className="line"></div>
+                              </div>
+                              <div className="text-wrapper ">
+                                 <div className="text-block1">
+                                    <h1 className="heading">
+                                       Chapter 6, <br />animals, and ecosystems <br />are under threat<br /></h1>
+                                 </div>
+                                 <div className="text-block2">
+                                    <p className="body-text _2">
+                                       Our unique native biodiversity is under significant pressure from introduced
+                                       species, pollution,
+                                       physical changes to our landscapes and coast, harvesting of wild species, and
+                                       other factors.
+                                       Almost 4,000 of our native species are currently threatened with or at risk of
+                                        extinction.<br />
+                                    </p>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div className="issue-div">
+                           <div className="image-wrapper">
+                              <img src={assets.homepage.ch7$svg} alt="" className="color"
+                                 style={{
+                                    willChange: 'filter, opacity',
+                                    filter: 'saturate(100%)',
+                                    opacity: 1
+                                 }} />
+                              <div id="ch7" className="lottie"></div>
+                           </div>
+                           <div className="text-div">
+                              <div className="line-parent">
+                                 <div id="ch7-line" className="line"></div>
+                              </div>
+                              <div className="text-wrapper ">
+                                 <div className="text-block1">
+                                    <h1 className="heading">
+                                       Chapter 7, <br />animals, and ecosystems <br />are under threat<br /></h1>
+                                 </div>
+                                 <div className="text-block2">
+                                    <p className="body-text _2">
+                                       Our unique native biodiversity is under significant pressure from introduced
+                                       species, pollution,
+                                       physical changes to our landscapes and coast, harvesting of wild species, and
+                                       other factors.
+                                       Almost 4,000 of our native species are currently threatened with or at risk of
+                                        extinction.<br />
+                                    </p>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
                </div>
-               <div>
-                  <h3 style={contentStyle}>This is Home Page Carousel 3</h3>
-               </div>
-               <div>
-                  <h3 style={contentStyle}>This is Home Page Carousel 4</h3>
-               </div>
-            </Carousel>
+            </div>
+            <div className="footer-nav-intro">
+               <h2>
+                  Want to find out more? 
+               </h2>
+            </div>
+            <NavBox items={footerNavs}></NavBox>
+            <div style={
+               {
+                  width: '100%',
+                  height: '6em'
+               }
+            }>
+
+            </div>
          </div>
-      </>)}
+      </>)
+   }
 
-   // private resize = () => {
-   //    console.log("resize");
-   //    const width = this.$homeFixed.clientWidth;
-   //    const height = this.$homeFixed.clientHeight;
-   //    const logoRadius = height * .3;
-   //    this.repaintHome1Mask(width, height, logoRadius);
-   //    this.relocateHome1LogoArea(width, height, logoRadius);
+   private resize = () => {
+      console.log("resize");
+      this.scroll();
+   }
+   public componentDidMount() {
+      window.addEventListener('resize', this.resize);
+      window.addEventListener('scroll', this.scroll);
+      this.resize();
+      this.addAnomination();
+   }
 
-   //    if (this.$home1BgImg.complete) {
-   //       const { naturalWidth, naturalHeight } = this.$home1BgImg;
-   //       if ((naturalWidth / naturalHeight) < (width / height)) {
-   //          this.setState({
-   //             isHome1BgImgTooWide: false,
-   //          });
-   //       } else {
-   //          this.setState({
-   //             isHome1BgImgTooWide: true,
-   //          });
-   //       }
-   //    }
+   public componentWillUnmount() {
+      window.removeEventListener('resize', this.resize);
+      window.removeEventListener('scroll', this.scroll);
+   }
 
-   //    if (this.state.showHome23) {
-   //       const home2Width = 4.2 * width;
-   //       const homeHeight = 2 * height + home2Width - width + this.$home3.clientHeight;
-   //       this.setState({
-   //          home2Width,
-   //          homeHeight,
-   //       });
-   //    }
-   //    this.scroll();
-   // }
-   // private repaintHome1Mask(width: number, height: number, logoRadius: number) {
-   //    if (this.state.isHome1MaskNotDisplay) return;
-   //    const { $home1Mask, $home1MaskCtx } = this;
-   //    $home1Mask.setAttribute('width', width + '');
-   //    $home1Mask.setAttribute('height', height + '');
-   //    const gradient = $home1MaskCtx.createLinearGradient(0, 0, width, height);
-   //    gradient.addColorStop(0, '#000');
-   //    gradient.addColorStop(0.8, '#000');
-   //    gradient.addColorStop(1, '#2f004c');
-   //    $home1MaskCtx.fillStyle = gradient;
-   //    $home1MaskCtx.fillRect(0, 0, width, height);
-   //    augmentCanvas.clearArc.call(
-   //       $home1MaskCtx,
-   //       width / 2, height / 2,
-   //       logoRadius - 2, 0, Math.PI * 2, false
-   //    );
-   // }
-   // private relocateHome1LogoArea(width: number, height: number, logoRadius: number) {
-   //    const { $home1Logoarea } = this;
-   //    $home1Logoarea.style.width = 2 * logoRadius + 'px';
-   //    $home1Logoarea.style.height = 2 * logoRadius + 'px';
-   //    $home1Logoarea.style.left = (width * 0.5 - logoRadius) + 'px';
-   //    $home1Logoarea.style.top = (height * 0.5 - logoRadius) + 'px';
-   // }
+   public scroll = () => {
+      let scrollTop = document.documentElement.scrollTop || document.body.scrollTop; // 滚动距离
+      let pageHeight = document.documentElement.clientHeight; // 页面高度
+      const minWidth = 479; // 小屏宽度
+      //动画进度条控制
+      let x = (scrollTop / pageHeight); // 相对于滚动条的位置
+      let times = 3000 // 动画时长
+      let lineTime = 2500
+      console.log(x);
+      //ch1的变化范围
+      if (x > 4) {
+         this.ch1.goToAndStop(78, 1);
+      }
+      if (x > 9) {
+         this.ch2.goToAndStop(74, 1);
+      }
+      if (x > 11) {
+         this.ch2Line.goToAndStop(63, 1);
+      }
+      if (x > 15) {
+         this.ch3.goToAndStop(74, 1);
+      }
+      if (x > 18) {
+         this.ch3Line.goToAndStop(63, 1);
+      }
+      if (x > 22) {
+         this.ch4.goToAndStop(76, 1);
+      }
+      if (x > 25) {
+         this.ch4Line.goToAndStop(63, 1);
+      }
+      if (x > 29) {
+         this.ch5.goToAndStop(75, 1);
+      }
+      if (x > 32) {
+         this.ch5Line.goToAndStop(1999, 0);
+      }
+      if (x > 36) {
+         this.ch6.goToAndStop(76, 1);
+      }
+      if (x > 39) {
+         this.ch6Line.goToAndStop(1999, 0);
+      }
+      if (x > 43) {
+         this.ch7.goToAndStop(74, 1);
+      }
 
-   // public componentDidMount() {
-   //    window.addEventListener('resize', this.resize);
-   //    window.addEventListener('scroll', this.scroll);
 
-   //    this.$home1MaskCtx = this.$home1Mask.getContext('2d')!;
-   //    this.resize();
-   //    if (!this.$home1BgImg.complete) {
-   //       this.$home1BgImg.addEventListener('load', this.resize);
-   //    }
-   // }
-   // public componentWillUnmount() {
-   //    window.removeEventListener('resize', this.resize);
-   //    window.removeEventListener('scroll', this.scroll);
-   // }
+      let target: number;
 
-   // public scroll = () => {
-   //    const {
-   //       $homeFixed,
-   //       $home2,
-   //       $logoareaContainer,
-   //       $home2Content,
-   //    } = this;
+      // chapter 1
+      if (.12 < x && x < 4) {
+         target = Math.ceil(times * (x - 0.12) / 3.88);
+         this.ch1.goToAndStop(target, 0);
+      }
+      // chapter 2
+      if (4 < x && x < 9) {
+         target = Math.ceil(times * (x - 4) / 5);
+         this.ch2.goToAndStop(target, 0);
+      }
+      if (9 < x && x < 11) {
+         target = Math.ceil(lineTime * (x - 9) / 2);
+         this.ch2Line.goToAndStop(target, 0);
+      }
+      // chapter 3
+      if (11 < x && x < 15) {
+         target = Math.ceil(times * (x - 11) / 4);
+         this.ch3.goToAndStop(target, 0);
+      }
+      if (15 < x && x < 18) {
+         target = Math.ceil(lineTime * (x - 15) / 3);
+         this.ch3Line.goToAndStop(target, 0);
+      }
+      // chapter 4
+      if (18 < x && x < 22) {
+         target = Math.ceil(times * (x - 18) / 4);
+         this.ch4.goToAndStop(target, 0);
+      }
+      if (22 < x && x < 25) {
+         target = Math.ceil(lineTime * (x - 22) / 3);
+         this.ch4Line.goToAndStop(target, 0);
+      }
+      // chapter 5
+      if (25 < x && x < 29) {
+         target = Math.ceil(times * (x - 25) / 4);
+         this.ch5.goToAndStop(target, 0);
+      }
+      if (29 < x && x < 32) {
+         target = Math.ceil(1999 * (x - 29) / 3);
+         this.ch5Line.goToAndStop(target, 0);
+      }
+      // chapter 6
+      if (32 < x && x < 36) {
+         target = Math.ceil(times * (x - 32) / 4);
+         this.ch6.goToAndStop(target, 0);
+      }
+      if (36 < x && x < 39) {
+         target = Math.ceil(1999 * (x - 36) / 3);
+         this.ch6Line.goToAndStop(target, 0);
+      }
+      // chapter 7
+      if (39 < x && x < 43) {
+         target = Math.ceil(times * (x - 39) / 4);
+         this.ch7.goToAndStop(target, 0);
+      }
 
-   //    const pageWidth = $homeFixed.clientWidth || 1;
-   //    const pageHeight = $homeFixed.clientHeight || 1;
-   //    const offset = document.documentElement.scrollTop || document.body.scrollTop;
 
-   //    let x = offset / pageHeight;
+      //文字效果
+      var titles = document.querySelectorAll('.text-wrapper .text-block1 h1');
+      var texts = document.querySelectorAll('.text-wrapper .text-block2 p');
+      var viewLength = 0;
+      if (this.$galleryTrack.style.transform) {
+         viewLength = parseInt(this.$galleryTrack.style.transform.split("translate3d(")[1].split("vw, 0px, 0px)")[0]);
+      }
+      //未开始移动屏幕  第一屏字体效果
+      var vh = document.documentElement.clientHeight;
+      if (viewLength === 0 && scrollTop < vh) {
 
-   //    if (x >= 1 && x < 1.5) {
-   //       $home2.style.top = '0';
-   //       this.$home1BgImg.style.filter = 'blur(25px)';
-   //       this.$home2.style.backgroundColor = 'rgba(0, 183, 195, 1)';
-   //    } else if (x < .01) {
-   //       $home2.style.top = '100%';
-   //       this.$home1BgImg.style.filter = 'blur(0)';
-   //       this.$home2.style.backgroundColor = 'rgba(0, 183, 195, .6)';
-   //    } else if (x < 1) {
-   //       $home2.style.top = (1 - x) * 100 + '%';
-   //       this.$home1BgImg.style.filter = 'blur(' + 25 * (Math.pow(x - 1, 3) + 1) + 'px)';
-   //       let home2Opacity = 2 * x - .8;
-   //       home2Opacity = home2Opacity < 0 ? 0 : home2Opacity > 1 ? 1 : home2Opacity;
-   //       home2Opacity = home2Opacity * .4 + .6;
-   //       this.$home2.style.backgroundColor = 'rgba(0, 183, 195, ' + home2Opacity + ')';
-   //    }
+         // for (let i = 0; i < titles.length; i++) {
+         //    if (i == 0) {
+         //       titles[i].style.animation = '0.5s ease-in-out 0s 1 normal none running titleMove';
+         //       texts[i].style.animation = '1.5s ease-in-out 0s 1 normal none running textMove';
+         //    } else {
+         //       titles[i].style.animation = ''
+         //       texts[i].style.animation = ''
+         //    }
+         // }
+      }
+      //开始移动屏幕  字体效果
+      if (viewLength < -50) {
+         var chapter = -Math.ceil((viewLength + 75) / 100) + 1;
+         //屏幕未移动前chapter为 0  开始移动为 1
+         // for (let i = 0; i < titles.length; i++) {
+         //    if (i == chapter) {
+         //       titles[i].style.animation = '0.4s ease-in-out 0s 1 normal none running titleMove';
+         //       texts[i].style.animation = '1.2s ease-in-out 0s 1 normal none running textMove';
+         //    } else {
+         //       titles[i].style.animation = ''
+         //       texts[i].style.animation = ''
+         //    }
+         // }
+      }
 
-   //    if (x >= .5) this.setState({ isLogoareaTransparent: true });
-   //    else this.setState({ isLogoareaTransparent: false });
 
-   //    if (x >= 1.1) this.setState({ isHome2BgSmooth: true });
-   //    else this.setState({ isHome2BgSmooth: false });
+      //滚动条控制
+      if (this.$galleryTrack) {
+         if (4 <= x && x <= 50) {
+            let index = (x - 4) * 100 / 7;
+            if (index <= 600) {
+               this.$galleryTrack.style.transform = 'translate3d(-' + index +
+                  'vw, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)';
+            } else {
+               this.$galleryTrack.style.transform = 'translate3d(-' + 600 +
+                  'vw, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)';
+            }
+         } else {
+            this.$galleryTrack.style.transform =
+               'translate3d(0vw, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)';
+         }
+      }
+   }
 
-   //    x -= 1;
-   //    const x2 = (offset - pageHeight) / pageWidth;
+   public addAnomination = () => {
+      this.ch0 = Lottie.loadAnimation({
+         container: document.getElementById('ch0'),
+         renderer: 'svg',
+         loop: false,
+         autoplay: false,
+         animationData: Data0,
 
-   //    if (x <= 0) {
-   //       $logoareaContainer.style.transform = 'translateX(0)';
-   //       $home2Content.style.left = '0';
-   //    } else if (x2 <= 3.2) {
-   //       $logoareaContainer.style.transform = 'translateX(-' + x * pageHeight + 'px)';
-   //       $home2Content.style.left = '-' + x * pageHeight + 'px';
-   //    } else {
-   //       $home2Content.style.left = '-' + (3.2 * pageWidth) + 'px';
-   //    }
+      })
 
-   //    if (x2 <= 0) return;
-   //    if (x2 > .05 && !this.state.shouldShowSection2) {
-   //       this.setState({
-   //          shouldShowSection2: true,
-   //       });
-   //    }
-   //    if (x2 <= 0.6) {
-   //       $home2.style.backgroundColor = 'rgb(0, 183, 195)';
-   //    } else if (x2 <= 1.3) { // 0.6
-   //       $home2.style.backgroundColor = '#faf9f8';
-   //       this.setState({
-   //          isSection4Text1Hide: false,
-   //       });
-   //    } else if (x2 <= 1.4) { // 1.4
-   //       $home2.style.backgroundColor = '#faf9f8';
-   //       this.setState({
-   //          isSection4Text1Hide: true,
-   //       });
-   //    } else if (x2 <= 2.05) { // 1.45
-   //       $home2.style.backgroundColor = '#000';
-   //       this.setState({
-   //          isSection4Text1Hide: true,
-   //       });
-   //    } else {
-   //       this.setState({
-   //          hasFishSlideIn: true,
-   //       });
-   //    }
-   //    console.log(x2);
-   //    // $s3Bg.style.transform = 'translateX(' + (x2 - 1.1) * 100 + '%)';
-   // }
+      this.ch1 = Lottie.loadAnimation({
+         container: document.getElementById('ch1'),
+         renderer: 'svg',
+         loop: false,
+         autoplay: false,
+         animationData: Data1,
+      })
+
+      this.ch2 = Lottie.loadAnimation({
+         container: document.getElementById('ch2'),
+         renderer: 'svg',
+         loop: false,
+         autoplay: false,
+         animationData: Data2,
+      })
+
+      this.ch2Line = Lottie.loadAnimation({
+         container: document.getElementById('ch2-line'),
+         renderer: 'svg',
+         loop: false,
+         autoplay: false,
+         animationData: Line234,
+      })
+
+      this.ch3 = Lottie.loadAnimation({
+         container: document.getElementById('ch3'),
+         renderer: 'svg',
+         loop: false,
+         autoplay: false,
+         animationData: Data3,
+
+      })
+
+      this.ch3Line = Lottie.loadAnimation({
+         container: document.getElementById('ch3-line'),
+         renderer: 'svg',
+         loop: false,
+         autoplay: false,
+         animationData: Line234,
+      })
+
+      this.ch4 = Lottie.loadAnimation({
+         container: document.getElementById('ch4'),
+         renderer: 'svg',
+         loop: false,
+         autoplay: false,
+         animationData: Data4,
+
+      })
+
+      this.ch4Line = Lottie.loadAnimation({
+         container: document.getElementById('ch4-line'),
+         renderer: 'svg',
+         loop: false,
+         autoplay: false,
+         animationData: Line234,
+      })
+
+
+      this.ch5 = Lottie.loadAnimation({
+         container: document.getElementById('ch5'),
+         renderer: 'svg',
+         loop: false,
+         autoplay: false,
+         animationData: Data5,
+
+      })
+
+      this.ch5Line = Lottie.loadAnimation({
+         container: document.getElementById('ch5-line'),
+         renderer: 'svg',
+         loop: false,
+         autoplay: false,
+         animationData: Line56,
+      })
+
+
+      this.ch6 = Lottie.loadAnimation({
+         container: document.getElementById('ch6'),
+         renderer: 'svg',
+         loop: false,
+         autoplay: false,
+         animationData: Data6,
+
+      })
+
+      this.ch6Line = Lottie.loadAnimation({
+         container: document.getElementById('ch6-line'),
+         renderer: 'svg',
+         loop: false,
+         autoplay: false,
+         animationData: Line56,
+      })
+
+      this.ch7 = Lottie.loadAnimation({
+         container: document.getElementById('ch7'),
+         renderer: 'svg',
+         loop: false,
+         autoplay: false,
+         animationData: Data7,
+
+      })
+   }
 
    public async enter() {
       document.title = 'Home - CPU-CHINA - iGEM 2020';
-      this.$logoareaSpinner.startLengthening();
-      await delay(800);
-      this.$logoareaSpinner.stopRotating();
-      this.setState({
-         showLogo: true,
-         isLogoareaBlue: true,
-      });
-      await delay(100);
-      this.setState({
-         shouldApproach: true,
-         showHome1Bg: true,
-      });
-      await delay(1000);
-      this.setState({
-         showLogoWave: true,
-         showHome1Slogan: true,
-      });
-      await delay(300);
-      this.setState({
-         isHome1MaskNotDisplay: true,
-         showHome23: true,
-      }, () => {
-         // this.resize();
-      });
+      // this.$logoareaSpinner.startLengthening();
+      // await delay(800);
+      // this.$logoareaSpinner.stopRotating();
+      // this.setState({
+      //    showLogo: true,
+      //    isLogoareaBlue: true,
+      // });
+      // await delay(100);
+      // this.setState({
+      //    shouldApproach: true,
+      //    showHome1Bg: true,
+      // });
+      // await delay(1000);
+      // this.setState({
+      //    showLogoWave: true,
+      //    showHome1Slogan: true,
+      // });
+      // await delay(300);
+      // this.setState({
+      //    isHome1MaskNotDisplay: true,
+      //    showHome23: true,
+      // }, () => {
+      //    // this.resize();
+      // });
    }
    public async exit() {
-      this.setState({
-         shouldHomePageLeave: true,
-      });
+      // this.setState({
+      //    shouldHomePageLeave: true,
+      // });
       await delay(300);
       window.scrollTo({
          top: 0,
       });
    }
-
-   // public render() {
-   //    const {
-   //       homeHeight,
-   //       shouldHomePageLeave: leave,
-   //       shouldApproach,
-   //       isLogoareaBlue,
-   //       isLogoareaTransparent,
-   //    } = this.state;
-   //    const cns = normalizeClassNames({
-   //       home: [
-   //          'home',
-   //          leave && 'fade-out',
-   //       ],
-   //       homeLogoarea: [
-   //          'home-logoarea',
-   //          isLogoareaBlue && 'blue',
-   //          isLogoareaTransparent && 'transparent',
-   //          shouldApproach && 'approach',
-   //       ],
-   //    });
-
-   //    return (
-   //       // <div id='home' className={cns.home}
-   //       //    style={homeHeight ? { height: homeHeight + 'px' } : void 0}
-   //       // >
-   //       //    <div className='home-fixed' ref={e => this.$homeFixed = e!}>
-   //       //       <div className='home-logoarea-container' ref={e => this.$logoareaContainer = e!}>
-   //       //          <div id='home-logoarea' className={cns.homeLogoarea}
-   //       //             ref={e => this.$home1Logoarea = e!}>
-   //       //             {this.renderLogoarea()}
-   //       //          </div>
-   //       //       </div>
-   //       //       {this.renderHome1()}
-   //       //       {this.renderHome2()}
-   //       //    </div>
-   //       //    {this.renderHome3()} 
-   //       // </div>
-   //       <div>
-   //          <h3>This Home Page</h3>
-   //       </div>
-   //    );
-   // }
-
-   // private renderHome1() {
-   //    const {
-   //       shouldApproach,
-   //       isHome1MaskNotDisplay: home1MaskNotDisplay,
-   //       showHome1Bg,
-   //       isHome1BgImgTooWide: home1BgImgTooWide,
-   //       showHome1Slogan,
-   //    } = this.state;
-   //    const cns = normalizeClassNames({
-   //       home1: 'home-1',
-   //       home1Mask: [
-   //          'home-1-mask',
-   //          shouldApproach && 'approach',
-   //          home1MaskNotDisplay && 'not-display',
-   //       ],
-   //       home1Bg: [
-   //          'home-1-bg',
-   //          showHome1Bg && 'show',
-   //          home1BgImgTooWide ? 'height' : 'width',
-   //       ],
-   //       home1Slogan: [
-   //          'home-1-slogan',
-   //          showHome1Slogan && 'show',
-   //       ],
-   //    });
-
-   //    return (
-   //       <div id='home-1' className={cns.home1}>
-   //          <canvas className={cns.home1Mask} ref={e => this.$home1Mask = e!}></canvas>
-   //          <div className={cns.home1Slogan}>
-   //             <div>
-   //                <div>Earth Intelligence Against</div>
-   //                <div>Earth Cancer</div>
-   //                <div className='chevron-container'>
-   //                   <div className='chevron'></div>
-   //                   <div className='chevron'></div>
-   //                </div>
-   //             </div>
-   //          </div>
-   //          <div className={cns.home1Bg}>
-   //             <img className='img'
-   //                src={assets.pages.Home.homeBg$jpg}
-   //                ref={e => this.$home1BgImg = e!}
-   //                alt='The background of homepage.' />
-   //             <div className='mask'></div>
-   //          </div>
-   //       </div>
-   //    );
-   // }
-
-   // private renderLogoarea() {
-   //    const cns = normalizeClassNames({
-   //       logo: [
-   //          'logoarea-logo',
-   //          this.state.showLogo && 'enter',
-   //       ],
-   //       wave: [
-   //          'logoarea-wave',
-   //          'fill-wave',
-   //          this.state.showLogoWave && 'show',
-   //       ],
-   //    });
-   //    return (<>
-   //       <HomePageSpinner ref={e => this.$logoareaSpinner = e!} />
-   //       <img className={cns.logo} src={assets.logos.teamLogo$svg} alt='The logo of our team.' />
-   //       <div className={cns.wave}>
-   //          <div><div></div><div></div></div>
-   //       </div>
-   //    </>);
-   // }
-
-   // private renderHome2() {
-   //    const {
-   //       showHome23,
-   //       home2Width,
-   //       shouldShowSection2,
-   //       isHome2BgSmooth,
-   //       isSection4Text1Hide,
-   //       hasFishSlideIn,
-   //    } = this.state;
-
-   //    const cns = normalizeClassNames({
-   //       home2: [
-   //          'home-2',
-   //          showHome23 && 'show',
-   //          isHome2BgSmooth && 'smooth-bg',
-   //       ],
-   //       s2Text: [
-   //          's2-text',
-   //          shouldShowSection2 && 'show',
-   //       ],
-   //       s4t1: [
-   //          's4-t1',
-   //          isSection4Text1Hide && 'hide',
-   //       ],
-   //       fish: [
-   //          's7-bg',
-   //          hasFishSlideIn && 'in',
-   //       ],
-   //    });
-
-   //    return (
-   //       <div id='home-2' className={cns.home2} ref={e => this.$home2 = e!}>
-   //          <main className='home-2-content' ref={e => this.$home2Content = e!}
-   //             style={home2Width ? { width: home2Width } : void 0}>
-   //             {/* <div style={{ position: 'absolute', left: 100, top: 100, width: 200, height: 100, background: 'red' }}></div> */}
-
-   //             <section className='home-2-sect' style={{ left: '0' }}>
-   //             </section>
-
-
-   //             <section className='home-2-sect' style={{ left: '50vw', width: '75vw' }}>
-   //                <div className='home-2-flex'>
-   //                   <div className={cns.s2Text}>
-   //                      <div className='s2-h1'>Algae Terminator</div>
-   //                      <div className='s2-h2'>The Midas Touch for Cyanobacteria</div>
-   //                   </div>
-   //                </div>
-   //             </section>
-
-
-   //             <section className='home-2-sect' style={{ left: '125vw' }}>
-   //                <div className='s3-bg'>
-   //                   {/* <div ref={e => this.$s3Bg = e!}>
-   //                      <MsImage src={assets.pages.Home.bg$jpg} imageFit={ImageFit.cover} width='100%' height='100%' />
-   //                   </div> */}
-   //                </div>
-   //             </section>
-
-
-   //             <section className='home-2-sect' style={{ left: '175vw', userSelect: 'none' }}>
-   //                <div className={cns.s4t1}>
-   //                   <div className='home-2-flex' style={{ color: '#323130' }}>
-   //                      <div className='home-2-sect-inner'>
-   //                         <div className='home-2-sect-header'>Why is it so urgent to deal with algae bloom?</div>
-   //                         <div className='home-2-sect-subheader'>The cancer of earth brooks no delay.</div>
-   //                         <div className='home-2-sect-body'>
-   //                            <p>Cyanobacteria (blue-green algae) can reproduce infinitely as long as there is adequate nutrition, which leads to frequent harmful algae bloom all over the world. <span style={{ fontSize: '1.4em' }}>Just like cancer cells to earth</span>.</p>
-   //                            <p>Under the background of global warming and ocean acidification, large scale of cyanobacteria bloom-forming is unavoidable, causing serious damage to water ecosystem and drinking water safety.</p>
-   //                         </div>
-   //                      </div>
-   //                   </div>
-   //                </div>
-   //                <div className='s4-t2'>
-   //                   <div className='home-2-flex' style={{ color: '#faf9f8' }}>
-   //                      <div className='home-2-sect-inner'>
-   //                         <div className='home-2-sect-header'>What is the highlight of our project?</div>
-   //                         <div className='home-2-sect-subheader'>‘From nature, to nature’, we always believe.</div>
-   //                         <div className='home-2-sect-body'>
-   //                            <p>Creatively, we turn blue-green algae <span style={{ fontSize: '1.4em' }}>from pollution to resource</span>. Our degradation product of cyanobacteria is toxin-free small molecule nutrients, which is a great supplement to animal feed protein ingredients.</p>
-   //                            <p>The best choice for nature problem is always hide in nature itself. We learned the existing method in nature from marine creature and develop it to be the best solution to earth cancer. The system of us is clear, simple and efficient with low the ecological safety risk. We don’t release any genetically modified organisms or their products directly into the environment.</p>
-   //                         </div>
-   //                      </div>
-   //                   </div>
-   //                </div>
-   //             </section>
-   //             <section className='home-2-sect' style={{ left: '225vw' }}>
-   //                <div className='s5-bg'>
-   //                   {/* <div ref={e => this.$s3Bg = e!}>
-   //                      <MsImage src={assets.pages.Home.bg$jpg} imageFit={ImageFit.cover} width='100%' height='100%' />
-   //                   </div> */}
-   //                </div>
-   //             </section>
-
-   //             <section className='home-2-sect' style={{ left: '325vw', width: '70vw', userSelect: 'none', zIndex: 1 }}>
-
-   //                <div className='home-2-flex' style={{ color: '#faf9f8' }}>
-   //                   <div className='home-2-sect-inner'>
-   //                      <div className='home-2-sect-header'>How do we make it?</div>
-   //                      <div className='home-2-sect-subheader'>From salvage to use, we are moving on.</div>
-   //                      <div className='home-2-sect-body'>
-   //                         <p>Recently, we have found that a simple creature called the amphioxus (Branchiostoma) has an unusual way of absorbing nutrients called phagocytic intracellular digestion, which can digest algae directly and degrade harmful algal elements.</p>
-   //                         <p style={{ fontSize: '1.3em' }}>Biobrick + Scaled expression + Natural ratio= Successful degradation with high efficiency</p>
-   //                         <p>We also modeled the reaction process and mechanism by computer simulation. In addition, we combine our project with TaiHu Lake algae control program and integrated algae fishing and treatment equipment, so as to make the degradation liquid reach the level of engineering application.</p>
-   //                      </div>
-   //                   </div>
-   //                </div>
-
-   //             </section>
-
-   //             <section className='home-2-sect' style={{ left: '275vw', zIndex: 0 }}>
-   //                <div className={cns.fish}>
-   //                   <MsImage src={assets.pages.Home.fish$jpg} width='100%' height='100%' imageFit={ImageFit.contain} />
-   //                </div>
-   //             </section>
-
-   //          </main>
-   //       </div >
-   //    );
-   // }
-   // private renderHome3() {
-   //    const cns = normalizeClassNames({
-   //       home3: [
-   //          'home-3',
-   //          this.state.showHome23 && 'show',
-   //       ],
-   //    });
-   //    return (
-   //       <div className={cns.home3} ref={e => this.$home3 = e!}>
-   //          <div className='home-3-header'>
-   //             <div>
-   //                Where would our degradation product go?
-   //             </div>
-   //          </div>
-   //          <div className='home-3-subheader'>
-   //             <div>
-   //                Eat algae like a fish? That’s not impossible.
-   //             </div>
-   //          </div>
-   //          <div className='home-3-body'>
-   //             <div>
-   //                <p>Focusing on the original discovery of intracellular digestive mechanism of marine organisms (amphioxus) and the theme of algae ecological management, we develop a novel non-grain feed protein source as raw material for feed protein based on algae degradation products. The main components of degradation products of cyanobacteria are amino acids, small peptides, oligopeptides and oligosaccharides. It will be a powerful substitute for soybean and other traditional feed protein sources with higher nutritive value, lower cost and more stable supply.</p>
-   //                <p>In the face of cyanobacteria crisis, we learn from the wisdom of nature. Jumping out from controlling cyanobacteria pollution via traditional methods, we find a new way to utilize cyanobacteria resources. It is a creative business model with closed-loop that will revolutionize the feed industry and have more profound influence in the future. As we know, cyanobacteria reserves are abundant around the world and if they are exploited effectively, more arable land will be saved to grow rations. This will improve the nutritional level and solve global food crisis to some extent.</p>
-   //                <p>By the way, perhaps one day in the future, we would develop delicious cyanobacteria biscuits and they would be your first choice for afternoon tea!</p>
-   //             </div>
-   //          </div>
-   //          <div style={{ height: '6em' }}></div>
-   //          <div className='home-3-end-logo'>
-   //             <img src={assets.logos.teamLogo$svg} alt='The logo of our team.' />
-   //          </div>
-   //          <div style={{ height: '14em' }}></div>
-   //       </div>
-   //    );
-   // }
 }

@@ -56,13 +56,13 @@ export class HomePage implements Page {
 
    public tryEnter() {
       if (this.App!.currPage !== this) return;
-      if (this.animationState !== HomePageAnimationState.Entering) return;
+      // if (this.animationState !== HomePageAnimationState.Entering) return;
       if (this.resrcState !== LoadingState.Loaded) return;
       this.animationState = HomePageAnimationState.Entered;
       this.App!.$body.enter().then(() => {
          if (this.App!.currPage !== this) return;
          this.App!.setState({
-            showFooter: true,
+            showFooter: false,
          });
       });
    }

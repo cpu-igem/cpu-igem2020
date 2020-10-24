@@ -3,11 +3,11 @@
 }
 
 .lightTheme-doc #doc-2-bg {
-   background: #ebebeb;
+   background: #fffffb;
 }
 
 .lightTheme-doc #doc-3-bg {
-   background: #EBEBEB;
+   background: #fffffb;
 }
 
 .lightTheme-doc #doc-body h2 {
@@ -21,17 +21,17 @@
 
 .lightTheme-doc #doc-body h2::selection {
    background: rgb(58, 116, 112);
-   color     : #ebebeb;
+   color     : #fffffb;
 }
 
 .lightTheme-doc #doc-body h2::-moz-selection {
    background: rgb(58, 116, 112);
-   color     : #ebebeb;
+   color     : #fffffb;
 }
 
 .lightTheme-doc #doc-body h2::-webkit-selection {
    background: rgb(58, 116, 112);
-   color     : #ebebeb;
+   color     : #fffffb;
 }
 
 .lightTheme-doc #doc-body *::selection {

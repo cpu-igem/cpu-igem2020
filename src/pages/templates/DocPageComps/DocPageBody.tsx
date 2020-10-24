@@ -299,8 +299,8 @@ export default class DocPageBody extends React.Component<IDocPageProps, IDocPage
       const hasAsideClassName = this.state.hasAside ? 'doc-has-aside' : 'doc-no-aside';
       const hasInfoBarClassName = this.state.hasInfobar ? 'doc-has-infobar' : 'doc-no-infobar';
       const shimmerColors = {
-         background: this.state.darkMode ? 'red' : 'white',
-         shimmer: this.state.darkMode ? 'red' : '#ebebeb',
+         background: this.state.darkMode ? 'red' : '#ebebeb',
+         shimmer: this.state.darkMode ? 'red' : '#E1E1E1',
       };
       // const shimmerColors = {
       //    background: this.state.darkMode ? '#3B3A39' : '#FFFFFF',

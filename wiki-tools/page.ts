@@ -6,17 +6,36 @@ import login from './login';
 import config from '../wiki-config.json';
 import { concurrencyRestrictify } from './util';
 
+
+//把  index.html 上传到所有Wiki页面
 const selector = '../dist/index.html';
 interface File2BeUploaded {
    path: string;
    content: string;
 }
 const pages: string[] = [
-   // 'Team:CPU_CHINA',
-   // 'Team:CPU_CHINA/',
-   // 'Team:CPU_CHINA/about',
-   // 'Team:CPU_CHINA/Project',
-   'Team:CPU_CHINA/Model'
+   'Team:CPU_CHINA',
+   'Team:CPU_CHINA/',
+   // Bronze
+   'Team:CPU_CHINA/Attributions',
+   'Team:CPU_CHINA/Description',
+   'Team:CPU_CHINA/Contribution',
+   // Silver
+   'Team:CPU_CHINA/Engineering',
+   'Team:CPU_CHINA/Collaborations',
+   'Team:CPU_CHINA/Human_Practices',
+   'Team:CPU_CHINA/Implementation',
+   // Gold
+   'Team:CPU_CHINA/Proof_Of_Concept',
+   'Team:CPU_CHINA/Partnership',
+   'Team:CPU_CHINA/Education',
+   'Team:CPU_CHINA/Model',
+
+   // Specical Prizes
+   'Team:CPU_CHINA/Inclusion',
+   'Team:CPU_CHINA/Entrepreneurship',
+   'Team:CPU_CHINA/Sustainable',
+
 ];
 
 (async () => {
@@ -24,7 +43,7 @@ const pages: string[] = [
    await login(browser);
 
    const files = searchTargetFiles();
-   console.log(files.length);
+   console.log("有" + files.length + "个打包文件需要上传");
    let succeedNum = 0;
 
    const singleUpload = concurrencyRestrictify(_singleUpload, 2);

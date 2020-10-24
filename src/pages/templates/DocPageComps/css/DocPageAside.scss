@@ -13,14 +13,14 @@
    overflow-y                : auto;
    -webkit-overflow-scrolling: touch;
    -ms-overflow-style        : none;
-   scrollbar-width           : none;
-   overflow                  : -moz-scrollbars-none;
+   // scrollbar-width           : none;
+   // overflow                  : -moz-scrollbars-none;
    display: flex;
    justify-content: center;
 
-   &::-webkit-scrollbar {
-      display: none;
-   }
+   // &::-webkit-scrollbar {
+   //    // display: none;
+   // }
 
    >.ms-Shimmer-container {
       margin-top: 12px;
@@ -116,7 +116,7 @@
 }
 
 .ant-anchor-wrapper{
-   background-color:#ebebeb !important;
+   background-color:#fffffb !important;
 }
 
 .ant-anchor-link-active > .ant-anchor-link-title-active{
@@ -134,4 +134,9 @@
 .ant-anchor-link{
    text-overflow: ellipsis !important;
    width: 150px !important;
+}
+
+.ant-anchor-wrapper{
+   width: 100% !important;
+   overflow: hidden !important;
 }

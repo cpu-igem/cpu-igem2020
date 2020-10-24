@@ -2,8 +2,6 @@ import React from 'react';
 import { assets } from '../assets-path.json';
 
 import './css/Footer.scss';
-import { svgMail } from './assets/svg-mail';
-import { svgTwi } from './assets/svg-twi';
 
 interface IFooterProps {
    showFooter?: boolean;
@@ -20,7 +18,7 @@ export default class Footer extends React.Component<IFooterProps> {
       return (
          <div id='footer' style={{ display: this.props.showFooter ? 'block' : 'none' }}>
             <div id='footer-strip-container'>
-            <img id='footer-glass' src={require("C:/Users/刘鑫/Desktop/iGEM/cpu-igem2020/assets/footer/glass.png")} alt=""/>
+               <img id='footer-glass' src={assets.footer.glass$png} alt="" />
                <div id="footer-strip-line">
                </div>
                {/* <div id='footer-strip-set'>
@@ -32,61 +30,53 @@ export default class Footer extends React.Component<IFooterProps> {
             <div id='footer-1'>
                <div id='footer-2'>
                   <div className='footer-space'></div>
-                  <div id='footer-content'>
-                     <div id='footer-cont-logo'>
-                        <div id='footer-cta'>
-                           <div id='footer-cta-inner'>
-                              <h3>Contact us</h3>
-                              <div className='footer-cta-btnbar'>
-                                 <div className='footer-cta-btn' onClick={() => this.onClickLogoBtn('mailto:iGEMTEAMCPU@163.com')}>
-                                    <div>{svgMail}</div>
-                                    <div>iGEMTEAMCPU@163.com</div>
-                                 </div>
-                                 <div className='footer-cta-btn' onClick={() => this.onClickLogoBtn('https://instagram.com/igem_cpu2019')}>
-                                    <div>{svgTwi}</div>
-                                    <div>@Lico~Health</div>
-                                 </div>
-                                 <div className='footer-cta-btn' onClick={() => this.onClickLogoBtn('https://weibo.com/u/6856701868')}>
-                                    <div>
-                                       {/* {svgWb} */}
-                                    </div>
-                                    <div>@CPU_CHINA_2019</div>
-                                 </div>
-                              </div>
+                  <div id='footer-container'>
+                     <div id='footer-title-container'>
+                        <div id='footer-title'>
+                           <div id='footer-text'>
+                              <span>
+                                 Contact us
+                              </span>
+                           </div>
+                           <div id='footer-divide'></div>
+                           <div id='footer-cpu-logo' onClick={() => this.onClickLogoBtn('https://international.cpu.edu.cn/')}>
+                              <img src={assets.footer.cpu$png} alt="" />
                            </div>
                         </div>
-                        <div id='footer-logo'>
-                           <div className='footer-logo-btn' onClick={() => this.onClickLogoBtn('https://international.cpu.edu.cn/')}>
-                              <img
-                                 src={assets.CPUWithText$png}
-                                 alt='China Pharmaceutical University Logo'
-                                 style={{ height: '4.8em' }}
-                              />
-                           </div>
-                           <div className='footer-logo-btn' onClick={() => this.onClickLogoBtn('https://sky.cpu.edu.cn/')}>
-                              <img
-                                 src={assets.SkyLogoWhite$png}
-                                 alt='State Key Laboratory of Bioelectronics'
-                                 style={{
-                                    height: '4.5em',
-                                    position: 'relative',
-                                    left: '.6em',
-                                 }}
-                              />
-                           </div>
-                           <div id='footer-github-container' className='footer-logo-btn' onClick={() => this.onClickLogoBtn('https://github.com/cpu-igem/cpu-igem2020')}>
-                              <img
-                                 src={assets.github.GitHubMarkLight64px$png}
-                                 alt='Star this website on Github'
-                                 style={{ height: '3.2em' }}
-                              />
-                              <div style={{ width: '1.2em' }}></div>
-                              <div id='footer-github-msg'>
-                                 <h2>Like our website?</h2>
-                                 <p>
-                                    It is open sourced under GPLv2 License on Github.
-                           </p>
+                     </div>
+                     <div id='footer-contact-container1'>
+                        <div id='footer-contact-container'>
+                           <div className='footer-contact-item' onClick={() => this.onClickLogoBtn('https://instagram.com/igem_cpu2019')}>
+                              <div className='footer-contact-img'>
+                                 <img src={assets.footer.twitter$png} alt="" />
                               </div>
+                              <div className='footer-contact-text'>
+                                 @Lico-Health
+                           </div>
+                           </div>
+                           <div className='footer-contact-item' onClick={() => this.onClickLogoBtn('https://weibo.com/u/6856701868')}>
+                              <div className='footer-contact-img'>
+                                 <img src={assets.footer.weibo$png} alt="" />
+                              </div>
+                              <div className='footer-contact-text'>
+                              @CPU-CHINA2020
+                           </div>
+                           </div>
+                           <div className='footer-contact-item' onClick={() => this.onClickLogoBtn('mailto:iGEMTEAMCPU@163.com')}>
+                              <div className='footer-contact-img'>
+                                 <img src={assets.footer.email$png} alt="" />
+                              </div>
+                              <div className='footer-contact-text'>
+                                 iGEMTEAMCPU@163.com
+                           </div>
+                           </div>
+                           <div className='footer-contact-item' onClick={() => this.onClickLogoBtn('https://github.com/cpu-igem/cpu-igem2020')}>
+                              <div className='footer-contact-img'>
+                                 <img src={assets.footer.github$png} alt="" />
+                              </div>
+                              <div className='footer-contact-text'>
+                              Like our Website?
+                           </div>
                            </div>
                         </div>
                      </div>

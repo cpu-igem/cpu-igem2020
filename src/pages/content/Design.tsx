@@ -9,19 +9,19 @@ export const body = {
    hasInfobar: true,
    hasRating: true,
    translatable: true,
-   pageLocation: [
-      { text: 'Home', path: '/' },
-      { text: 'Project', path: '/Description' },
-      { text: 'Description', path: '/Description' },
-   ],
-   editors: [
-      {
-         name: 'XXX XXX', hash: '#XXX-XXX',
-         // nameAbbr: 'CF', avatar: assets.avatars.ChengyuFu32x32$png,
-      },
-   ],
-   lastModified: 'July 19, 2020',
-   docTitle: 'Hello Everyone',
+   // pageLocation: [
+   //    { text: 'Home', path: '/' },
+   //    { text: 'Project', path: '/Description' },
+   //    { text: 'Description', path: '/Description' },
+   // ],
+   // editors: [
+   //    {
+   //       name: 'XXX XXX', hash: '#XXX-XXX',
+   //       // nameAbbr: 'CF', avatar: assets.avatars.ChengyuFu32x32$png,
+   //    },
+   // ],
+   // lastModified: 'July 19, 2020',
+   // docTitle: 'Hello Everyone',
    content:(
       <>
       <div>

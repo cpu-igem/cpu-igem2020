@@ -24,34 +24,44 @@ const links = [
    {
       h1: { text: 'Project' },
       h2: [
-         { text: 'Project DDDDDD', url: '/Description' },
-         { text: 'Project Design', url: '/Design' },
-         { text: 'Experiments', url: '/Experiments' },
-         { text: 'Notebook', url: '/Notebook' },
-         { text: 'Contribution', url: '/Contribution' },
-         { text: 'Result', url: '/Result' },
+         { text: 'Description', url: '/Description' },
+         { text: 'Design', url: '/Design' },
          { text: 'Demonstrate', url: '/Demonstrate' },
-         { text: 'Improve', url: '/Improve' },
       ],
    },
    {
-      h1: { text: 'Human Practices' },
+      h1: { text: 'Lab' },
       h2: [
-         { text: 'Human Practices', url: '/Human_Practices' },
-         { text: 'Education & Engagement', url: '/Education_Engagement' },
+         { text: 'Notebook', url: '/Notebook' },
+         { text: 'Experiments', url: '/Experiments' },
+         { text: 'Results', url: '/Results' },
+         { text: 'Safety', url: '/Safety' },
+      ],
+   },
+   {
+      h1: { text: 'Parts' },
+      h2: [
+         { text: 'Summary', url: '/Parts' },
+         { text: 'Basic Part', url: '/Basic_Part' },
+         { text: 'Composite Part', url: '/Composite_Part'},
       ],
    },
    {
       h1: { text: 'Modeling' },
       h2: [
-         { text: 'Overview', url: '/Modeling_Overview' },
+         { text: 'Summary', url: '/Model' },
+         { text: 'Alcohol Disposal', url: '/Model/Alcohol' },
+         { text: 'Bacteriocins Model', url: '/Model/Bacteriocins' },
+         { text: 'IL-22 Model', url: '/Model/IL_22' },
+         { text: 'Plasmid Transduction', url: '/Model/Transduction' },
       ],
    },
    {
-      h1: {
-         text: 'Safety',
-         plainText: 'Safety',
-      }
+      h1: { text: 'Human Practices' },
+      h2: [
+         { text: 'Summary', url: '/Human_Practices/Summary' },
+         { text: 'Human Practices', url: '/Human_Practices' }
+      ],
    },
    {
       h1: { text: 'Team' },
@@ -60,14 +70,6 @@ const links = [
          { text: 'Attributions', url: '/Attributions' },
          { text: 'Collaborations', url: '/Collaborations' },
          { text: 'Sponsors', url: '/Sponsors' },
-      ],
-   },
-   {
-      h1: { text: 'Parts' },
-      h2: [
-         { text: 'Overview', url: '/Parts_Overview' },
-         { text: 'Basic Part', url: '/Basic_Part' },
-         { text: 'Composite Part', url: '/Composite_Part' },
       ],
    },
    {
