@@ -10,7 +10,7 @@
    width                     : 100%;
    margin-top                : 1.5em;
    position                  : relative;
-   overflow-y                : auto;
+   overflow                  : hidden;
    -webkit-overflow-scrolling: touch;
    -ms-overflow-style        : none;
    // scrollbar-width           : none;
@@ -112,7 +112,7 @@
 }
 
 .ant-anchor-ink-ball{
-   border: 2px solid #e91e63 !important;
+   border: 2px solid #b35a5a !important;
 }
 
 .ant-anchor-wrapper{
@@ -120,20 +120,24 @@
 }
 
 .ant-anchor-link-active > .ant-anchor-link-title-active{
-   color:#121212 !important;
+   color:#b35a5a !important;
    font-weight: bold !important;
 }
 
 .ant-anchor-link-title{
    &:hover{
-      color:#121212 !important;
+      color:#b35a5a !important;
       font-weight: bold !important;
    }
 }
 
 .ant-anchor-link{
    text-overflow: ellipsis !important;
-   width: 150px !important;
+   width: 200px !important;
+
+   a{
+      text-decoration: none;
+   }
 }
 
 .ant-anchor-wrapper{

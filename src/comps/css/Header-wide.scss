@@ -35,15 +35,21 @@ $wideheader-vp-width: 1080px;
    display: flex;
    justify-content: center;
    &:hover{
+      color: #B35A5A;
       font-weight: 500;
    }
 }
 
 .ant-menu{
    width: 140px !important;
+   transition: none !important;
 }
 
 .ant-menu-item{
+   line-height: 15px !important;
+   text-overflow: none !important;
+   overflow: none !important;
+   white-space:normal !important;
    text-align: center !important;
    font-size: 12px !important;
    font-weight: 400 !important;
@@ -52,9 +58,8 @@ $wideheader-vp-width: 1080px;
    margin-bottom: 0px !important;
    padding:0px !important;
    &:hover{
-      color:#121212 !important;
-      font-weight: bold !important;
-      // background-color: red;
+      color:#B35A5A !important;
+      font-weight: bold !important
    }
 }
 
@@ -64,12 +69,8 @@ $wideheader-vp-width: 1080px;
 
 .ant-menu-item-selected{
    background-color: white !important;
-   color: #121212;
+   color: #B35A5A;
    font-weight: 0;
-}
-
-.ant-dropdown{
-   // top: 73px !important;
 }
 
 .header-nav-3d-container {
@@ -150,7 +151,12 @@ $wideheader-vp-width: 1080px;
 
    >div {
       font-size     : 13px;
-      font-family   : "Segoe UI", "Segoe UI Web (West European)", "Segoe UI";
+      font-family   : 
+      "Helvetica Neue",
+      "PingFang SC",
+      "Segoe UI",
+      "Segoe UI Web (West European)",
+      "Segoe UI";
       font-weight   : 400;
       line-height   : 20px;
       letter-spacing: 1px;
@@ -167,3 +173,8 @@ $wideheader-vp-width: 1080px;
       background-color: #EDEBE9;
    }
 }
+
+// .ant-menu-item-active{
+//    color: #B35A5A !important;
+//    font-weight: 1000 !important;
+// }

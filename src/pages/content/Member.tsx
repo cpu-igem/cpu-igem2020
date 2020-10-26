@@ -60,7 +60,7 @@ const members = [
             {
                 img:assets.members.LiYilin$jpg,
                 name: 'Yilin Li',
-                position:'Cell Farmer',
+                position:'Wet-lab Leader',
                 intro:'My name is YILIN LI. I have a boyfriend, his name is science. But…I can have another one.'
             },
             {

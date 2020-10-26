@@ -2,18 +2,18 @@
    cursor  : pointer;
    display : inline-block;
    position: relative;
-
+   font-size: 1.2em;
    >a {
       text-decoration: none;
 
       &:link,
       &:visited {
          .lighttheme-doc & {
-            color: #0078d4;
+            color: #B35A5A;
          }
 
          .darktheme-doc & {
-            color: lighten(#0078d4, 20%);
+            color: lighten(#B35A5A, 20%);
          }
 
          text-decoration: none;
@@ -22,11 +22,11 @@
       &:hover,
       &:hover {
          .lighttheme-doc & {
-            color: #004578;
+            color: #B35A5A;
          }
 
          .darktheme-doc & {
-            color: lighten(#0078d4, 30%);
+            color: lighten(#B35A5A, 30%);
          }
       }
 
@@ -36,7 +36,7 @@
          bottom          : 0px;
          width           : 100%;
          height          : 2px;
-         background-color: #008ddd;
+         background-color: #B35A5A;
          transform       : scaleX(0);
          transition      : all 0.2s ease-in-out 0s;
       }

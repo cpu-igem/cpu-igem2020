@@ -16,7 +16,7 @@ import { NavBox } from '../../content/comps/NavBox';
 // import './css/home-3.scss';
 import './css/homepage.scss';
 // import './css/home-nav.scss';
-import Data0 from 'C:/Users/刘鑫/Desktop/新建文件夹 (2)/Home Page/线条/output/output/主页动图/ch0.json'
+import Data0 from 'C:/Users/刘鑫/Desktop/新建文件夹 (2)/Home Page/线条/output/output/主页动图/ch0(1).json'
 import Data1 from 'C:/Users/刘鑫/Desktop/新建文件夹 (2)/Home Page/线条/output/output/主页动图/ch1.json'
 import Data2 from 'C:/Users/刘鑫/Desktop/新建文件夹 (2)/Home Page/线条/output/output/主页动图/ch2.json'
 import Data3 from 'C:/Users/刘鑫/Desktop/新建文件夹 (2)/Home Page/线条/output/output/主页动图/ch3.json'
@@ -61,6 +61,28 @@ export class HomePageBody extends React.Component<{}, IHomePageState> {
    private ch6Line: any;
    private $galleryTrack: HTMLDivElement;
    private $homePage: HTMLDivElement;
+   private $title0: HTMLDivElement;
+   private $title1: HTMLDivElement;
+   private $title2: HTMLDivElement;
+   private $title3: HTMLDivElement;
+   private $title4: HTMLDivElement;
+   private $title5: HTMLDivElement;
+   private $title6: HTMLDivElement;
+   private $title7: HTMLDivElement;
+
+   private $content0: HTMLDivElement;
+   private $content1: HTMLDivElement;
+   private $content2: HTMLDivElement;
+   private $content3: HTMLDivElement;
+   private $content4: HTMLDivElement;
+   private $content5: HTMLDivElement;
+   private $content6: HTMLDivElement;
+   private $content7: HTMLDivElement;
+
+   private $titles: HTMLDivElement[];
+   private $contents: HTMLDivElement[];
+
+   private $heading1: HTMLDivElement;
 
    public state: IHomePageState = {
       ch0: null,
@@ -109,23 +131,14 @@ export class HomePageBody extends React.Component<{}, IHomePageState> {
                <div className="div-block">
                   <div className="div-block-2">
                      <div className="div-block-4">
-                        <div className="div-block-29">
-                           <h1 data-w-id="19ad981c-be28-8ced-0887-e41f6a62b4f1"
-                              style={{
-                                 transform: 'translate3d(0px, 0 %, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)',
-                                 transformStyle: 'preserve-3d'
-                              }}
-                              className="heading-italic">A Visual Summary of <a
-                                 href="https://www.mfe.govt.nz/Environment-Aotearoa-2019-Summary" target="_blank"
-                                 className="link-2">The Environment Aotearoa 2019 Report</a><br /></h1>
-                        </div>
                         <div className="div-block-30">
-                           <h1 data-w-id="5c3a9a66-0bd4-8d3c-c79a-b29240c07b95"
+                           <h1 id="heading1"
+                           ref={e => this.$heading1 = e!}
                               style={{
-                                 transform: 'translate3d(0px, 0 %, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)',
+                                 transform: 'translate3d(0px, -150%, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)',
                                  transformStyle: 'preserve-3d'
                               }}
-                              className="title _1">9 Priority Issues Facing<br /><span className="text-span">Our
+                              className="heading">9 Priority Issues Facing<br /><span className="text-span">Our
                                     Environment</span></h1>
                         </div>
                         <div className="div-block-31">
@@ -160,11 +173,11 @@ export class HomePageBody extends React.Component<{}, IHomePageState> {
                            <div className="text-div">
                               <div className="text-wrapper tw-birds">
                                  <div className="text-block1">
-                                    <h1 className="heading">
-                                       Chapter 1, <br />animals, and ecosystems <br />are under threat<br /></h1>
+                                    <h1 className="heading" ref={e => this.$title1 = e!}>
+                                       Chapter 1, <br />animals, and ecosystems are under threat<br /></h1>
                                  </div>
                                  <div className="text-block2">
-                                    <p className="body-text _2">
+                                    <p className="body-text _2" ref={e => this.$content1 = e!}>
                                        Our unique native biodiversity is under significant pressure from introduced
                                        species, pollution,
                                        physical changes to our landscapes and coast, harvesting of wild species, and
@@ -201,11 +214,11 @@ export class HomePageBody extends React.Component<{}, IHomePageState> {
                               </div>
                               <div className="text-wrapper ">
                                  <div className="text-block1">
-                                    <h1 className="heading">
-                                       Chapter 2, <br />animals, and ecosystems <br />are under threat<br /></h1>
+                                    <h1 className="heading" ref={e => this.$title2 = e!}>
+                                       Chapter 2, <br />animals, and ecosystems are under threat<br /></h1>
                                  </div>
                                  <div className="text-block2">
-                                    <p className="body-text _2">
+                                    <p className="body-text _2" ref={e => this.$content2 = e!}>
                                        Our unique native biodiversity is under significant pressure from introduced
                                        species, pollution,
                                        physical changes to our landscapes and coast, harvesting of wild species, and
@@ -233,11 +246,11 @@ export class HomePageBody extends React.Component<{}, IHomePageState> {
                               </div>
                               <div className="text-wrapper ">
                                  <div className="text-block1">
-                                    <h1 className="heading">
+                                    <h1 className="heading" ref={e => this.$title3 = e!}>
                                        Chapter 3, <br />animals, and ecosystems <br />are under threat<br /></h1>
                                  </div>
                                  <div className="text-block2">
-                                    <p className="body-text _2">
+                                    <p className="body-text _2" ref={e => this.$content3 = e!}>
                                        Our unique native biodiversity is under significant pressure from introduced
                                        species, pollution,
                                        physical changes to our landscapes and coast, harvesting of wild species, and
@@ -265,11 +278,11 @@ export class HomePageBody extends React.Component<{}, IHomePageState> {
                               </div>
                               <div className="text-wrapper ">
                                  <div className="text-block1">
-                                    <h1 className="heading">
+                                    <h1 className="heading" ref={e => this.$title4 = e!}>
                                        Chapter 4, <br />animals, and ecosystems <br />are under threat<br /></h1>
                                  </div>
                                  <div className="text-block2">
-                                    <p className="body-text _2">
+                                    <p className="body-text _2" ref={e => this.$content4 = e!}>
                                        Our unique native biodiversity is under significant pressure from introduced
                                        species, pollution,
                                        physical changes to our landscapes and coast, harvesting of wild species, and
@@ -297,11 +310,11 @@ export class HomePageBody extends React.Component<{}, IHomePageState> {
                               </div>
                               <div className="text-wrapper ">
                                  <div className="text-block1">
-                                    <h1 className="heading">
+                                    <h1 className="heading" ref={e => this.$title5 = e!}>
                                        Chapter 5, <br />animals, and ecosystems <br />are under threat<br /></h1>
                                  </div>
                                  <div className="text-block2">
-                                    <p className="body-text _2">
+                                    <p className="body-text _2" ref={e => this.$content5 = e!}>
                                        Our unique native biodiversity is under significant pressure from introduced
                                        species, pollution,
                                        physical changes to our landscapes and coast, harvesting of wild species, and
@@ -329,11 +342,11 @@ export class HomePageBody extends React.Component<{}, IHomePageState> {
                               </div>
                               <div className="text-wrapper ">
                                  <div className="text-block1">
-                                    <h1 className="heading">
+                                    <h1 className="heading" ref={e => this.$title6 = e!}>
                                        Chapter 6, <br />animals, and ecosystems <br />are under threat<br /></h1>
                                  </div>
                                  <div className="text-block2">
-                                    <p className="body-text _2">
+                                    <p className="body-text _2" ref={e => this.$content6 = e!}>
                                        Our unique native biodiversity is under significant pressure from introduced
                                        species, pollution,
                                        physical changes to our landscapes and coast, harvesting of wild species, and
@@ -361,11 +374,11 @@ export class HomePageBody extends React.Component<{}, IHomePageState> {
                               </div>
                               <div className="text-wrapper ">
                                  <div className="text-block1">
-                                    <h1 className="heading">
+                                    <h1 className="heading" ref={e => this.$title7 = e!}>
                                        Chapter 7, <br />animals, and ecosystems <br />are under threat<br /></h1>
                                  </div>
                                  <div className="text-block2">
-                                    <p className="body-text _2">
+                                    <p className="body-text _2" ref={e => this.$content7 = e!}>
                                        Our unique native biodiversity is under significant pressure from introduced
                                        species, pollution,
                                        physical changes to our landscapes and coast, harvesting of wild species, and
@@ -383,7 +396,7 @@ export class HomePageBody extends React.Component<{}, IHomePageState> {
             </div>
             <div className="footer-nav-intro">
                <h2>
-                  Want to find out more? 
+                  Want to find out more?
                </h2>
             </div>
             <NavBox items={footerNavs}></NavBox>
@@ -406,8 +419,30 @@ export class HomePageBody extends React.Component<{}, IHomePageState> {
    public componentDidMount() {
       window.addEventListener('resize', this.resize);
       window.addEventListener('scroll', this.scroll);
+      this.$contents = [
+         this.$content1,
+         this.$content2,
+         this.$content3,
+         this.$content4,
+         this.$content5,
+         this.$content6,
+         this.$content7,
+      ];
+      this.$titles = [
+         this.$title1,
+         this.$title2,
+         this.$title3,
+         this.$title4,
+         this.$title5,
+         this.$title6,
+         this.$title7,
+      ];
+      this.addLineAnimation();
       this.resize();
-      this.addAnomination();
+      setTimeout(() => { this.ch0.goToAndStop(2000, 0) }, 2000);
+
+      this.$heading1.style.transform = 'translate3d(0px, 0%, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)';
+
    }
 
    public componentWillUnmount() {
@@ -419,6 +454,7 @@ export class HomePageBody extends React.Component<{}, IHomePageState> {
       let scrollTop = document.documentElement.scrollTop || document.body.scrollTop; // 滚动距离
       let pageHeight = document.documentElement.clientHeight; // 页面高度
       const minWidth = 479; // 小屏宽度
+
       //动画进度条控制
       let x = (scrollTop / pageHeight); // 相对于滚动条的位置
       let times = 3000 // 动画时长
@@ -521,48 +557,13 @@ export class HomePageBody extends React.Component<{}, IHomePageState> {
          this.ch7.goToAndStop(target, 0);
       }
 
-
-      //文字效果
-      var titles = document.querySelectorAll('.text-wrapper .text-block1 h1');
-      var texts = document.querySelectorAll('.text-wrapper .text-block2 p');
-      var viewLength = 0;
-      if (this.$galleryTrack.style.transform) {
-         viewLength = parseInt(this.$galleryTrack.style.transform.split("translate3d(")[1].split("vw, 0px, 0px)")[0]);
-      }
-      //未开始移动屏幕  第一屏字体效果
-      var vh = document.documentElement.clientHeight;
-      if (viewLength === 0 && scrollTop < vh) {
-
-         // for (let i = 0; i < titles.length; i++) {
-         //    if (i == 0) {
-         //       titles[i].style.animation = '0.5s ease-in-out 0s 1 normal none running titleMove';
-         //       texts[i].style.animation = '1.5s ease-in-out 0s 1 normal none running textMove';
-         //    } else {
-         //       titles[i].style.animation = ''
-         //       texts[i].style.animation = ''
-         //    }
-         // }
-      }
-      //开始移动屏幕  字体效果
-      if (viewLength < -50) {
-         var chapter = -Math.ceil((viewLength + 75) / 100) + 1;
-         //屏幕未移动前chapter为 0  开始移动为 1
-         // for (let i = 0; i < titles.length; i++) {
-         //    if (i == chapter) {
-         //       titles[i].style.animation = '0.4s ease-in-out 0s 1 normal none running titleMove';
-         //       texts[i].style.animation = '1.2s ease-in-out 0s 1 normal none running textMove';
-         //    } else {
-         //       titles[i].style.animation = ''
-         //       texts[i].style.animation = ''
-         //    }
-         // }
-      }
-
+      // 文字动效
+      // this.textAnimation();
 
       //滚动条控制
       if (this.$galleryTrack) {
-         if (4 <= x && x <= 50) {
-            let index = (x - 4) * 100 / 7;
+         let index = (x - 4) * 100 / 7;
+         if (4 <= x) {
             if (index <= 600) {
                this.$galleryTrack.style.transform = 'translate3d(-' + index +
                   'vw, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)';
@@ -570,19 +571,16 @@ export class HomePageBody extends React.Component<{}, IHomePageState> {
                this.$galleryTrack.style.transform = 'translate3d(-' + 600 +
                   'vw, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)';
             }
-         } else {
-            this.$galleryTrack.style.transform =
-               'translate3d(0vw, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)';
          }
       }
    }
 
-   public addAnomination = () => {
+   public addLineAnimation = () => {
       this.ch0 = Lottie.loadAnimation({
          container: document.getElementById('ch0'),
          renderer: 'svg',
          loop: false,
-         autoplay: false,
+         autoplay: true,
          animationData: Data0,
 
       })
@@ -689,6 +687,45 @@ export class HomePageBody extends React.Component<{}, IHomePageState> {
          animationData: Data7,
 
       })
+   }
+
+   public textAnimation = () => {
+      let vh = document.documentElement.clientHeight;
+      let scrollTop = document.documentElement.scrollTop || document.body.scrollTop; // 滚动距离
+      let viewLength = 0;
+
+      if (this.$galleryTrack.style.transform) {
+         viewLength = parseInt(this.$galleryTrack.style.transform.split("translate3d(")[1].split("vw, 0px, 0px)")[0]);
+      }
+      // console.log(viewLength);
+      //未开始移动屏幕  第一屏字体效果
+      if (viewLength === 0 && scrollTop < vh) {
+
+         for (let i = 0; i < this.$titles.length; i++) {
+            if (i === 0) {
+               this.$titles[i].style.animation = '0.5s ease-in-out 0s 1 normal none running titleMove';
+               this.$contents[i].style.animation = '1.5s ease-in-out 0s 1 normal none running textMove';
+            } else {
+               this.$titles[i].style.animation = ''
+               this.$contents[i].style.animation = ''
+            }
+         }
+      }
+
+      //开始移动屏幕  字体效果
+      if (viewLength < -50) {
+         var chapter = -Math.ceil((viewLength + 75) / 100) + 1;
+         //屏幕未移动前chapter为 0  开始移动为 1
+         for (let i = 0; i < this.$titles.length; i++) {
+            if (i === chapter) {
+               this.$titles[i].style.animation = '0.4s ease-in-out 0s 1 normal none running titleMove';
+               this.$contents[i].style.animation = '1.2s ease-in-out 0s 1 normal none running textMove';
+            } else {
+               this.$titles[i].style.animation = ''
+               this.$contents[i].style.animation = ''
+            }
+         }
+      }
    }
 
    public async enter() {

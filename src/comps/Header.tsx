@@ -27,12 +27,12 @@ const links = [
          { text: 'Description', url: '/Description' },
          { text: 'Design', url: '/Design' },
          { text: 'Demonstrate', url: '/Demonstrate' },
+         { text: 'Parts Overview', url: '/Engineering' },
       ],
    },
    {
       h1: { text: 'Lab' },
       h2: [
-         { text: 'Notebook', url: '/Notebook' },
          { text: 'Experiments', url: '/Experiments' },
          { text: 'Results', url: '/Results' },
          { text: 'Safety', url: '/Safety' },
@@ -41,7 +41,6 @@ const links = [
    {
       h1: { text: 'Parts' },
       h2: [
-         { text: 'Summary', url: '/Parts' },
          { text: 'Basic Part', url: '/Basic_Part' },
          { text: 'Composite Part', url: '/Composite_Part'},
       ],
@@ -60,7 +59,9 @@ const links = [
       h1: { text: 'Human Practices' },
       h2: [
          { text: 'Summary', url: '/Human_Practices/Summary' },
-         { text: 'Human Practices', url: '/Human_Practices' }
+         { text: 'Integrated Human Practices', url: '/Human_Practices' },
+         { text: 'Education & Public Engagement', url: '/Public_Engagement' },
+         { text: 'Entrepreneurship', url: '/Entrepreneurship' },
       ],
    },
    {
@@ -69,7 +70,6 @@ const links = [
          { text: 'Members', url: '/Member' },
          { text: 'Attributions', url: '/Attributions' },
          { text: 'Collaborations', url: '/Collaborations' },
-         { text: 'Sponsors', url: '/Sponsors' },
       ],
    },
    {

@@ -12,6 +12,7 @@ import { MessageBar, MessageBarType } from 'office-ui-fabric-react/lib/MessageBa
 
 import './css/DocPageBody.scss';
 
+import Loading from '../../../comps/Loading';
 import { IEditor } from '@/types';
 import { context } from '@/event/context';
 import { DocPageAnimationState } from '../DocPage';
@@ -408,7 +409,7 @@ export default class DocPageBody extends React.Component<IDocPageProps, IDocPage
                      author={this.state.editors && this.state.editors[0] && this.state.editors[0].name}
                   />
                } */}
-               <div style={{ height: this.state.hasInfobar ? 'calc(107px + 1.071em)' : '0' }}></div>
+               <div style={{ height: this.state.hasInfobar ? 'calc(1em)' : '0' }}></div>
             </article>
 
          </div>

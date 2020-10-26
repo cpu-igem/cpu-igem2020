@@ -9,6 +9,7 @@ import { concurrencyRestrictify } from './util';
 
 //把  index.html 上传到所有Wiki页面
 const selector = '../dist/index.html';
+// const selector = '../prototype/index.html';
 interface File2BeUploaded {
    path: string;
    content: string;

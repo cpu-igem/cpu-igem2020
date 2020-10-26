@@ -275,7 +275,7 @@ export class HeaderNarrowNavItem extends React.Component<{ links: any }, { rotat
                         display: 'flex',
                         justifyContent: 'center',
                         alignItems: 'center',
-                        color: '#0077b6 ',
+                        color: '#b35a5a ',
                      }}
                      onClick={this.onNavTwoClick}
                   />

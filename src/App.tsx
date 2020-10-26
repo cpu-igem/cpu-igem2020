@@ -159,12 +159,12 @@ export default class App extends React.Component<{}, IAppState> {
                )}
             </div>
 
-            {/* <AlertSafari
+            <AlertSafari
                show={this.state.alertSafari}
                hide={() => {
                   this.setState({ alertSafari: false });
                }}
-            /> */}
+            />
 
             <Footer
                ref={(el) => (this.$footer = el!)}

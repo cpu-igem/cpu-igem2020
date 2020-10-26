@@ -11,7 +11,7 @@ export const DocOrderedList: React.FC<{ items: React.ReactChild[], abc?: boolean
          {
             props.items.map((item, i) => (
                <div className='doc-list-item' key={i}>
-                  <div>{order[i]}</div>
+                  <div>{order[i]+'.'}</div>
                   <div>{item}</div>
                </div>
             ))

@@ -6,7 +6,7 @@ export const Model_Alcohol = new DocPage(
    {
       imgUrl: assets.cover.Description$jpg,
       tbimgUrl: assets.cover.tnDescription$jpg,
-      title: 'ModelOverview',
+      title: 'Alcohol',
    },
    lazy(() => import('./content/Model_Alcohol'))
 );

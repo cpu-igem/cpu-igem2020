@@ -74,7 +74,7 @@
     right: 0;
     bottom: 0;
     left: 0;
-    background-color: #A62103;
+    background-color: #C25641;
 }
 
 .fancybox-item {
@@ -85,12 +85,13 @@
 
 .item-title {
     font-weight: 500;
-    color: #121212;
+    color: #C25641;
     font-size: 24px;
     padding-bottom: 28px;
     margin-bottom: 25px;
     position: relative;
     z-index: 3;
+    font-family: 'Hlevetica Neue' !important;
     display: inline;
     clear: both;
     transition: 0.4s;
@@ -101,8 +102,9 @@
     bottom: 0;
     width: 40%;
     min-width: 90px;
-    background: #202020;
-    height: 2px;
+    background: #C25641;
+    height: 3px;
+    font-weight: bold;
     left: 50%;
     position: absolute;
     transform: translateX(-50%);
@@ -121,25 +123,30 @@
     margin-bottom: 60px;
     margin-top: 48px;
     transition: 0.4s;
+
+    p{
+        font-family: 'Hlevetica Neue' !important;
+        font-size: 12px;
+    }
 }
 
 .btn-default-alt,
 .btn-default-alt:after {
-    border-top: 3px solid #000;
-    border-bottom: 3px solid #000;
-    border-left: 3px solid #000;
-    border-right: 3px solid #000;
+    border-top: 3px solid #C25641;
+    border-bottom: 3px solid #C25641;
+    border-left: 3px solid #C25641;
+    border-right: 3px solid #C25641;
 }
 
 .btn-default-alt {
-    color: #222;
+    color: #C25641;
     background-color: transparent;
 
     line-height: 34px;
     font-size: 11px;
     padding-right: 57px;
     padding-left: 22px;
-    font-family: 'Hlevetica Neue';
+    font-family: 'Hlevetica Neue' !important;
     text-transform: uppercase;
     letter-spacing: 1px;
     font-weight: 900;

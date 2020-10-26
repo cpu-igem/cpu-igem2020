@@ -70,6 +70,47 @@
          "ch4$svg": "https://2020.igem.org/wiki/images/5/55/T--CPU_CHINA--78c5209d.svg",
          "ch6$svg": "https://2020.igem.org/wiki/images/9/99/T--CPU_CHINA--7de83d24.svg",
          "ch7$svg": "https://2020.igem.org/wiki/images/b/b5/T--CPU_CHINA--c7a2b6de.svg"
+      },
+      "pages": {
+         "Model": {
+            "Alcohol": {
+               "clip_image002$png": "https://2020.igem.org/wiki/images/2/27/T--CPU_CHINA--b9b2a3e3.png",
+               "clip_image004$png": "https://2020.igem.org/wiki/images/2/27/T--CPU_CHINA--db8f0830.png",
+               "clip_image008$png": "https://2020.igem.org/wiki/images/4/4f/T--CPU_CHINA--fa397ef6.png",
+               "clip_image010$png": "https://2020.igem.org/wiki/images/d/db/T--CPU_CHINA--78ae7016.png",
+               "clip_image006$png": "https://2020.igem.org/wiki/images/f/f7/T--CPU_CHINA--3c5a508b.png",
+               "clip_image012$png": "https://2020.igem.org/wiki/images/b/bc/T--CPU_CHINA--998a0fa8.png",
+               "clip_image014$png": "https://2020.igem.org/wiki/images/6/64/T--CPU_CHINA--4351466c.png",
+               "clip_image016$png": "https://2020.igem.org/wiki/images/2/2d/T--CPU_CHINA--1dc7879e.png",
+               "clip_image020$png": "https://2020.igem.org/wiki/images/f/fa/T--CPU_CHINA--033390db.png",
+               "clip_image018$png": "https://2020.igem.org/wiki/images/4/42/T--CPU_CHINA--152b6d1e.png",
+               "clip_image022$jpg": "https://2020.igem.org/wiki/images/4/44/T--CPU_CHINA--dd19a5ec.jpg",
+               "clip_image026$png": "https://2020.igem.org/wiki/images/5/58/T--CPU_CHINA--4163cbec.png",
+               "clip_image024$png": "https://2020.igem.org/wiki/images/7/7e/T--CPU_CHINA--3fe32c88.png",
+               "clip_image028$png": "https://2020.igem.org/wiki/images/a/ae/T--CPU_CHINA--2a467c79.png",
+               "clip_image030$png": "https://2020.igem.org/wiki/images/a/a2/T--CPU_CHINA--b94cbee3.png",
+               "final2$png": "https://2020.igem.org/wiki/images/9/95/T--CPU_CHINA--a7c5029e.png",
+               "final1$png": "https://2020.igem.org/wiki/images/c/ca/T--CPU_CHINA--97e995f9.png",
+               "final3$png": "https://2020.igem.org/wiki/images/e/e3/T--CPU_CHINA--b7ab2cc2.png",
+               "table2$png": "https://2020.igem.org/wiki/images/b/b9/T--CPU_CHINA--075a99c5.png",
+               "table1$png": "https://2020.igem.org/wiki/images/c/c4/T--CPU_CHINA--696c0072.png",
+               "clip_image000$png": "https://2020.igem.org/wiki/images/0/02/T--CPU_CHINA--875e0af6.png"
+            }
+         },
+         "Entrepreneurship": {
+            "Progress$png": "https://2020.igem.org/wiki/images/d/d9/T--CPU_CHINA--1717838f.png",
+            "SWOT$png": "https://2020.igem.org/wiki/images/f/fc/T--CPU_CHINA--bf872c09.png",
+            "CPU_CHINA_Entrepreneurship$pdf": "https://2020.igem.org/wiki/images/8/8d/T--CPU_CHINA--1aca949a.pdf"
+         }
+      },
+      "parts": {
+         "part1": {
+            "Fig1$Experimentresult$png": "https://2020.igem.org/wiki/images/3/38/T--CPU_CHINA--b5923dcd.png",
+            "Fig2$IL22standardcurve$png": "https://2020.igem.org/wiki/images/5/59/T--CPU_CHINA--2a4a6dd3.png",
+            "Fig3$comparison$png": "https://2020.igem.org/wiki/images/b/bd/T--CPU_CHINA--08831c49.png",
+            "Table1$png": "https://2020.igem.org/wiki/images/1/15/T--CPU_CHINA--e999ec31.png",
+            "Table2$png": "https://2020.igem.org/wiki/images/1/16/T--CPU_CHINA--c13080d8.png"
+         }
       }
    }
 }

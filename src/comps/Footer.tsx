@@ -46,7 +46,7 @@ export default class Footer extends React.Component<IFooterProps> {
                      </div>
                      <div id='footer-contact-container1'>
                         <div id='footer-contact-container'>
-                           <div className='footer-contact-item' onClick={() => this.onClickLogoBtn('https://instagram.com/igem_cpu2019')}>
+                           <div className='footer-contact-item' onClick={() => this.onClickLogoBtn('https://twitter.com/HealthLico')}>
                               <div className='footer-contact-img'>
                                  <img src={assets.footer.twitter$png} alt="" />
                               </div>
@@ -54,12 +54,12 @@ export default class Footer extends React.Component<IFooterProps> {
                                  @Lico-Health
                            </div>
                            </div>
-                           <div className='footer-contact-item' onClick={() => this.onClickLogoBtn('https://weibo.com/u/6856701868')}>
+                           <div className='footer-contact-item' onClick={() => this.onClickLogoBtn('https://weibo.com/u/7485907376')}>
                               <div className='footer-contact-img'>
                                  <img src={assets.footer.weibo$png} alt="" />
                               </div>
                               <div className='footer-contact-text'>
-                              @CPU-CHINA2020
+                              @2020CPU_CHINA
                            </div>
                            </div>
                            <div className='footer-contact-item' onClick={() => this.onClickLogoBtn('mailto:iGEMTEAMCPU@163.com')}>
