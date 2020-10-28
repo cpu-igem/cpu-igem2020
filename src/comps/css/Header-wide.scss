@@ -57,6 +57,9 @@ $wideheader-vp-width: 1080px;
    font-family: 'Helvetica Neue';
    margin-bottom: 0px !important;
    padding:0px !important;
+   &:active{
+      background-color: #FFF !important;
+   }
    &:hover{
       color:#B35A5A !important;
       font-weight: bold !important
@@ -69,8 +72,8 @@ $wideheader-vp-width: 1080px;
 
 .ant-menu-item-selected{
    background-color: white !important;
-   color: #B35A5A;
-   font-weight: 0;
+   color: rgba(0, 0, 0, 0.65) !important;
+   // font-weight: 0 !important;
 }
 
 .header-nav-3d-container {

@@ -15,27 +15,44 @@ interface File2BeUploaded {
    content: string;
 }
 const pages: string[] = [
+
    'Team:CPU_CHINA',
    'Team:CPU_CHINA/',
-   // Bronze
-   'Team:CPU_CHINA/Attributions',
-   'Team:CPU_CHINA/Description',
-   'Team:CPU_CHINA/Contribution',
-   // Silver
-   'Team:CPU_CHINA/Engineering',
-   'Team:CPU_CHINA/Collaborations',
-   'Team:CPU_CHINA/Human_Practices',
-   'Team:CPU_CHINA/Implementation',
-   // Gold
-   'Team:CPU_CHINA/Proof_Of_Concept',
-   'Team:CPU_CHINA/Partnership',
-   'Team:CPU_CHINA/Education',
-   'Team:CPU_CHINA/Model',
+   'Team:CPU_CHINA/Poster',
 
-   // Specical Prizes
-   'Team:CPU_CHINA/Inclusion',
+   'Team:CPU_CHINA/Description',
+   'Team:CPU_CHINA/Design',
+   'Team:CPU_CHINA/Demonstrate',
+   'Team:CPU_CHINA/Implementation',
+
+   'Team:CPU_CHINA/Experiments',
+   'Team:CPU_CHINA/Safety',
+   'Team:CPU_CHINA/Contribution',
+
+   'Team:CPU_CHINA/Engineering',
+   'Team:CPU_CHINA/Basic_Part',
+   'Team:CPU_CHINA/Composite_Part',
+   'Team:CPU_CHINA/Improved_Part',
+
+   'Team:CPU_CHINA/Model',
+   'Team:CPU_CHINA/Model/Alcohol',
+   'Team:CPU_CHINA/Model/Bacteriocin',
+   'Team:CPU_CHINA/Model/IL_22',
+   'Team:CPU_CHINA/Model/Transduction',
+
+
+   'Team:CPU_CHINA/Human_Practices',
+   'Team:CPU_CHINA/Integrated_HP',
+   'Team:CPU_CHINA/Education',
    'Team:CPU_CHINA/Entrepreneurship',
-   'Team:CPU_CHINA/Sustainable',
+
+
+   'Team:CPU_CHINA/Team',
+   'Team:CPU_CHINA/Attributions',
+   'Team:CPU_CHINA/Collaborations',
+   
+   'Team:CPU_CHINA/Juding_Form',
+   // 'Team:CPU_CHINA/Sustainable',
 
 ];
 

@@ -40,8 +40,9 @@ export const ImageWithShadow: React.FC<{
             <div className='text'
                style={{
                   fontSize: '.9em',
+                  fontStyle: 'italic',
                   marginBottom: '1.2em',
-                  fontFamily: '\'Times New Roman\', Times, serif',
+                  fontFamily: '\'Times New Roman\', Times, serif !important' ,
                   textAlign: 'center',
                }}
             >{props.caption}</div>

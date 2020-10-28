@@ -15,14 +15,14 @@
 
 @media (max-width: 960px) {
     .foot-nav-item {
-        width: 50%;
+        width: 50% !important;
         /* background-image: linear-gradient(#e66465, #9198e5); */
     }
 }
 
 @media (max-width: 450px) {
     .foot-nav-item {
-        width: 100%;
+        width: 100% !important;
         /* background-image: linear-gradient(#e66465, #9198e5); */
     }
 }
@@ -74,7 +74,7 @@
     right: 0;
     bottom: 0;
     left: 0;
-    background-color: #C25641;
+    background-color: #B35A5A ;
 }
 
 .fancybox-item {
@@ -84,17 +84,21 @@
 }
 
 .item-title {
+    flex-direction: column;
+    justify-content: center;
     font-weight: 500;
-    color: #C25641;
-    font-size: 24px;
-    padding-bottom: 28px;
-    margin-bottom: 25px;
+    color: #B35A5A;
+    height: 5em;
+    font-size: 2.1em;
+    // padding-bottom: 28px;
+    margin-bottom: 0.5em;
     position: relative;
     z-index: 3;
     font-family: 'Hlevetica Neue' !important;
-    display: inline;
+    display: inline-block;
     clear: both;
     transition: 0.4s;
+    display: flex;
 }
 
 .item-title:after {
@@ -102,8 +106,8 @@
     bottom: 0;
     width: 40%;
     min-width: 90px;
-    background: #C25641;
-    height: 3px;
+    background: #B35A5A;
+    height: .1em;
     font-weight: bold;
     left: 50%;
     position: absolute;
@@ -120,8 +124,8 @@
 .item-content {
     position: relative;
     z-index: 3;
-    margin-bottom: 60px;
-    margin-top: 48px;
+    margin-bottom: 2em;
+    margin-top: 1.5em;
     transition: 0.4s;
 
     p{
@@ -130,22 +134,25 @@
     }
 }
 
-.btn-default-alt,
-.btn-default-alt:after {
-    border-top: 3px solid #C25641;
-    border-bottom: 3px solid #C25641;
-    border-left: 3px solid #C25641;
-    border-right: 3px solid #C25641;
+.btn-default-alt{
+    border-top: .2em solid #B35A5A ;
+    border-bottom: .2em solid #B35A5A ;
+    border-left: .2em solid #B35A5A ;
+    border-right: .2em solid #B35A5A ;
+}
+
+.btn-default-alt:after{
+    border-left: .2em solid #B35A5A ;
 }
 
 .btn-default-alt {
-    color: #C25641;
+    color: #B35A5A ;
     background-color: transparent;
 
-    line-height: 34px;
-    font-size: 11px;
-    padding-right: 57px;
-    padding-left: 22px;
+    line-height: 2.5em;
+    font-size: 1em;
+    padding-right:2.5em;
+    padding-left: 0.5em;
     font-family: 'Hlevetica Neue' !important;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -159,16 +166,16 @@
 }
 
 .btn-default-alt:after {
-    line-height: 34px;
-    width: 34px;
+    line-height: 2.5em;
+    width: 2em;
     content: '\f178';
     font-family: FontAwesome;
-    font-size: 16px;
+    font-size: 1em;
     display: inline-block;
     position: absolute;
     transition: all 0.3s linear 0s;
-    top: -3px !important;
-    right: -3px !important;
+    // top: -3px !important;
+    right: -.2em !important;
     border-radius: 0;
 
     text-align: center;

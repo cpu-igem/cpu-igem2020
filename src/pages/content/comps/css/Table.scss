@@ -1,0 +1,55 @@
+
+
+/** page structure **/
+#wrapper {
+  display: block;
+  width: 80%;
+  background: #fffffb;
+  margin: 0 auto;
+  padding: 10px 17px;
+//   -webkit-box-shadow: 2px 2px 3px -1px rgba(0,0,0,0.35);
+}
+
+#keywords {
+    width: 100%;
+}
+
+
+#keywords thead {
+  background-color: #B35A5A;
+  text-align: left;
+  color: white;
+}
+#keywords thead tr th {
+  text-align: center;
+  font-weight: bold;
+  padding: 12px 30px;
+  padding-left: 42px;
+
+}
+#keywords thead tr th span { 
+  // padding-right: 20px;
+  font-size: 1.2em;
+  background-repeat: no-repeat;
+  background-position: 100% 100%;
+}
+
+#keywords thead tr th.headerSortUp, #keywords thead tr th.headerSortDown {
+  background: #acc8dd;
+}
+
+
+#keywords tbody tr { 
+  color: #555;
+}
+#keywords tbody tr td {
+  text-align: justify;
+  padding: 15px 10px;
+}
+#keywords tbody tr td.lalign {
+  text-align: left;
+}
+
+#keywords tbody tr>td:first-child{
+  text-align: center;
+}

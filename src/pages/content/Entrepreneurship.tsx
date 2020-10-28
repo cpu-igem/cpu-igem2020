@@ -20,24 +20,17 @@ const content = (<>
     ]}>
     </DocOrderedList>
 
-    <H2>Product—— probiotic oralprescription drug</H2>
+    <H2>Product—— probiotic oral prescription drug</H2>
     <p>Lico.Health has been designed as a genetic-engineered, probiotic oralprescription drug aimed at preventing
         alcohol liver disease (ALD) at early stage by intestinal colonization.</p>
     <H2>Advantages</H2>
 
     <DocOrderedList items={[
-        <p><strong>Effectiveness</strong>: our directional transformation could enable Lico. Health to target at
-        specific lesions and to give full play to prevent ALD.</p>,
-        <p><strong>Quapty</strong>: The more sophisticated production process of this cutting-edge technology and
-        corresponding stricter legal supervision, the higher level of quapty assurance and controllabipty for
-        Lico. Health.</p>,
-        <p><strong>Innovation</strong>: Our product achieves microbial intestinal colonization through oral medication,
-        which precisely cater to those drinking enthusiasts in want of improving their health while changing their
-        pfestyle as pttle as possible </p>,
-        <p><strong>Comppance</strong>: Freeze-dried (microencapsulation) powder can be preferrable than conventional
-        capsule to soften the resistance as a preventive product.</p>,
-        <p><strong>Profitabipty</strong>: As a gene therapy, Lico.Health can be outstanding in competing for middle
-        and high-end markets, which means more promising profit margin.</p>
+        <p><strong>Effectiveness</strong>: our directional transformation could enable Lico. Health to target at specific lesions and to give full play to prevent ALD.</p>,
+        <p><strong>Quality</strong>: The more sophisticated production process of this cutting-edge technology and corresponding stricter legal supervision, the higher level of quality assurance and controllability for Lico. Health.</p>,
+        <p><strong>Innovation</strong>: Our product achieves microbial intestinal colonization through oral medication, which precisely cater to those drinking enthusiasts in want of improving their health while changing their lifestyle as little as possible</p>,
+        <p><strong>Compliance</strong>: Freeze-dried (microencapsulation) powder can be preferrable than conventional capsule to soften the resistance as a preventive product.</p>,
+        <p><strong>Profitability</strong>: As a gene therapy, Lico.Health can be outstanding in competing for middle and high-end markets, which means more promising profit margin.</p>
     ]}>
     </DocOrderedList>
 
@@ -88,8 +81,8 @@ const content = (<>
 
     <H2>Operation cycle</H2>
     <ImageWithShadow  noShadow width='100%' src={es.Progress$png} />
-
-    <Link href={es.CPU_CHINA_Entrepreneurship$pdf}> Read More About Entrepreneurship</Link>
+    
+    <Link href={es.CPU_CHINA_Entrepreneurship$pdf}>Read More About Entrepreneurship</Link>
 </>)
 
 

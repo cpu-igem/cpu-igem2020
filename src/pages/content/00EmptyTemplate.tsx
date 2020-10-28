@@ -1,6 +1,6 @@
 import React from 'react';
 
-import TRH2 from './comps/TRH2';
+import H2 from './comps/TRH2';
 import { assets } from '../../assets-path.json';
 import { ImageWithShadow } from './comps/ImageWithShadow';
 import { Link } from './comps/Link';
@@ -17,8 +17,21 @@ export const body = {
    content: (
       <>
          <div>
-            <h1>Project Description</h1>
-            
+            <div className="no-aside-container">
+               <div className="no-aside-content">
+
+
+                  <h1>Project Description</h1>
+
+                  <div className='doc-refer'>
+                     <div className='text'>Reference</div>
+                     <div className='text'>
+                     </div>
+                  </div>
+
+                  
+               </div>
+            </div>
          </div>
       </>
    )

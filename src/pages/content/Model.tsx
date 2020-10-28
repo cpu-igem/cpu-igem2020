@@ -8,17 +8,17 @@ const navboxs = [
         title: 'Alcohol Disposal',
         content: '',
         url: '/Model/Alcohol'
-    }, 
+    },
     {
-        title: 'Bacteriocins Model',
+        title: 'Bacteriocin Expression',
         content: '',
-        url: '/Model/Bacteriocins'
-    }, 
+        url: '/Model/Bacteriocin'
+    },
     {
-        title: 'IL-22 Model',
+        title: 'IL-22 Expression',
         content: '',
         url: '/Model/IL_22'
-    }, 
+    },
     {
         title: 'Plasmid Transduction',
         content: '',
@@ -35,17 +35,25 @@ export const body = {
     hasAside: false,
     content: (
         <>
-            <div>
-                <h1>Model OverView</h1>
-                <p>Modeling is an essential aspect of every iGEM project. The mathematical model can deepen our team&#39;s understanding of the work, and can also carry out calculations to assist the selection of construction conditions of engineering bacteria such as promoters and plasmids.</p>
-                <p>Our aim is to establish a systematic model to reflect the in vivo metabolic processes of alcohol and the influence of engineered bacteria on alcohol metabolism after alcohol intake. With this systematic model, we can determine the therapeutic window of anti-inflammatory factors, antimicrobial peptides, the therapeutic dose of engineered bacteria, and the transcription efficiency required by engineered bacteria, among other key parameters. In this model, alcohol is divided into three main stages according to the time and space process of in vivo metabolism, namely, the pre-enteral stage, the enteral stage and the metabolic elimination stage.</p>
-                <p>The pre-enteral stage is the first stage in the body before alcohol is ingested into the intestine. In the first stage, alcohol undergoes a spatial shift from the mouth to the esophagus and then to the stomach. At this stage, the alcohol does not reach the intestinal tract, does not change the permeability of the intestinal epithelium to cause enterococcus faecalis to metastasize, and does not stimulate the protective effect of the engineered bacteria on the liver. Before alcohol enters the intestine, it is absorbed into the blood through the esophagus and stomach, and the alcohol after entering the blood will not pass through the liver first under the driving of blood circulation. In other words, the first stage is the first resorptive and metabolic stage of alcohol in the body, in which its resorptive metabolism will completely conform to the classical pharmacokinetic model. In the first stage, we can calculate the alcohol concentration in the blood before entering and leaving the intestine and the alcohol concentration in the digestive tract when entering the intestine, which will provide the calculation basis for the model in the following two stages.</p>
-                <p>Enteral stage is the second stage, which is the internal stage of alcohol in the intestine. In the second stage, alcohol completes the spatial transfer of the intestine. During this stage, alcohol reaches the intestine, alters the permeability of the intestinal epithelium, and stimulates the transcription and translation of engineered bacteria, thus achieving a protective effect on the liver. Intestinal alcohol concentration, as a signal, starts from the group sense system, undergoes amplification system, and then leads to the expression of antimicrobial peptides, plasmid transduction in order to control the enteral enterococci concentration, and through the expression of anti-inflammatory factors, balances the signal of inflammatory factors in the liver. When alcohol enters the intestine, it is absorbed into the blood stream, and when it enters the blood circulation, it passes first through the liver through the portal vein. In the second stage, the parameters related to the absorption and metabolism of alcohol in the intestine will be changed, and we will modify them. In this stage, we were able to calculate the changes in blood alcohol concentration, the therapeutic window for anti-inflammatory factors and antimicrobial peptides, the therapeutic amount of engineered bacteria, and the transcription efficiency required by engineered bacteria, among other key parameters.</p>
-                <p>Metabolic elimination stage is the third stage, in which alcohol is absorbed in the digestive tract but not metabolized and eliminated in the blood. In the third stage, there is no alcohol in the digestive tract, engineering bacteria are no longer activate transcription. The concentration of anti-inflammatory factors in the blood will decrease if not supplemented. It is necessary to plan the expression level of anti-inflammatory factors through calculation to ensure the balance between anti-inflammatory factors and inflammatory factors in the third stage, and ensure that the remaining alcohol in the blood will not lead to severe inflammation of the liver.</p>
-                
-                <NavBox items={navboxs}></NavBox>
-                <p>&nbsp;</p>
-                <p>&nbsp;</p>
+            <div className="no-aside-container">
+                <div className="no-aside-content">
+                    <h1>Summary</h1>
+                    <p>Modeling is an essential tool for every iGEM project. The mathematical model can deepen our team&#39;s understanding of the work, and can also carry out calculations to assist the construction of engineered bacteria such as promoters and plasmids.</p>
+                    <p>Our aim is to establish a systematic model to demonstrate the <em>in vivo</em> metabolic processes of ethanol and the effect of engineered bacteria after alcohol intake.</p>
+                    <p> </p>
+                    <p>Part 1：Alcohol Disposal</p>
+                    <p>Due to the lack of data on the intestinal and blood alcohol concentration over time after alcohol consumption, and yet these data are required for subsequent calculations, we ought to model the process of alcohol disposal in the body. Since alcohol is ingested orally, its <em>in vivo</em> disposal process is similar to that of drugs. So we use the pharmacokinetics equation to simulate. Based on the strong liposolubility and extremely fast rate of transportation through the membrane of ethanol , we adopted a single-compartment model ignored the distribution stage to construct a comprehensive equation of alcohol absorption and metabolism <em>in vivo</em>. The final results of this part of modeling provided data on the alcohol concentration in the blood and in the digestive tract over time. We could also get the time under a specific alcohol concentration which would help establish a phased dosing regimen. <strong>This model made subsequent calculation results more reliable and provided the basis for determining the time and interval of administration route.</strong></p>
+                    <p> </p>
+                    <p>Part 2：Bacteriocin Expression</p>
+                    <p>In this part, our purpose is to construct a system dynamics model to calculate the expression amount of bacteriocin and determine the population of engineered bacteria in the intestine to fix that given to a person. In addition,  The model adopted the Michaelis-Menten equation and the Ligand Binding equation to simulate the dynamic processes of signal induction, mRNA transcription, bacteriocin translation and so on. Moreover, based on the Simbiology toolbox in MATLAB software, the modeling and calculation of system dynamics were completed. <strong>The results of this model included the expression amount of unit engineered bacteria bacteriocin over time and the population of engineered bacteria needed in the intestine supporting for our treatment strategy.</strong></p>
+                    <p> </p>
+                    <p>Part 3：IL-22 Expression</p>
+                    <p>This part of modeling aimed to construct another dynamics model to calculate the expression amount of IL-22 to prove the reliability of the constructed plasmid. Since the IL-22 expression system designed initially had components which could be adjusted to fix the therapeutic window, we decided to quantitatively calculate the efficacy of each component and used the intestinal alcohol concentration as an input variable which had been calculated in &quot;Part 1：Alcohol Disposal&quot; , and then adjusted the components according to the results. The results of this part of the model provided the expression amount of the unit engineered bacteria IL-22 over time. <strong>This model provides a reliable basis for the expression of plasmid designed for anti-inflammatory factor and verifies the rationality of the constructed plasmid.</strong></p>
+                    <p> </p>
+                    <p>Part 4：Plasmid Transduction</p>
+                    <p>Since the CRISPR system lacked relevant kinetic parameters and the kinetics of plasmid transduction still needed further research, we made a bold and innovative model for the sterilization part of plasmid transduction. Plasmid transduction and plasmid sterilization were two independent events. Their occurrence had reproducibility and macroscopic laws. The estimation of the probability could be completed through the statistics of the probability of the events based on probability space. We adopted a Bayesian probability model which would provide the mathematical expectation of sterilization. <strong>The result of this model could give us the sterilization efficiency of the plasmid transduction system and get the accurate antibacterial ratio together with the results of the bacteriocin model. It also helped us evaluate the effectiveness and rationality of the construction of the plasmid transduction system.</strong> </p>
+                    <NavBox items={navboxs}></NavBox>
+                </div>
             </div>
         </>
     )

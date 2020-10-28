@@ -1,25 +1,29 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import DocPageRating from './DocPageRating';
-import DocPageInfobar from './DocPageInfobar';
+// import DocPageRating from './DocPageRating';
+// import DocPageInfobar from './DocPageInfobar';
 import DocPageAside from './DocPageAside';
-import DocPageSetting from './DocPageSetting';
+// import DocPageSetting from './DocPageSetting';
 
-import { Callout } from 'office-ui-fabric-react/lib/components/Callout';
+// import { Callout } from 'office-ui-fabric-react/lib/components/Callout';
 import { Shimmer, ShimmerElementType } from 'office-ui-fabric-react/lib/Shimmer';
-import { MessageBar, MessageBarType } from 'office-ui-fabric-react/lib/MessageBar';
+// import { MessageBar, MessageBarType } from 'office-ui-fabric-react/lib/MessageBar';
 
 import './css/DocPageBody.scss';
+import { BackTop } from 'antd';
+// import 'antd/es/backtop/style/css';
 
-import Loading from '../../../comps/Loading';
+// import Loading from '../../../comps/Loading';
 import { IEditor } from '@/types';
 import { context } from '@/event/context';
 import { DocPageAnimationState } from '../DocPage';
-import { detectDefaultLang, translation } from '@/translation';
+// import { detectDefaultLang, translation } from '@/translation';
 import { delay, range } from '@/util';
 import { locaCtrl } from '@/event/loca-ctrl';
 import Header from '@/comps/Header';
+import { isAssertionExpression } from 'typescript';
+import { assets } from '../../../assets-path.json'
 
 interface IDocPageProps {
    $header: Header;
@@ -409,9 +413,14 @@ export default class DocPageBody extends React.Component<IDocPageProps, IDocPage
                      author={this.state.editors && this.state.editors[0] && this.state.editors[0].name}
                   />
                } */}
+
                <div style={{ height: this.state.hasInfobar ? 'calc(1em)' : '0' }}></div>
             </article>
-
+            <BackTop>
+                  <div className='backtop'>
+                     <img src={assets.icons.BackTop$png} alt=""/>
+                  </div>
+               </BackTop>
          </div>
       );
    }

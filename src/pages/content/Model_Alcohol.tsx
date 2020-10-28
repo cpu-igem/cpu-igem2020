@@ -22,7 +22,7 @@ export const body = {
             <p>		<strong>Enteral stage</strong> is the second stage, which is the internal stage of alcohol in the intestine. In the second stage, alcohol completes the spatial transfer of the intestine. During this stage, alcohol reaches the intestine, alters the permeability of the intestinal epithelium, and stimulates the transcription and translation of engineered bacteria, thus achieving a protective effect on the liver. Intestinal alcohol concentration, as a signal, starts from the group sense system, undergoes amplification system, and then leads to the expression of antimicrobial peptides, plasmid transduction in order to control the population of Enterococcus faecalis, and through the expression of anti-inflammatory factors, balances the signal of inflammatory factors in the liver. When alcohol enters the intestine, it is absorbed into the blood stream, and when it enters the blood circulation, it passes first through the liver through the portal vein. In the second stage, the parameters related to the absorption and metabolism of alcohol in the intestine will be changed, and we will modify them. In this stage, we were able to calculate the changes in blood alcohol concentration, the therapeutic window for anti-inflammatory factors and antimicrobial peptides and the therapeutic amount of engineered bacteria.</p>
             <p>		<strong>Metabolic elimination stage</strong> is the third stage, in which alcohol is absorbed in the digestive tract but not metabolized and eliminated in the blood. In the third stage, there is no alcohol in the digestive tract, engineering bacteria are no longer activate transcription. The concentration of anti-inflammatory factors in the blood will decrease without supplement. It is necessary to get the expression level of anti-inflammatory factors through calculation to ensure the balance between anti-inflammatory factors and inflammatory factors, and ensure that the remaining alcohol in the blood will not lead to severe inflammation of the liver.</p>
 
-            <ImageWithShadow src={alcohol.clip_image000$png} noShadow
+            <ImageWithShadow src={alcohol.pic1$png} noShadow
                 caption={<>Figure.1: The process of alcohol disposal</>} />
             <p></p>
             <H2>Ⅱ. Model preparation</H2>
@@ -48,7 +48,7 @@ export const body = {
             </DocOrderedList>
             <H2>Ⅲ. Variables and Parameters</H2>
             <h3>1. Variables</h3>
-            <ImageWithShadow noShadow width='85%' src={alcohol.table1$png} caption={<>Table.1: The variables of model</>} />
+            <p><ImageWithShadow noShadow width='85%' src={alcohol.table1$png} caption={<>Table.1: The variables of model</>} /></p>
 
             <h3>2. Parameters</h3>
             <p><ImageWithShadow noShadow width='90%' src={alcohol.table2$png} caption={<>Table.2: The parameters of model</>} /></p>

@@ -6,7 +6,7 @@ export const JudgingForm = new DocPage(
    {
       imgUrl: assets.cover.Description$jpg,
       tbimgUrl: assets.cover.tnDescription$jpg,
-      title: 'Description',
+      title: 'JudgingForm',
    },
    lazy(() => import('./content/JudgingForm'))
 );

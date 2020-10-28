@@ -27,22 +27,25 @@ const links = [
          { text: 'Description', url: '/Description' },
          { text: 'Design', url: '/Design' },
          { text: 'Demonstrate', url: '/Demonstrate' },
-         { text: 'Parts Overview', url: '/Engineering' },
+         { text: 'Implementation', url: '/Implementation' },
       ],
    },
    {
       h1: { text: 'Lab' },
       h2: [
          { text: 'Experiments', url: '/Experiments' },
-         { text: 'Results', url: '/Results' },
          { text: 'Safety', url: '/Safety' },
+         { text: 'Contribution', url: '/Contribution' },
       ],
    },
    {
       h1: { text: 'Parts' },
       h2: [
+         { text: 'Parts Overview', url: '/Engineering' },
          { text: 'Basic Part', url: '/Basic_Part' },
          { text: 'Composite Part', url: '/Composite_Part'},
+         { text: 'Improved Part', url: '/Improved_Part' },
+
       ],
    },
    {
@@ -50,40 +53,46 @@ const links = [
       h2: [
          { text: 'Summary', url: '/Model' },
          { text: 'Alcohol Disposal', url: '/Model/Alcohol' },
-         { text: 'Bacteriocins Model', url: '/Model/Bacteriocins' },
-         { text: 'IL-22 Model', url: '/Model/IL_22' },
+         { text: 'Bacteriocin Expression', url: '/Model/Bacteriocin' },
+         { text: 'IL-22 Expression', url: '/Model/IL_22' },
          { text: 'Plasmid Transduction', url: '/Model/Transduction' },
       ],
    },
    {
       h1: { text: 'Human Practices' },
       h2: [
-         { text: 'Summary', url: '/Human_Practices/Summary' },
-         { text: 'Integrated Human Practices', url: '/Human_Practices' },
-         { text: 'Education & Public Engagement', url: '/Public_Engagement' },
+         { text: 'Summary', url: '/Human_Practices' },
+         { text: 'Integrated Human Practices', url: '/Integrated_HP' },
+         { text: 'Education & Public Engagement', url: '/Education' },
          { text: 'Entrepreneurship', url: '/Entrepreneurship' },
       ],
    },
    {
       h1: { text: 'Team' },
       h2: [
-         { text: 'Members', url: '/Member' },
+         { text: 'Members', url: '/Team' },
          { text: 'Attributions', url: '/Attributions' },
          { text: 'Collaborations', url: '/Collaborations' },
       ],
    },
+   // {
+   //    h1: {
+   //       text: <div style={{ display: 'flex', alignItems: 'center', fontSize: '.9em' }}>
+   //          <div>Judging<br />Form</div>
+   //          <Icon
+   //             iconName='ArrowUpRight'
+   //             style={{ width: 18, height: 18, fontSize: 18, marginLeft: 6 }} />
+   //       </div>,
+   //       plainText: 'Judging Form',
+   //       icon: 'ArrowUpRight',
+   //       url: '/Juding_Form',
+   //    },
+   // },
    {
-      h1: {
-         text: <div style={{ display: 'flex', alignItems: 'center', fontSize: '.9em' }}>
-            <div>Judging<br />Form</div>
-            <Icon
-               iconName='ArrowUpRight'
-               style={{ width: 18, height: 18, fontSize: 18, marginLeft: 6 }} />
-         </div>,
-         plainText: 'Judging Form',
-         icon: 'ArrowUpRight',
-         url: '/Judging_Form',
-      },
+      h1: { text: 'JudgingForm'},
+      h2: [
+         { text: 'JudgingForm', url: '/Juding_Form' },
+      ],
    },
 ];
 
