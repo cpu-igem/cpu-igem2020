@@ -67,7 +67,7 @@ export function queryPage(path: string): Page {
       '/Attributions': Attributions,
       '/Collaborations': Collaborations,
 
-      '/Juding_Form': JudgingForm,
+      '/Judging_Form': JudgingForm,
       '/Proof_Of_Concept': Demonstrate,
       // '/Partnership': Partnership,
    };

@@ -122,7 +122,7 @@ export class HeaderNavItem extends React.PureComponent<IHeaderNavItemProps, IHea
                visible={this.state.visible}>
                <a className="ant-dropdown-link" onClick={e => e.preventDefault()}>
                   <div id='nav-container'>
-                     <div id='nav-item'>
+                     <div id='nav-item' onClick={() => locaCtrl.navTo(h1.url)}>
                         {h1.text}
                      </div>
                   </div>

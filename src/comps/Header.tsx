@@ -75,25 +75,25 @@ const links = [
          { text: 'Collaborations', url: '/Collaborations' },
       ],
    },
-   // {
-   //    h1: {
-   //       text: <div style={{ display: 'flex', alignItems: 'center', fontSize: '.9em' }}>
-   //          <div>Judging<br />Form</div>
-   //          <Icon
-   //             iconName='ArrowUpRight'
-   //             style={{ width: 18, height: 18, fontSize: 18, marginLeft: 6 }} />
-   //       </div>,
-   //       plainText: 'Judging Form',
-   //       icon: 'ArrowUpRight',
-   //       url: '/Juding_Form',
-   //    },
-   // },
    {
-      h1: { text: 'JudgingForm'},
-      h2: [
-         { text: 'JudgingForm', url: '/Juding_Form' },
-      ],
+      h1: {
+         text: <div style={{ display: 'flex', alignItems: 'center', fontSize: '.9em' }}>
+            <div>Judging<br />Form</div>
+            <Icon
+               iconName='ArrowUpRight'
+               style={{ width: 18, height: 18, fontSize: 18, marginLeft: 6 }} />
+         </div>,
+         plainText: 'Judging Form',
+         icon: 'ArrowUpRight',
+         url: '/Judging_Form',
+      },
    },
+   // {
+   //    h1: { text: 'JudgingForm'},
+   //    h2: [
+   //       { text: 'JudgingForm', url: '/Juding_Form' },
+   //    ],
+   // },
 ];
 
 export default class Header extends React.Component {

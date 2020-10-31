@@ -101,6 +101,42 @@ export class HomePageBody extends React.Component<{}, IHomePageState> {
    };
 
    render() {
+      const homeText = {
+         ch0: {
+            h1: 'Lico. Health',
+            content: '',
+         },
+         ch1: {
+            h1: 'Our inspiration',
+            content: 'At the very beginning of the project, when we first held the spear of synthetic biology and thought about where our arrow shall point, the most important traditional Chinese festival, the Spring Festival, come in time. People sat together with family and friends( a much smaller scale than usual, of course, due to COVID-19), had their hearty drink to celebrate this festival. Yet at the same time, many tragedies caused by drinking had frequently come to our sights, with social discussions around the notorious social norm known as wine table culture reaching its peak as well. Statistics witness a sharp increase in the number of cases sent to the emergency department due to alcoholic liver disease (ALD) at this very period, which drew our concern.',
+         },
+         ch2: {
+            h1: 'First glance at the very problem',
+            content: 'We were sad to find that there had been countless similar cases in the past few decades: people being forced to drink due to social norms and people getting alcohol addiction for different reasons, their health is seriously threatened by ALD.<br/> This investigation results made us determined to do something to help with this situation.',
+         },
+         ch3: {
+            h1: 'Importance of early intervention and our early conception',
+            content: 'China is already the country with the most deaths from drinking in the world, with 709,000 deaths caused by drinking every year, while people still perform disproportionate indifference to the harm of drinking and the prevention of ALD, thus ALD develops quickly into later stages such as liver steatosis, liver cirrhosis even liver cancer, at which point the damage done to the liver can hardly get heal. That’s why we focus on the early stage of ALD, hoping to bring up a new therapy to intervene the development of ALD at the early stage and prevent further liver damage.',
+         },
+         ch4: {
+            h1: 'Feedback from human practices and improvement in design',
+            content: 'Though helpful for the decomposition of alcohol and acetaldehyde, those de-alcoholic drugs were not able to alleviate the damage of alcohol and could even make it worse, for people who take the drugs are likely to blindly trust the effect of the drugs, which results in them drinking even more than they usually do, thus the harm of alcohol is not only not relieved but also get worse on the contrary.Based on this important feedback, we decided to call off the acetaldehyde decomposition assisting design and started to seek other important factors fundamental for the development of ALD.',
+         },
+         ch5: {
+            h1: 'The discovery of new entry point : Enterococcus Faecalis and ALD',
+            content: 'Scholars made a breaking discovery that Enterococcus faecalis, which has always been regarded as an important kind of probiotic in human intestines, was found to be a main contributor to liver inflammation. Based on these researches, we reshaped our project, taking E.faecalis density control and balancing intestinal flora as our new goal, and secretion of anti-inflammation cytokine IL-22 as another aim function to achieve.',
+         },
+         ch6: {
+            h1: ' The final structure of our design',
+            content: 'Continuous improvement and changes have been made to our project design. The final structure we constructed is as follows: Our engineered bacteria has two main functions: 1. Secreting bacteriocins JM79, plwα, plwβto reduce the aberrantly high E.faecalis density in intestines. <br/> 2. Secreting anti-inflammatory cytokine IL-22. We selected E.coli Nissle 1917 which is a well-studied probiotic as our chassis.',
+         },
+         ch7: {
+            h1: 'Further improvement of design details',
+            content: '1. As the alcohol-inducible promoter palcA is relatively inefficient, we decided to apply a T7 system downstream of it, to amplify the expression level of IL-22. 2. We are also interested in exploring milder new approaches to balance the intestinal flora. So that we established a mathematic model to make a predicted determination of the efficiency of this CRISPR-plasmid transfer system.'
+         }
+      }
+
+
       const footerNavs = [
          {
             title: 'Project',
@@ -138,8 +174,8 @@ export class HomePageBody extends React.Component<{}, IHomePageState> {
                                  transform: 'translate3d(0px, -150%, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)',
                                  transformStyle: 'preserve-3d'
                               }}
-                              className="heading">Lico Health<br /><span className="text-span">
-                                    </span></h1>
+                              className="heading">{homeText.ch0.h1}<br /><span className="text-span">
+                              </span></h1>
                         </div>
                         <div className="div-block-31">
                            <p data-w-id="cd568a61-46fe-e407-4fb7-ab41d4e4e26d"
@@ -147,8 +183,7 @@ export class HomePageBody extends React.Component<{}, IHomePageState> {
                                  transform: 'translate3d(0px, 0 %, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)',
                                  transformStyle: 'preserve-3d'
                               }}
-                              className="body-text">Every inordinate cup is unblessed and the ingredient is a devil.
-                              <br /></p>
+                              className="body-text">{homeText.ch0.content}<br /></p>
                         </div>
                      </div>
                   </div>
@@ -171,11 +206,11 @@ export class HomePageBody extends React.Component<{}, IHomePageState> {
                               <div className="text-wrapper tw-birds">
                                  <div className="text-block1">
                                     <h1 className="heading" ref={e => this.$title1 = e!}>
-                                       Chapter 1, <br />OUR INSPIRATION<br /></h1>
+                                       Chapter 1, <br />{homeText.ch1.h1}<br /></h1>
                                  </div>
                                  <div className="text-block2">
                                     <p className="body-text _2" ref={e => this.$content1 = e!}>
-                                       At the very beginning of the project, when we first held the spear of synthetic biology and thought about where our arrow shall point, the most important traditional Chinese festival, the Spring Festival, come in time. People sat together with family and friends( a much smaller scale than usual, of course, due to COVID-19), had their hearty drink to celebrate this festival. Yet at the same time, many tragedies caused by drinking had frequently come to our sights, with social discussions around the notorious social norm known as wine table culture reaching its peak as well. Statistics witness a sharp increase in the number of cases sent to the emergency department due to alcoholic liver disease (ALD) at this very period, which drew our concern.<br />
+                                       {homeText.ch1.content}
                                     </p>
                                  </div>
                               </div>
@@ -207,13 +242,11 @@ export class HomePageBody extends React.Component<{}, IHomePageState> {
                               <div className="text-wrapper ">
                                  <div className="text-block1">
                                     <h1 className="heading" ref={e => this.$title2 = e!}>
-                                       Chapter 2, <br />FIRST GLANCE AT THE VERY PROBLEM<br /></h1>
+                                       Chapter 2, <br />{homeText.ch2.h1}<br /></h1>
                                  </div>
                                  <div className="text-block2">
                                     <p className="body-text _2" ref={e => this.$content2 = e!}>
-                                       We were sad to find that there had been countless similar cases in the past few decades: people being forced to drink due to social norms and people getting alcohol addiction for different reasons, their health is seriously threatened by ALD.
-
-**This investigation results made us determined to do something to help with this situation.**<br />
+                                       {homeText.ch2.content}
                                     </p>
                                  </div>
                               </div>
@@ -236,11 +269,13 @@ export class HomePageBody extends React.Component<{}, IHomePageState> {
                               <div className="text-wrapper ">
                                  <div className="text-block1">
                                     <h1 className="heading" ref={e => this.$title3 = e!}>
-                                       Chapter 3, <br />IMPORTANCE OF EARLY INTERVENTION AND OUR EARLY CONCEPTION<br /></h1>
+                                       Chapter 3, <br />
+                                       {homeText.ch3.h1}
+                                    </h1>
                                  </div>
                                  <div className="text-block2">
                                     <p className="body-text _2" ref={e => this.$content3 = e!}>
-                                       China is already the country with the most deaths from drinking in the world, with 709,000 deaths caused by drinking every year, while people still perform disproportionate indifference to the harm of drinking and the prevention of ALD, thus ALD develops quickly into later stages such as liver steatosis, liver cirrhosis even liver cancer, at which point the damage done to the liver can hardly get heal. That’s why we focus on the early stage of ALD, hoping to bring up a new therapy to intervene the development of ALD at the early stage and prevent further liver damage.<br />
+                                       {homeText.ch3.content}
                                     </p>
                                  </div>
                               </div>
@@ -263,12 +298,13 @@ export class HomePageBody extends React.Component<{}, IHomePageState> {
                               <div className="text-wrapper ">
                                  <div className="text-block1">
                                     <h1 className="heading" ref={e => this.$title4 = e!}>
-                                       Chapter 4, <br />FEEDBACK FROM HUMAN PRACTICES AND IMPROVEMENT IN DESIGN<br /></h1>
+                                       Chapter 4, <br />
+                                       {homeText.ch4.h1}
+                                    </h1>
                                  </div>
                                  <div className="text-block2">
                                     <p className="body-text _2" ref={e => this.$content4 = e!}>
-                                       Though helpful for the decomposition of alcohol and acetaldehyde, those de-alcoholic drugs were not able to alleviate the damage of alcohol and could even make it worse, for people who take the drugs are likely to blindly trust the effect of the drugs, which results in them drinking even more than they usually do, thus the harm of alcohol is not only not relieved but also get worse on the contrary.Based on this important feedback, we decided to call off the acetaldehyde decomposition assisting design and started to seek other important factors fundamental for the development of ALD.
-                                        <br />
+                                       {homeText.ch4.content}
                                     </p>
                                  </div>
                               </div>
@@ -291,11 +327,13 @@ export class HomePageBody extends React.Component<{}, IHomePageState> {
                               <div className="text-wrapper ">
                                  <div className="text-block1">
                                     <h1 className="heading" ref={e => this.$title5 = e!}>
-                                       Chapter 5, <br />THE DISCOVERY OF NEW ENTRY POINT: ENTEROCOCCUS FAECALIS AND ALD<br /></h1>
+                                       Chapter 5, <br />
+                                       {homeText.ch5.h1}
+                                    </h1>
                                  </div>
                                  <div className="text-block2">
                                     <p className="body-text _2" ref={e => this.$content5 = e!}>
-                                       Scholars made a breaking discovery that Enterococcus faecalis, which has always been regarded as an important kind of probiotic in human intestines, was found to be a main contributor to liver inflammation. Based on these researches, we reshaped our project, taking E.faecalis density control and balancing intestinal flora as our new goal, and secretion of anti-inflammation cytokine IL-22 as another aim function to achieve.<br />
+                                       {homeText.ch5.content}
                                     </p>
                                  </div>
                               </div>
@@ -318,21 +356,13 @@ export class HomePageBody extends React.Component<{}, IHomePageState> {
                               <div className="text-wrapper ">
                                  <div className="text-block1">
                                     <h1 className="heading" ref={e => this.$title6 = e!}>
-                                       Chapter 6, <br />THE FINAL STRUCTURE OF OUR DESIGN<br /></h1>
+                                       Chapter 6, <br />
+                                       {homeText.ch6.content}
+                                    </h1>
                                  </div>
                                  <div className="text-block2">
                                     <p className="body-text _2" ref={e => this.$content6 = e!}>
-                                       Continuous improvement and changes have been made to our project design. The final structure we constructed is as follows:<br/>
-
-                                       Our engineered bacteria has two main functions:<br/>
-
-                                       1. Secreting bacteriocins JM79, plwα, plwβto reduce the aberrantly high E.faecalis density in intestines.<br/>
-
-                                       2. Secreting anti-inflammatory cytokine IL-22.<br/>
-
-                                       We selected E.coli Nissle 1917 which is a well-studied probiotic as our chassis.<br/>
-                                    <br />
-
+                                       {homeText.ch6.content}
                                     </p>
                                  </div>
                               </div>
@@ -355,12 +385,13 @@ export class HomePageBody extends React.Component<{}, IHomePageState> {
                               <div className="text-wrapper ">
                                  <div className="text-block1">
                                     <h1 className="heading" ref={e => this.$title7 = e!}>
-                                       Chapter 7, <br />FURTHER IMPROVEMENT OF DESIGN DETAILS<br /></h1>
+                                       Chapter 7, <br />
+                                       {homeText.ch7.h1}
+                                    </h1>
                                  </div>
                                  <div className="text-block2">
                                     <p className="body-text _2" ref={e => this.$content7 = e!}>
-                                    1. As the alcohol-inducible promoter palcA is relatively inefficient, we decided to apply a T7 system downstream of it, to amplify the expression level of IL-22.<br/>
-2. We are also interested in exploring milder new approaches to balance the intestinal flora. So that we established a mathematic model to make a predicted determination of the efficiency of this CRISPR-plasmid transfer system.<br />
+                                       {homeText.ch7.content}
                                     </p>
                                  </div>
                               </div>

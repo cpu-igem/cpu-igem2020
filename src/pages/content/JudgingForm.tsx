@@ -16,8 +16,9 @@ export const body = {
     content: (<>
         <div>
             <h1>Judging Form</h1>
-            <h2>Bronze</h2>
-            <h3>1.Competition Deliverables: Convince the judges that you have completed the following Competition Deliverables:</h3>
+            <H2>Bronze Criterion</H2>
+            <h3>1.Competition Deliverables:</h3>
+            <p>Convince the judges that you have completed the following Competition Deliverables:</p>
             <DocOrderedList items={[
                 <p>Wiki</p>,
                 <p>Poster</p>,
@@ -45,7 +46,7 @@ export const body = {
             <p>We successfully added quantification characterization results of existing BioBrick Parts: <a href='http://parts.igem.org/Part:BBa_K2539500'>BBa_K2539500</a></p>
 
 
-            <h2>Silver</h2>
+            <H2>Silver</H2>
             <h3>1.Engineering Success: Demonstrate engineering success in at least one aspect of your project. This achievement should be distinct from your Contribution for Bronze.</h3>
 
             <p>Done! See our Engineering Success page <a href=' https://2020.igem.org/Team:CPU_CHINA/Engineering'>here</a>!</p>
@@ -71,7 +72,7 @@ export const body = {
             <p>We’ve done it! Please click our Implementation page [here]<a href='https://2020.igem.org/Team:CPU_CHINA/Implementation'>https://2020.igem.org/Team:CPU_CHINA/Implementation</a>!</p>
 
 
-            <h2>Gold</h2>
+            <H2>Gold</H2>
             <h3>1.Integrated Human Practices: Demonstrate how your team responded to your human practices reflections, research, and/or engagement. You should show how your activities impacted your project purpose, design and/or execution.</h3>
 
             <p>Done! See our page <a href='https://2020.igem.org/Team:CPU_CHINA/Human_Practices'>here</a>.</p>
