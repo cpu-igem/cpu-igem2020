@@ -11,10 +11,11 @@ interface item {
 }
 
 interface ITableProps {
+    textAlign: string[],
     caption: string,
     titles: string[],
     items: item[][],
-    widthSize?:string,
+    widthSize?: string,
 }
 
 
@@ -22,7 +23,7 @@ export const Table: React.FC<ITableProps> = props => {
 
     return (<>
         <div id='wrapper' style={{
-            width:props.widthSize || '100%'
+            width: props.widthSize || '100%'
         }}>
             <H2>{props.caption}</H2>
             <table id="keywords">
@@ -37,10 +38,24 @@ export const Table: React.FC<ITableProps> = props => {
                     {props.items.map((item, i) => (
                         <tr>
                             {item.map((item, i) => (
-                                <td>
-                                    {item.url === '' ? <>{item.text}</> : <><Link href={item.url}>{item.text}</Link></>}
+                                <>
+                                    { props.textAlign[i] === 'center' ?
+                                        <>
+                                            <td style={{
+                                                    textAlign: 'center',
+                                                }}>
+                                                {item.url === '' ? <>{item.text}</> : <><Link href={item.url}>{item.text}</Link></>}
 
-                                </td>
+                                            </td>
+                                        </>
+                                        :
+                                        <>
+                                            <td>
+                                                {item.url === '' ? <>{item.text}</> : <><Link href={item.url}>{item.text}</Link></>}
+                                            </td>
+                                        </>
+                            }
+                                </>
                             ))}
                         </tr>
                     ))}

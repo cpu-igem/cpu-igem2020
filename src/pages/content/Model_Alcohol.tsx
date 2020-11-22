@@ -2,7 +2,9 @@ import React from 'react';
 import H2 from './comps/TRH2';
 import { assets } from 'assets-path.json'
 import { ImageWithShadow } from './comps/ImageWithShadow'
-import { DocOrderedList, DocUnorderedList } from './comps/DocList'
+import { DocOrderedList } from './comps/DocList'
+// import SyntaxHighlighter from 'react-syntax-highlighter';
+// import { docco } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 
 const alcohol = assets.pages.Model.Alcohol;
 
@@ -48,10 +50,10 @@ export const body = {
             </DocOrderedList>
             <H2>Ⅲ. Variables and Parameters</H2>
             <h3>1. Variables</h3>
-            <p><ImageWithShadow noShadow width='85%' src={alcohol.table1$png} caption={<>Table.1: The variables of model</>} /></p>
+            <p><ImageWithShadow noShadow width='100%' src={alcohol.table1$png} caption={<>Table.1: The variables of model</>} /></p>
 
             <h3>2. Parameters</h3>
-            <p><ImageWithShadow noShadow width='90%' src={alcohol.table2$png} caption={<>Table.2: The parameters of model</>} /></p>
+            <p><ImageWithShadow noShadow width='100%' src={alcohol.table2$png} caption={<>Table.2: The parameters of model</>} /></p>
 
             <H2>Ⅳ. Model establishment</H2>
             <h3>1. Pre-enteral stage</h3>
@@ -129,6 +131,27 @@ export const body = {
             <p>
                 <ImageWithShadow noShadow src={alcohol.final3$png} caption={<>Figure.5: The curve of third stage</>} />
             </p>
+            <p>Ethanol is eliminated to a very small amount in about six hours without supplementation.</p>
+            <H2>Ⅵ. Model promotion</H2>
+            <p>Alcohol is taken orally into the human digestive tract, then undergoes absorption in the digestive tract and enters the blood circulation. After being absorbed in the intestinal tract, ethanol enters the portal vein and directly enters the liver under the influence of blood circulation. This makes ethanol go through the liver and be massively metabolized before undergoing a complete blood circulation. Ethanol molecules are characterized by small molecular weight, strong fat solubility and faster transport through the membrane, so the distribution process of ethanol can be ignored. This model is established based on the above-mentioned inherent characteristics of ethanol transfer in the body. Therefore, the model can be generalized under the same assumption. We propose the following hypotheses for model promotion:</p>
+            <DocOrderedList items={[
+                <p>The object of consideration is a low molecular weight compound.</p>,
+                <p>The compound is taken orally into the human body instead of other ways (such as injection and other preparations).</p>,
+                <p>The characteristics of the compound should meet the requirements of strong fat solubility and fast transport through the membrane.</p>,
+                <p>The main metabolic site of this compound is the liver, not other organs or tissues.</p>,
+                <p>The compound has a higher rate of metabolism in the liver.</p>,
+                <p>The compound will be massively metabolized when it reaches the liver via the portal vein after the first absorption.</p>
+            ]}>
+            </DocOrderedList>
+            <p>The single room model can be used if the above assumptions are met. The model contains two parts: absorption term and elimination term, which are solved by differential equations. The required results include the concentration of the compound in the digestive tract, the concentration of the compound in the blood, and the change over time.</p>
+            <p>In order to facilitate the promotion, we have written related codes based on MATLAB software as follows.</p>
+            <h3>1.Absorption term</h3>
+            <ImageWithShadow noShadow width="100%" src="http://47.100.227.73/Team:CPU_CHINA/assets/mode/part1/code1.png"></ImageWithShadow>
+            <h3>2.Elimination term</h3>
+            <ImageWithShadow noShadow width="100%" src="http://47.100.227.73/Team:CPU_CHINA/assets/mode/part1/code2.png"></ImageWithShadow>
+            <h3>3.Full-stage differential equation</h3>
+            <ImageWithShadow noShadow width="100%" src="http://47.100.227.73/Team:CPU_CHINA/assets/mode/part1/code3.png"></ImageWithShadow>
+            <p>Any single-compartment model can be solved by using the above-mentioned full-stage differential equation.</p>
 
             <div className='doc-refer'>
                 <div className='text'>Reference</div>

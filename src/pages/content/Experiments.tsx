@@ -19,14 +19,14 @@ export const body = {
             <div>
                 <h1>Protocol</h1>
 
-                <h2>Activation of <em>Enterococcus faecalis</em></h2>
+                <H2>Activation of Enterococcus faecalis</H2>
                 <DocOrderedList items={[
                     <p>Add 1ml of reconstituted solution to <em>Enterococcus faecalis</em> freeze-dried powder and rejuvenate at 35°C for 24h. </p>,
                     <p>Add 5ml of brain heart infusion (BHI) and culture overnight.</p>,
                 ]}>
                 </DocOrderedList>
 
-                <h2>Induction of <em>E. coli</em></h2>
+                <H2>Induction of E. coli</H2>
 
                 <DocOrderedList items={[
                     <p>Synthesize the target plasmid.</p>,
@@ -40,7 +40,7 @@ export const body = {
 
                 ]}></DocOrderedList>
 
-                <h2>ELISA </h2>
+                <H2>ELISA </H2>
                 <h3>IL-22</h3>
                 <h4>IL-22 ELISA </h4>
                 <DocOrderedList items={[
@@ -98,14 +98,14 @@ export const body = {
 
                 </DocOrderedList>
 
-                <h2>Bacteriocins killing activity against <em>E.faecalis</em></h2>
+                <H2>Bacteriocins killing activity against E.faecalis</H2>
                 <p>1.Culture <em>E.faecalis</em> overnight, then dilute it to OD600=0.2 using BHI Broth.</p>
                 <p>2.Activate <em>E.faecalis</em> for 4h in 37℃, 200rpm.</p>
                 <p>3.Centrifuge the culture, 12000rpm, 1min, keep the supernatant.</p>
                 <p>4.Filter the supernatant with 0.22μm microvoid filter film.</p>
                 <p>5.Add 500μl filtered supernatant into 2ml <em>E.faecalis</em> culture, memsure its OD600 every hour.</p>
 
-                <h2>Improvement </h2>
+                <H2>Improvement </H2>
                 <h3>EZtrans transfection protocol  </h3>
                 <DocOrderedList items={[
                     <p>The  day  before  transfection  (around  18-24),  the  cells  were  trypsinized  and counted, and the cells were plated so that the confluence was 70-90% at the time of transfection.</p>,

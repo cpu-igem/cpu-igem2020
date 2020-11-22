@@ -281,7 +281,7 @@ const Expert_visits = (<>
     ]}>
     </DocOrderedList>
     <p>Through literature research, we have learned that it is more feasible to form a &quot;low-risk drinking&quot; model for people who have moderate drinking awareness. For patients who are heavily dependent on alcohol, it is very necessary to quit drinking. In order to avoid severe alcohol withdrawal syndrome, our program can assist in gradual cessation of alcohol. We clarified the project positioning, which is aiming at people who are in the early and middle stages of alcoholic liver injury, have certain drinking habits and cannot accept the goal of complete abstinence, seek low-risk drinking patterns, and seek gradual methods to quit alcohol, and comprehensively improve mental health problems and alcoholism caused by alcohol Liver disease and avoid people with severe alcohol withdrawal syndrome. We will provide a comprehensive approach to prevention and treatment.</p>
-    <p><Link href=''>psychological and sociological research on alcohol dependence that strongly affects ALD.pdf</Link></p>
+    <p><Link href=''>Psychological and sociological research on alcohol dependence that strongly affects ALD.pdf</Link></p>
     <h4><span>Psychology expert interview</span></h4>
     <Pivot>
         <PivotItem headerText='Dr. Jie Meng'>
@@ -300,14 +300,15 @@ const Expert_visits = (<>
 
                     <DocOrderedList items={[
                         <p>Demanding abstinence too soon may just end up driving away a patient who is at the brink of dealing with addiction more directly. When a patient expresses a desire to moderate drinking, it can alert the clinician to a teachable moment. Patients who try to limit drinking for a while and find they are unable to do so may then realize that they have already developed dependence. This may be enough to motivate them to try to abstain. For those who are able to drink moderately, it is more feasible to form a &quot;low-risk drinking&quot; model. For patients who are heavily dependent on alcohol, it is very necessary to quit drinking. In order to avoid severe alcohol withdrawal syndrome, our program can assist in gradual cessation of alcohol.</p>,
-                        <p>The current situation in our country is that far fewer people seek psychological counseling help than those who need it. Therefore, we will promote possible ways for people to seek psychological help if they are troubled by alcohol use in popular science activities. Generally speaking, it is roughly divided into the following ways:</p>,
-                        <DocOrderedList items={[
+                        <p>The current situation in our country is that far fewer people seek psychological counseling help than those who need it. Therefore, we will promote possible ways for people to seek psychological help if they are troubled by alcohol use in popular science activities. Generally speaking, it is roughly divided into the following ways:
+                        <DocUnorderedList items={[
                             <p>Hospital Psychology Department</p>,
                             <p>Local psychological counseling agencies have websites, convenience hotlines, etc.</p>,
                             <p>The &quot;National Psychological Consultation and Assistance Information Yellow Pages&quot; project includes privately-practised psychological counselors across the country, NGOs involved in psychological assistance, public welfare hotlines, and related government resources. Can easily browse on the web.</p>,
                             <p>Alcoholic Anonymous in China has contact locations and contact information in various cities on the website.</p>
                         ]}>
-                        </DocOrderedList>
+                        </DocUnorderedList>
+                        </p>,
                     ]}>
                     </DocOrderedList>
                     <ImageWithShadow noShadow src={hp.fig14$jpg} />
@@ -333,8 +334,9 @@ const Expert_visits = (<>
         <p>General information<br />
             <DocUnorderedList items={[
                 <p><strong>Purpose:</strong><br /> The basic information part is to have a clear understanding of the surveyed personnel and master basic information in order to classify and analyze the follow-up survey results</p>,
-                <p><strong>Result:</strong> <br />In this survey, the number of surveyed persons is large,and the geographical distribution is even, and the number of men and women is almost equal. Most of them are between 19 and 60 years old and have a wide range of occupations, including government employees, technicians, company personnel, business personnel, students, etc.We have classified the occupations of investigators. It can be seen from the chart that among the investigators, the company’s employees, students, and professional and technical personnel account for the largest and average proportions, which will provide very useful information for our project development and listing and project plan improvement. The proportion of commercial personnel is also very large, which is conducive to obtain the product marketing and development direction of related products from the following questions.</p>,
+                <p><strong>Result:</strong> <br />In this survey, the number of surveyed persons is large,and the geographical distribution is even, and the number of men and women is almost equal. Most of them are between 19 and 60 years old and have a wide range of occupations, including government employees, technicians, company personnel, business personnel, students, etc.We have classified the occupations of investigators. It can be seen from the chart that among the investigators, the company’s employees, students, and professional and technical personnel account for the largest and average proportions, which will provide very useful information for our project development and listing and project plan improvement. The proportion of commercial personnel is also very large, which is conducive to obtain the product marketing and development direction of related products from the following questions.
                 <ImageWithShadow noShadow src={hp.fig15$png} caption='Fig 1. Occupation'/>
+                </p>,
             ]}></DocUnorderedList></p>,
 
         <p>Drinking habits<br />
@@ -429,8 +431,8 @@ const Expert_visits = (<>
 
     <p>What we learned in summary:</p>
     <DocOrderedList items={[
-        <p>	1. Alcohol‐dependent patients seldom stop drinking or get treatment at the mild stage. The moment they finally choose to seek medical treatment to control it, they are much more likely to have heavily dependent on alcoholism with serious and irreversible harm to their health.</p>,
-        <p>	2. According to the results of this investigations, alcohol withdrawal can be simply divided into two stages: physical dependence withdrawal and psychological dependence withdrawal.</p>
+        <p>Alcohol‐dependent patients seldom stop drinking or get treatment at the mild stage. The moment they finally choose to seek medical treatment to control it, they are much more likely to have heavily dependent on alcoholism with serious and irreversible harm to their health.</p>,
+        <p>According to the results of this investigations, alcohol withdrawal can be simply divided into two stages: physical dependence withdrawal and psychological dependence withdrawal.</p>
     ]}></DocOrderedList>
     {/* <ImageWithShadow noShadow src={} caption='Fig 6. Why support drinking' /> */}
     {/* <ImageWithShadow noShadow src={} caption='Fig 6. Why support drinking' /> */}

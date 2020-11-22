@@ -281,6 +281,8 @@ $border-radius     : 18px 18px 0 0/#{12px};
       font-size: 1.8em;
       margin-bottom: 1.5em;
    }
+
+   
    
    & h2{
       font-family: 'Futura PT Book';
@@ -289,7 +291,17 @@ $border-radius     : 18px 18px 0 0/#{12px};
       color: #B35A5A;
       margin-top: 2.6em;
       font-size: 1.8em;
-      margin-bottom: 1.5em;
+      // margin-bottom: 1.5em;
+   }
+
+   div > h2:first-of-type{
+      font-family     : 'Futura PT Book';
+      text-align: center;
+      font-weight: 500;
+      color: #B35A5A;
+      margin-top: 0.6em !important;
+      font-size: 1.8em;
+      // margin-bottom: 0em;
    }
 
    & h1 {
@@ -321,15 +333,16 @@ $border-radius     : 18px 18px 0 0/#{12px};
       font-weight: bold;
       display      : inline-block;
       width        : auto;
-      padding      : 0 .2em;
+      // padding      : 0 .2em;
       border-radius: 3px;
       font-size    : 1.4em;
       line-height  : 1.4;
       margin-top   : 1.4em;
       margin-bottom: 1.2em;
+      margin-left: 0.9em;
 
       .lighttheme-doc & * {
-         color: white;
+         // color: white;
 
          &::selection {
             background: rgba(255, 255, 255, .4);
@@ -338,7 +351,7 @@ $border-radius     : 18px 18px 0 0/#{12px};
       }
 
       .darktheme-doc & * {
-         color: #e1dfdd;
+         // color: #e1dfdd;
 
          &::selection {
             background: white;
@@ -357,6 +370,7 @@ $border-radius     : 18px 18px 0 0/#{12px};
          background-color:#B35A5A;
          padding: .2em;
          line-height: 2em;
+         margin-left: 1.2em;
       }
    }
 
@@ -439,7 +453,7 @@ $border-radius     : 18px 18px 0 0/#{12px};
 
          >div:first-child {
             flex        : 0 0 2em;
-            padding-left: .8em;
+            padding-left: 1.2em;
             font-size   : 1.2em;
 
             .lighttheme-doc & {
@@ -485,6 +499,12 @@ $border-radius     : 18px 18px 0 0/#{12px};
       .text{
          color: #7d7d7d;
       }
+   }
+
+   h5{
+      margin-left: 1.2em;
+    font-size: inherit;
+    font-weight: 1000;
    }
 
 }

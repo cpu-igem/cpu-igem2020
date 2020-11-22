@@ -16,16 +16,16 @@ import { NavBox } from '../../content/comps/NavBox';
 // import './css/home-3.scss';
 import './css/homepage.scss';
 // import './css/home-nav.scss';
-import Data0 from 'C:/Users/刘鑫/Desktop/新建文件夹 (2)/Home Page/线条/output/output/主页动图/ch0(1).json'
-import Data1 from 'C:/Users/刘鑫/Desktop/新建文件夹 (2)/Home Page/线条/output/output/主页动图/ch1.json'
-import Data2 from 'C:/Users/刘鑫/Desktop/新建文件夹 (2)/Home Page/线条/output/output/主页动图/ch2.json'
-import Data3 from 'C:/Users/刘鑫/Desktop/新建文件夹 (2)/Home Page/线条/output/output/主页动图/ch3.json'
-import Data4 from 'C:/Users/刘鑫/Desktop/新建文件夹 (2)/Home Page/线条/output/output/主页动图/ch4.json'
-import Data5 from 'C:/Users/刘鑫/Desktop/新建文件夹 (2)/Home Page/线条/output/output/主页动图/ch5.json'
-import Data6 from 'C:/Users/刘鑫/Desktop/新建文件夹 (2)/Home Page/线条/output/output/主页动图/ch6.json'
-import Data7 from 'C:/Users/刘鑫/Desktop/新建文件夹 (2)/Home Page/线条/output/output/主页动图/ch7.json'
-import Line56 from 'C:/Users/刘鑫/Desktop/新建文件夹 (2)/Home Page/线条/output/output/主页动图/linedown.json'
-import Line234 from 'C:/Users/刘鑫/Desktop/新建文件夹 (2)/Home Page/线条/output/output/主页动图/line.json'
+import Data0 from './homepageLine/ch0(1).json'
+import Data1 from './homepageLine/ch1.json'
+import Data2 from './homepageLine/ch2.json'
+import Data3 from './homepageLine/ch3.json'
+import Data4 from './homepageLine/ch4.json'
+import Data5 from './homepageLine/ch5.json'
+import Data6 from './homepageLine/ch6.json'
+import Data7 from './homepageLine/ch7.json'
+import Line56 from './homepageLine/linedown.json'
+import Line234 from './homepageLine/line.json'
 // import { Data0, Data1, Data2, Data3, Data4, Data5, Data6, Data7, Line } from 'C:/Users/刘鑫/Desktop/新建文件夹 (2)/Home Page/线条/output/all.json'
 
 
@@ -104,7 +104,7 @@ export class HomePageBody extends React.Component<{}, IHomePageState> {
       const homeText = {
          ch0: {
             h1: 'Lico. Health',
-            content: '',
+            content: '"Every inordinate cup is unblessed and the ingredient is a devil."',
          },
          ch1: {
             h1: 'Our inspiration',
@@ -112,23 +112,23 @@ export class HomePageBody extends React.Component<{}, IHomePageState> {
          },
          ch2: {
             h1: 'First glance at the very problem',
-            content: 'We were sad to find that there had been countless similar cases in the past few decades: people being forced to drink due to social norms and people getting alcohol addiction for different reasons, their health is seriously threatened by ALD.<br/> This investigation results made us determined to do something to help with this situation.',
+            content: 'We were sad to find that there had been countless similar cases in the past few decades: people being forced to drink due to social norms and people getting alcohol addiction for different reasons, their health is seriously threatened by ALD. This investigation results made us determined to do something to help with this situation.',
          },
          ch3: {
-            h1: 'Importance of early intervention and our early conception',
+            h1: 'Importance of early intervention',
             content: 'China is already the country with the most deaths from drinking in the world, with 709,000 deaths caused by drinking every year, while people still perform disproportionate indifference to the harm of drinking and the prevention of ALD, thus ALD develops quickly into later stages such as liver steatosis, liver cirrhosis even liver cancer, at which point the damage done to the liver can hardly get heal. That’s why we focus on the early stage of ALD, hoping to bring up a new therapy to intervene the development of ALD at the early stage and prevent further liver damage.',
          },
          ch4: {
-            h1: 'Feedback from human practices and improvement in design',
+            h1: 'Feedback from human practices and design',
             content: 'Though helpful for the decomposition of alcohol and acetaldehyde, those de-alcoholic drugs were not able to alleviate the damage of alcohol and could even make it worse, for people who take the drugs are likely to blindly trust the effect of the drugs, which results in them drinking even more than they usually do, thus the harm of alcohol is not only not relieved but also get worse on the contrary.Based on this important feedback, we decided to call off the acetaldehyde decomposition assisting design and started to seek other important factors fundamental for the development of ALD.',
          },
          ch5: {
-            h1: 'The discovery of new entry point : Enterococcus Faecalis and ALD',
+            h1: 'Enterococcus Faecalis and ALD',
             content: 'Scholars made a breaking discovery that Enterococcus faecalis, which has always been regarded as an important kind of probiotic in human intestines, was found to be a main contributor to liver inflammation. Based on these researches, we reshaped our project, taking E.faecalis density control and balancing intestinal flora as our new goal, and secretion of anti-inflammation cytokine IL-22 as another aim function to achieve.',
          },
          ch6: {
-            h1: ' The final structure of our design',
-            content: 'Continuous improvement and changes have been made to our project design. The final structure we constructed is as follows: Our engineered bacteria has two main functions: 1. Secreting bacteriocins JM79, plwα, plwβto reduce the aberrantly high E.faecalis density in intestines. <br/> 2. Secreting anti-inflammatory cytokine IL-22. We selected E.coli Nissle 1917 which is a well-studied probiotic as our chassis.',
+            h1: 'The final structure of our design',
+            content: 'Continuous improvement and changes have been made to our project design. The final structure we constructed is as follows: Our engineered bacteria has two main functions: 1. Secreting bacteriocins JM79, plwα, plwβto reduce the aberrantly high E.faecalis density in intestines. 2. Secreting anti-inflammatory cytokine IL-22. We selected E.coli Nissle 1917 which is a well-studied probiotic as our chassis.',
          },
          ch7: {
             h1: 'Further improvement of design details',
@@ -140,22 +140,22 @@ export class HomePageBody extends React.Component<{}, IHomePageState> {
       const footerNavs = [
          {
             title: 'Project',
-            content: 'home-block home-blockhome-block home-blockhome-blockhome-blockhome-block',
+            content: '',
             url: '/Description'
          },
          {
             title: 'Modeling',
-            content: 'home-block home-blockhome-block home-blockhome-blockhome-blockhome-block',
+            content: '',
             url: '/Model'
          },
          {
             title: 'Human Practices',
-            content: 'home-block home-blockhome-block home-blockhome-blockhome-blockhome-block',
+            content: '',
             url: '/Human_Practices'
          },
          {
             title: 'Team',
-            content: 'home-block home-blockhome-block home-blockhome-blockhome-blockhome-block',
+            content: '',
             url: '/Member'
          }
       ];
@@ -357,7 +357,7 @@ export class HomePageBody extends React.Component<{}, IHomePageState> {
                                  <div className="text-block1">
                                     <h1 className="heading" ref={e => this.$title6 = e!}>
                                        Chapter 6, <br />
-                                       {homeText.ch6.content}
+                                       {homeText.ch6.h1}
                                     </h1>
                                  </div>
                                  <div className="text-block2">

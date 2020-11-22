@@ -77,7 +77,7 @@ In addition, we designed a club carnival to involve students; we experimented wi
             <p><ImageWithShadow noShadow src={ed.fig4$jpg}caption='Fig14.User test' /></p>
             <H2>Booklet</H2>
             <p>We have produced a booklet, introducing the development of alcoholic liver injury, the existing treatment system, and the design and purpose of our project. When conducting public interviews and patient interviews, we shared booklet with them and modified them based on their feedback to make our manual more readable. The final version of the popular science manual can be viewed in pdf version.</p>
-            <p> <Link href={ed.brochure$pdf}>brochure.pdf</Link> </p>
+            <p> <Link href={ed.brochure$pdf}>Brochure.pdf</Link> </p>
             <H2>Club Carnival</H2>
             <p>Every year, each club of the school will hold a club carnival to introduce and promote all the clubs in the school to all freshmen.</p>
             <p>We introduced our club: CPU Bio-X Club. We have prepared microscopes for students to observe specimens and experience the fun of science. At the same time, we prepared the consumables commonly used in the laboratory, printed the logo of the club, and distributed it to the students as souvenirs, hoping to attract students&#39; attention to synthetic biology.</p>

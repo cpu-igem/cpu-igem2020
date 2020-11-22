@@ -121,18 +121,26 @@
 }
 
 .div-block-30 {
-    overflow: hidden;
+    // overflow: hidden;
+    width: 100%;
+    text-align: center;
     h1{
-        margin-top: 100px;
-        // font-size: 47px;
+        margin-top: 180px;
+        line-height: 1.5em;
+        font-size: 4.5em;
     }
-    margin-bottom: 20px;
+    // margin-bottom: 20px;
 }
 
 .div-block-31 {
-    overflow: hidden;
-    margin-top: 20px;
+    // overflow: hidden;
+    // margin-top: 20px;
+    font-family: 'Comic Sans MS';
+    line-height: 1.4em;
+    color: #a49a9a;
     font-size: 25px;
+    font-style: italic;
+    text-align: center;
 
 }
 
@@ -318,7 +326,7 @@
     -webkit-align-items: flex-start;
     -ms-flex-align: start;
     align-items: flex-start;
-    font-family: 'EB Garamond', sans-serif;
+    font-family: 'Comic Sans MS';
     color: #b35a5a;
     font-size: 43px;
     line-height: 50px;

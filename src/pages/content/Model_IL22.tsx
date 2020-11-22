@@ -26,17 +26,17 @@ export const body = {
                 <p>		Considering these, we introduced IL-22 into our E.coli Nissle 1917 as another means to combat ALD in experimental design. </p>
                 <p>		However, unlike simulation of intestinal absorption of small molecule drugs, simulation upon intestinal absorption of proteins secreted by engineered strains haven&#39;t been widely studied. Here, following wet lab experimental design, we present an ordinary differential equations model to simulate the secretion of IL-22 of engineered strain E.coli Nissle 1917. </p>
                 <p>		We used Simbiology as platform to simulate the expression of IL-22.</p>
-                <p><ImageWithShadow noShadow src={IL.figure1$png} caption='Figure.1: The IL-22 Expression Model' /></p>
+                <p><ImageWithShadow width='65%' noShadow src={IL.figure1$png} caption='Figure.1: The IL-22 Expression Model' /></p>
                 <H2>Ⅱ. Model Preparation</H2>
                 <h3>Michaelis-Menten Equation: </h3>
                 <p>		For the description of Michaelis-Menten equation, please see <strong>[qrorum sensing]</strong> part.</p>
                 <p>		In IL-22 expression model, Michaelis-Menten equation is used in most of the enzymatic reaction, including proteins&#39; transcription. For the transcription procedure, taking stronger starting efficiency of T7 promoter compared to PalcA promoter in to consideration, different <strong>K<sub>m</sub>s</strong> have been applied to represent the differences between transcription rate since multiple promoters was used, leading to different transcription rate.</p>
                 <H2>Ⅲ. Model Establishment</H2>
-                <p><ImageWithShadow noShadow src={IL.result4$jpg} caption='Figure.2: Diagram without asRNA' /></p>
+                <p><ImageWithShadow width='90%' noShadow src={IL.result4$jpg} caption='Figure.2: Diagram without asRNA' /></p>
                 <H2>Ⅳ. Equations</H2>
-                <p><ImageWithShadow noShadow src={IL.table1$png} caption='Table.1 Equation used in this model' /></p>
+                <p><ImageWithShadow width='100%' noShadow src={IL.table1$png} caption='Table.1 Equation used in this model' /></p>
                 <H2>Ⅴ. Parameters</H2>
-                <p><ImageWithShadow noShadow src={IL.table2$png} caption='Table.2 Parameter used in this model' /></p>
+                <p><ImageWithShadow width='100%' noShadow src={IL.table2$png} caption='Table.2 Parameter used in this model' /></p>
                 <H2>Ⅵ. Result</H2>
                 <h3>Result of IL-22 Secretion:</h3>
                 <p>		We comprehensively consider the construction of the plasmid of the amplification system, there are three factors in total that determine the expression of IL-22.</p>
@@ -50,14 +50,41 @@ export const body = {
                     <p>		We constructed a system with asRNA (low IL-22 expression system) and a system without asRNA (high IL-22 expression system). The system construction diagrams are as follows.</p>
 
                 </DocOrderedList>
-                <p><ImageWithShadow noShadow src={IL.result4$jpg} caption='Figure.2: Diagram without asRNA' /></p>
-                <p><ImageWithShadow noShadow src={IL.result1$jpg} caption='Figure.3: Diagram with asRNA' /></p>
+                <p><ImageWithShadow width='90%' noShadow src={IL.result4$jpg} caption='Figure.2: Diagram without asRNA' /></p>
+                <p><ImageWithShadow width='90%' noShadow src={IL.result1$jpg} caption='Figure.3: Diagram with asRNA' /></p>
                 <p>		According to the above parameter table, we perform calculations and the results are shown in the figures below.</p>
-                <p><ImageWithShadow noShadow src={IL.result2$png} caption='Figure.4: Result with asRNA' /></p>
-                <p><ImageWithShadow noShadow src={IL.result3$png} caption='Figure.5: Result without asRNA' /></p>
+                <p><ImageWithShadow width='60%' noShadow src={IL.result2$png} caption='Figure.4: Result with asRNA' /></p>
+                <p><ImageWithShadow width='60%'noShadow src={IL.result3$png} caption='Figure.5: Result without asRNA' /></p>
                 <p>		According to calculation, the population of engineered bacteria in the whole intestine is <strong>1.37×10<sup>7</sup></strong> (about <strong>0.45%</strong> of the population of bacteria in the whole intestine).</p>
                 <p>		This result shows that with an amplified expression system that does not contain asRNA, the concentration of IL-22 and the population of engineered bacteria in the intestine can also achieve therapeutic effects. Therefore, the asRNA part can be removed.</p>
 
+
+                <H2> Ⅷ. Model promotion</H2>
+                <p>In the system dynamics model for simulating protein secretion, the equations used can be divided into three categories:</p>
+                <DocOrderedList items={[
+                    <p>The equation used to describe the increase of concentration of a substance
+                    <br />
+                    This type of equation includes the <strong>Michaelis-Menten equation</strong> for increasing mRNA concentration and <strong>the equation</strong> to simulate the increasing of protein concentration.
+                    <br />
+                    The description and assumptions of the <strong>Michaelis-Menten equation</strong> are in the Abstract and Assumption part of <strong>Bacteriocin Expression Model</strong>.
+                    <br />
+                    Since the transcription procedures in bacteria are catalyzed by RNA polymerase II that is rebundant in cells, and each promoter has a corresponding transcription factors(TFs) to control the rate of mRNA transcription. In the database, we can retrieve the turnover numbers of RNA polymerase II of different substrates, so we can calculate V<sub>max</sub> from the concentration of RNA polymerase II in total and its turnover number. The K<sub>m</sub> of RNA polymerase II, as a constant that is often studied, can also be found in databases.
+                    <br />
+                    In the translation process, we assume that we have abundant ribosomes. In fact, it is a condition that is often assumed, because the synthesis rate of heterologous proteins in the constructed secretion system is often higher than the synthesis rate of many bacterial endogenous substances. We comprehensively consider the length of the mRNA and the estimated translation rate of mRNA, and then the amount of protein synthesis per minute can be obtained. And because protein folding and secretion and protein synthesis can be performed simultaneously, there&#39;s no need to consider the time consumed folding of the protein.
+                    </p>,
+
+                    <p>The equation used to describe the decrease in the concentration of a substance
+                    <br />
+                    The <strong>first-order kinetic equation</strong> is used to simulate the mRNA degradation process because a large number of experiments are based on this hypothesis, and it has been verified for decades. The mRNA half-life can be determined experimentally, including but not limited to experimental techniques such as Northern Blot and qRT-PCR<sup>[7-8]</sup>. After obtaining the half-life, we can calculate rate constant with k=ln2/t<sub>1/2</sub>.
+                    <br />
+                    We simulate protein degradation through <strong>first-order kinetic equation</strong>. The half-life of protein degradation can be simulated by ExPASy, but half-life determined by experiments can be more accurate. Designed in 2011, Blench-Chase technique can measure half-life mRNA with a unique fluorescently tagged protein<sup>[9]</sup>.
+                    </p>,
+                    
+                    <p>Receptor ligand binding
+                    <br />
+                    Among the system dynamics models based on signaling pathways, there is also an equation widely used to simulate ligand-receptor binding: <strong>Ligand Binding equation</strong>. The description of the equation and the assumptions are in the Abstract and Assumption part of <strong>Bacteriocin Expression Model</strong>. Parameters can be determined experimentally, the value of K<sub>D</sub> can also be found in related databases. It is convenient and accurate to simulate the dynamic behavior of protein interaction through the ligand-receptor binding equation.
+                    </p>
+                ]}></DocOrderedList>
                 <div className='doc-refer'>
                     <div className='text'>Reference</div>
                     <div className='text'>

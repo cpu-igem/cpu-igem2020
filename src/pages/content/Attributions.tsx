@@ -232,7 +232,7 @@ export const body = {
         <>
             <div>
                 <h1>Attributions</h1>
-                <Table titles={titles} caption={caption} items={items} ></Table>
+                <Table textAlign={['center', '']} titles={titles} caption={caption} items={items} ></Table>
 
                 <H2>General Support</H2>
                 <p>Thank our advisors, Mr. Hui Huang, for helping us for a long time. He helps us to communicate with the leaders of our school. We also thank College of Life Science and Technology for providing lab for daily work.</p>

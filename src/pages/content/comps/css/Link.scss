@@ -1,49 +1,90 @@
+// .Link {
+//    cursor: pointer;
+//    display: inline-block;
+//    position: relative;
+//    font-size: 1.2em;
+//    > a {
+//       text-decoration: none;
+
+//       &:link,
+//       &:visited {
+//          .lighttheme-doc & {
+//             color: #b35a5a;
+//          }
+
+//          .darktheme-doc & {
+//             // color: lighten(#B35A5A, 20%);
+//          }
+
+//          // text-decoration: underline;
+//       }
+
+//       &:hover,
+//       &:hover {
+//          .lighttheme-doc & {
+//             color: #b35a5a;
+//          }
+//          text-decoration: underline;
+
+//          .darktheme-doc & {
+//             // color: lighten(#B35A5A, 30%);
+//          }
+//       }
+
+//       &:before {
+//          content: "";
+//          position: absolute;
+//          bottom: 0px;
+//          width: 100%;
+//          height: 2px;
+//          // background-color: #B35A5A;
+//          transform: scaleX(0);
+//          transition: all 0.2s ease-in-out 0s;
+//       }
+
+//       &:hover:before {
+//          transform: scaleX(1);
+//       }
+//    }
+// }
+
 .Link {
-   cursor  : pointer;
-   display : inline-block;
+   cursor: pointer;
+   display: inline-block;
    position: relative;
-   font-size: 1.2em;
-   >a {
-      text-decoration: none;
-
-      &:link,
-      &:visited {
-         .lighttheme-doc & {
-            // color: #B35A5A;
-         }
-
-         .darktheme-doc & {
-            // color: lighten(#B35A5A, 20%);
-         }
-
-         // text-decoration: underline;
-      }
-
-      &:hover,
-      &:hover {
-         .lighttheme-doc & {
-            // color: #B35A5A;
-         }
-         text-decoration: underline;
-
-         .darktheme-doc & {
-            // color: lighten(#B35A5A, 30%);
-         }
-      }
-
-      &:before {
-         content         : "";
-         position        : absolute;
-         bottom          : 0px;
-         width           : 100%;
-         height          : 2px;
-         // background-color: #B35A5A;
-         transform       : scaleX(0);
-         transition      : all 0.2s ease-in-out 0s;
-      }
-
-      &:hover:before {
-         transform: scaleX(1);
-      }
-   }
+}
+.Link > a,
+.Link > a:link,
+.Link > a:visited {
+   text-decoration: none;
+}
+.lighttheme-doc .Link > a:link,
+.lighttheme-doc .Link > a:visited {
+   color: #0078d4;
+}
+.darktheme-doc .Link > a:link,
+.darktheme-doc .Link > a:visited {
+   color: #3baaff;
+}
+.lighttheme-doc .Link > a:hover {
+   color: #004578;
+}
+.darktheme-doc .Link > a:hover {
+   color: #6ec0ff;
+}
+.Link > a:before {
+   content: "";
+   position: absolute;
+   bottom: 0;
+   width: 100%;
+   height: 2px;
+   background-color: #008ddd;
+   -webkit-transform: scaleX(0);
+   transform: scaleX(0);
+   -webkit-transition: all 0.2s ease-in-out 0s;
+   transition: all 0.2s ease-in-out 0s;
+}
+.Link > a:hover:before {
+   -webkit-transform: scaleX(1);
+   transform: scaleX(1);
 }

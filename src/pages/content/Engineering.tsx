@@ -110,7 +110,7 @@ export const body = {
                     
 
                     <p>Click the part number to see detailed information of the parts we design!</p>
-                    <Table caption='Parts Overview' titles={titles} items={items}></Table>
+                    <Table textAlign={['center', 'center', 'center','center']} caption='Parts Overview' titles={titles} items={items}></Table>
                 </div>
             </div>
         </div>

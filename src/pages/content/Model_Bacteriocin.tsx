@@ -23,23 +23,23 @@ export const body = {
                 <H2>Ⅰ. Abstract</H2>
                 <p>		In the purpose of neutralizing excess Enterococcus faecalis to achieve therapeutic goal of curing ALD, wet lab team engineered strain E.coli Nissle 1912 to secrete bacteriocin to kill excess E. faecalis. To predict the killing effect under different engineered bacteria colonization situation, we established system dynamics model to simulate the amount of bacteriocin secreted by engineered bacteria<sup>[1]</sup>. </p>
                 <p>		By simulate the transcription and translation procedure with regulatory factors taken into account, we managed to simulate the bacteriocin secretion procedure with the variation of concentration for GBAP inside of intestine<sup>[2-5]</sup>.</p>
-                <p><ImageWithShadow   noShadow src={bc.figure1$png} caption='Figure.1: The Skeleton of Qrorum Sensing' /></p>
+                <p><ImageWithShadow width='65%'  noShadow src={bc.figure1$png} caption='Figure.1: The Skeleton of Qrorum Sensing' /></p>
                 
                 <H2>Ⅱ. Model Preparation</H2>
                 <h3>1.Michaelis-Menten Equation</h3>
                 <p>		The equation describes the rate of enzymatic reactions, by giving the maximum reaction rate <strong>V<sub>max</sub></strong>, Michaelis constant <strong>K<sub>M</sub></strong>.</p>
-                <p><ImageWithShadow  noShadow src={bc.function1$png} caption='Fomula.1' /></p>
+                <p><ImageWithShadow width='17%'  noShadow src={bc.function1$png} caption='Fomula.1' /></p>
                 <h3>2.Ligand Binding Equation</h3>
                 <p>		In biochemistry, the ligand-receptor binding equation<sup>[6]</sup> is often used to describe the kinetic process of ligand-receptor binding.</p>
                 <p>		Binding kinetics was concerned with the rate constants of association (<strong>k<sub>on</sub></strong>) and dissociation (<strong>k<sub>off</sub></strong>); then the ratio of the two defines the equilibrium dissociation constant. It can be described by the following equation :</p>
-                <p><ImageWithShadow  noShadow src={bc.function2$png} /></p>
+                <p><ImageWithShadow width='25%' noShadow src={bc.function2$png} /></p>
                 <p>		After substituting the kinetic parameters (<strong>K<sub>D</sub></strong>, or <strong>k<sub>on</sub></strong> and <strong>k<sub>off</sub></strong>) obtained through ligand binding assays or other analytical methods such as synchrotron radiation circular dichroism(SRCD)<sup>[7]</sup>, ligand-receptor binding procedure could be simulated and various ligands and receptor concentrations could be obtained.</p>
                 <p>		<strong>The parameters are as follows:</strong>        </p>
                 <p>		<strong>k<sub>on</sub></strong>: Association rate constant, reflects the height of the transition state in the journey from free drug to bound drug-target complex.</p>
                 <p>		<strong>k<sub>off</sub></strong>: Dissociation rate constant, reflects energy barrier from the bound complex up to transition state.</p>
                 <p>		<strong>K<sub>D</sub></strong>: Affinity of ligand and receptor, is a measure of the binding strength between ligand and receptor.</p>
                 <p>		The relationship between <strong>k<sub>on</sub></strong>, <strong>k<sub>off</sub></strong> and <strong>K<sub>D</sub></strong> is:</p>
-                <p><ImageWithShadow  noShadow src={bc.function3$png} caption='Fomula.2' /></p>
+                <p><ImageWithShadow width='15%' noShadow src={bc.function3$png} caption='Fomula.2' /></p>
                 <p>		In our modeling, the binding procedure of FsrC protein and GBAP polypeptide was simulated via this equation. The binding of the ligand and the receptor would prompt FsrC to initiate autophosphorylation<sup>[2]</sup>, which in turn would make FsrC exhibit histidine protein kinase activity.</p>
                 <h3>3. Assumptions</h3>
                 <h4>
@@ -81,25 +81,25 @@ export const body = {
                 </DocOrderedList>
                 <H2>Ⅲ. Model Establishment</H2>
                 <p>		We applied a toolkit of MATLAB: Simbiology, to construct the system dynamics model.</p>
-                <p><ImageWithShadow  noShadow src={bc.figure5$jpg} caption='Figure2: Bacteriocin Expressing System' /></p>
+                <p><ImageWithShadow width='100%' noShadow src={bc.figure5$jpg} caption='Figure2: Bacteriocin Expressing System' /></p>
                 <H2>Ⅳ. Equations</H2>
-                <p><ImageWithShadow  noShadow src={bc.table1$png} caption='Table.1: Equations' /></p>
+                <p><ImageWithShadow width='100%' noShadow src={bc.table1$png} caption='Table.1: Equations' /></p>
                 <H2>Ⅴ. Parameters</H2>
-                <p><ImageWithShadow  noShadow src={bc.table2$png} caption='Table.2: Parameters' /></p>
+                <p><ImageWithShadow width='100%' noShadow src={bc.table2$png} caption='Table.2: Parameters' /></p>
                 <H2>Ⅵ. Result</H2>
                 <p>		Based on assumptions about three scenarios that may appear in the <strong>medication process</strong>, we simulated the secretion of bacteriocins under different colonization conditions and the inhibition of the growth of E. faecalis caused by bacteriocins.</p>
                 <p>		Assume the concentration of E. faecalis of intestine to be <strong>1.71×10<sup>6</sup></strong> CFU/ml<sup>[13]</sup>, further, as we estimated, they can produce <strong>1.55×10<sup>11</sup></strong> molecule/ml GBAP<sup>[16]</sup>. According to the GBAP concentration, we can further obtained the number of  bacteriocins secreted by each E.coli Nissle 1917 at 30 minutes to be 606 molecule/cell. </p>
-                <p><ImageWithShadow  noShadow src={bc.result1$png} caption='Result.1: Secretion of Bacteriocins by Each E.coli Nissle 1917' /></p>
+                <p><ImageWithShadow width='60%' noShadow src={bc.result1$png} caption='Result.1: Secretion of Bacteriocins by Each E.coli Nissle 1917' /></p>
                 <h3>The first condition : E. faecalis : E.coli  Nissle 1917 = 1 :  10<sup>-4</sup> </h3>
-                <p><ImageWithShadow  noShadow src={bc.figure2$png} caption='Figure.3：The First Condition' /></p>
+                <p><ImageWithShadow width='60%' noShadow src={bc.figure2$png} caption='Figure.3：The First Condition' /></p>
                 <p>		The first condition is when the intestinal concentration of the engineered bacteria was 10<sup>-4</sup> times of E. faecalis (at this time E. faecalis was in the dominant position), which is <strong>1.71×10<sup>2</sup></strong> CFU/ml. This situation occurs at the end of the <strong>dosing cycle</strong> when the concentration of engineered bacteria is small. At the same time, we can obtain its inhibitory effect on Enterococcus faecalis at a low concentration of engineered bacteria.</p>
                 <p>		According to the simulation, the concentration of E. faecalis will decay to <strong>99.9999575%</strong> of the previous concentration, which means only <strong>0.73</strong> E. faecalis will be eliminated under this condition. </p>
                 <h3>The second condition : E. faecalis : E.coli Nissle 1917 = 1 : 1</h3>
-                <p><ImageWithShadow  noShadow src={bc.figure3$png} caption='Figure.4：The Second Condition' /></p>
+                <p><ImageWithShadow width='60%' noShadow src={bc.figure3$png} caption='Figure.4：The Second Condition' /></p>
                 <p>		Secondly, we simulated the secretion of bacteriocins when the concentration of the engineered bacteria in the intestine was equivalent to that of E. faecalis, which is <strong>1.71×10<sup>6</sup></strong> CFU/ml. Based on this simulation, we can obtain the inhibition ability, of the growth of E. faecalis when the bacteriocin secretion is strong (when the engineered bacteria just entered the intestinal tract and begin to function).</p>
                 <p>		According to the simulation, the concentration of E. faecalis will decay to <strong>99.58%</strong> of the previous concentration, which means <strong>7300</strong> E. faecalis will be eliminated under this condition.</p>
                 <h3>The third condition : E. faecalis : E. coli Nissle 1917 = 1 : 100</h3>
-                <p><ImageWithShadow  noShadow src={bc.figure4$png} caption='Figure.5：The Third Condition' /></p>
+                <p><ImageWithShadow width='60%' noShadow src={bc.figure4$png} caption='Figure.5：The Third Condition' /></p>
                 <p>		Once again, we simulated the secretion of bacteriocins when the intestinal concentration of the engineered bacteria was maintained at 100 times the concentration of E. faecalis (the engineered bacteria are now in the dominant position). In this case, the engineered bacteria overexpressed the bacteriocins, and suppressed the concentration of Enterococcus faecalis heavily. </p>
                 <p>		According to the simulation, the concentration of E. faecalis will decay to <strong>65.43%</strong> of the previous concentration, which means <strong>7.3×10<sup>5</sup></strong> E. faecalis will be eliminated under this condition. Under this condition, E. coli Nissle 1917 will make up to  17.1% of total concentration of E. coli.</p>
 

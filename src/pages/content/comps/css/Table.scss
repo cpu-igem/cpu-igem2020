@@ -29,7 +29,7 @@
 }
 #keywords thead tr th span { 
   // padding-right: 20px;
-  font-size: 1.2em;
+  font-size: 1.6em;
   background-repeat: no-repeat;
   background-position: 100% 100%;
 }
@@ -43,13 +43,16 @@
   color: #555;
 }
 #keywords tbody tr td {
-  text-align: justify;
+  text-align: left;
   padding: 15px 10px;
+  border: 0.06em solid #979797;
 }
 #keywords tbody tr td.lalign {
   text-align: left;
 }
 
 #keywords tbody tr>td:first-child{
-  text-align: center;
+  // text-align: center;
+  // font-size: 16px;
+  font-weight: 1000;
 }
