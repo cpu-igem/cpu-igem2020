@@ -103,7 +103,10 @@
                "table2$png": "https://2020.igem.org/wiki/images/b/b9/T--CPU_CHINA--075a99c5.png",
                "table1$png": "https://2020.igem.org/wiki/images/c/c4/T--CPU_CHINA--696c0072.png",
                "clip_image000$png": "https://2020.igem.org/wiki/images/0/02/T--CPU_CHINA--875e0af6.png",
-               "pic1$png": "https://2020.igem.org/wiki/images/1/18/T--CPU_CHINA--92dde4e2.png"
+               "pic1$png": "https://2020.igem.org/wiki/images/1/18/T--CPU_CHINA--92dde4e2.png",
+               "code1$png": "https://2020.igem.org/wiki/images/d/d9/T--CPU_CHINA--fd53850d.png",
+               "code2$png": "https://2020.igem.org/wiki/images/2/25/T--CPU_CHINA--adfbbb14.png",
+               "code3$png": "https://2020.igem.org/wiki/images/e/ed/T--CPU_CHINA--6396416b.png"
             },
             "Plasmid": {
                "fomula1$png": "https://2020.igem.org/wiki/images/a/ad/T--CPU_CHINA--87306eb4.png",
@@ -314,6 +317,9 @@
             "fig1$jpg": "https://2020.igem.org/wiki/images/2/21/T--CPU_CHINA--49f696c0.png",
             "fig2$png": "https://2020.igem.org/wiki/images/b/bd/T--CPU_CHINA--aecd95f6.png",
             "fig3$png": "https://2020.igem.org/wiki/images/7/7f/T--CPU_CHINA--c78ba65a.png"
+         },
+         "Contribution": {
+            "Figure1$png": ""
          }
       },
       "parts": {

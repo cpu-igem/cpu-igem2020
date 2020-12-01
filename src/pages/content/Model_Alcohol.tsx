@@ -146,11 +146,11 @@ export const body = {
             <p>The single room model can be used if the above assumptions are met. The model contains two parts: absorption term and elimination term, which are solved by differential equations. The required results include the concentration of the compound in the digestive tract, the concentration of the compound in the blood, and the change over time.</p>
             <p>In order to facilitate the promotion, we have written related codes based on MATLAB software as follows.</p>
             <h3>1.Absorption term</h3>
-            <ImageWithShadow noShadow width="100%" src="http://47.100.227.73/Team:CPU_CHINA/assets/mode/part1/code1.png"></ImageWithShadow>
+            <ImageWithShadow noShadow width="100%" src={alcohol.code1$png}></ImageWithShadow>
             <h3>2.Elimination term</h3>
-            <ImageWithShadow noShadow width="100%" src="http://47.100.227.73/Team:CPU_CHINA/assets/mode/part1/code2.png"></ImageWithShadow>
+            <ImageWithShadow noShadow width="100%" src={alcohol.code2$png}></ImageWithShadow>
             <h3>3.Full-stage differential equation</h3>
-            <ImageWithShadow noShadow width="100%" src="http://47.100.227.73/Team:CPU_CHINA/assets/mode/part1/code3.png"></ImageWithShadow>
+            <ImageWithShadow noShadow width="100%" src={alcohol.code3$png}></ImageWithShadow>
             <p>Any single-compartment model can be solved by using the above-mentioned full-stage differential equation.</p>
 
             <div className='doc-refer'>
