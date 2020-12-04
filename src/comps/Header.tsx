@@ -78,7 +78,11 @@ const links = [
    {
       h1: {
          text: <div style={{ display: 'flex', alignItems: 'center', fontSize: '.9em' }}>
-            <div>Judging<br />Form</div>
+            <div style={
+               {
+                  lineHeight:'20px',
+               }
+            }>Judging<br />Form</div>
             <Icon
                iconName='ArrowUpRight'
                style={{ width: 18, height: 18, fontSize: 18, marginLeft: 6 }} />
