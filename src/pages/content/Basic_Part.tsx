@@ -24,12 +24,12 @@ export const body = {
                 {/* <h3>Part:BBa_K3661007</h3> */}
                 <h3><Link href='http://parts.igem.org/wiki/index.php?title=Part:BBa_K3661007'>Part:BBa_K3661007</Link></h3>
 
-                <p>In 2020, Hiracin JM79 were used to kill <em>entrococcus faecalis</em>.  JM79 have been tested and reported to have activity against <em>enterococcus faecalis</em>.[1] A major benefit of the Hiracin JM79 as an antimicrobial agent is their specificity compared to many traditional antibiotics.</p>
+                <p>In 2020, Hiracin JM79 were used to kill <em>Enterococcus faecalis</em>.  JM79 have been tested and reported to have activity against <em>Enterococcus faecalis</em>.[1] A major benefit of the Hiracin JM79 as an antimicrobial agent is their specificity compared to many traditional antibiotics.</p>
                 <h4><span>Usage</span></h4>
 
-                <p> Hiracin JM79 can be secreted from engineered bacteria to increase the extracellular concentration. Bacteriocins thus improve ALD in patients by killing <em>enterococcus faecalis</em> in the cellular environment.</p>
+                <p> Hiracin JM79 can be secreted from engineered bacteria to increase the extracellular concentration. Bacteriocins thus improve ALD in patients by killing <em>Enterococcus faecalis</em> in the cellular environment.</p>
                 <h4><span>Biology</span></h4>
-                <p>Bacteriocins are proteinaceous or peptidic toxins produced by bacteria to inhibit the growth of similar or closely related bacterial strain(s).  Hiracin JM79 (HirJM79), a Sec-dependent bacteriocin produced by <em>enterococcus hirae DCH5</em>, was proved to have activity against <em>enterococcus faecalis</em>. The bacteriocin Hiracin JM79 is a useful means to kill Enterococcus faecalis</p>
+                <p>Bacteriocins are proteinaceous or peptidic toxins produced by bacteria to inhibit the growth of similar or closely related bacterial strain(s).  Hiracin JM79 (HirJM79), a Sec-dependent bacteriocin produced by <em>Enterococcus hirae DCH5</em>, was proved to have activity against <em>Enterococcus faecalis</em>. The bacteriocin Hiracin JM79 is a useful means to kill <em>Enterococcus faecalis</em></p>
 
 
                 <h4><span>Characterization</span></h4>
@@ -41,8 +41,8 @@ export const body = {
 
                 <p>It showed that the Hiracin JM79 expression of the positive group induced by IPTG was significantly higher than that of the uninduced negative group. The sample group was significantly different compared to the negative control group.*P &lt; 0.05, ** P &lt; 0.01, *** P &lt; 0.001, and ****P &lt; 0.0001 by t test.</p>
                 <p><ImageWithShadow noShadow width="50%" src={ip.fig4$png} caption="Figure4.The killing assay of E.faecalis by JM79." /></p>
-                <p>JM79 was added from 5.5h. The group that added JM79 showed decreased growth relative to the negative control (added the supernatant of uninduced <em>E.coli</em> ).</p>
-                <p>We tested the antibacterial effect of hiracin JM79. As shown in Figure 4, the quantity of Enterococcus faecalis in the experimental group induced by 5h was significantly lower than that of the negative control group, which proved that our system can successfully secrete The bacteriocin also achieves the bactericidal effect on Enterococcus faecalis.</p>
+                <p>JM79 was added from 5.5h. The group that added JM79 showed decreased growth relative to the negative control (added the supernatant of uninduced <em>E. coli</em> ).</p>
+                <p>We tested the antibacterial effect of hiracin JM79. As shown in Figure 4, the quantity of <em>Enterococcus faecalis</em> in the experimental group induced by 5h was significantly lower than that of the negative control group, which proved that our system can successfully secrete The bacteriocin also achieves the bactericidal effect on <em>Enterococcus faecalis</em>.</p>
 
                 <div className='doc-refer'>
                     <div className='text'>Reference</div>
@@ -68,7 +68,7 @@ In our project, IL-22 is expected to inhibit the local inflammation on liver tha
                 The production of TNF-α by macrophages is significantly increased in patients with alcoholic hepatitis, and this is further exacerbated by exogenous LPS, resulting in significant inflammation of the liver. In addition, LPS decreased the level of IL-22 production by macrophages through the JNK signaling pathway [4]. Taken together, this leads to apoptosis of hepatocytes.
 IL-22 reduces inflammation through the JAK-STAT pathway as well as the NF-κB pathway to inhibit TNF-α production, reducing hepatocyte apoptosis and protecting hepatocytes [5].</p>
                 <h4><span>Characterization</span></h4>
-                <p>We constructed a secretory expression vector for IL-22, using <em>E.coli</em> as chasis. IL-22 was detected using an ELISA kit.</p>
+                <p>We constructed a secretory expression vector for IL-22, using <em>E. coli</em> as chasis. IL-22 was detected using an ELISA kit.</p>
                 <p><ImageWithShadow noShadow width="25%" src={ip.figure1$png} caption="Fig1. Experiment result" /></p>
                 <p><strong>Figure 1. Result of activity assay using human IL-22 ELISA kit.</strong> </p>
                 <p>(A1/B1) are blank-corrected wells. Wells (A2/B2), (A3/B3), (A4/B4), (A5/B5), (A6/B6), (A7/B7), (A8/B8) are standard human IL-22 protein sample with concentration at 2000pg/ml, 1000pg/ml, 500pg/ml, 250pg/ml, 150pg/ml, 62.5pg/ml and 0pg/ml respectively. Wells C1-C3 are duplicate wells for protein sample 1 while C4-C6 are duplicate wells for protein sample 2. C7-C8 are negative control wells. Protein sample 1 was induced by adding 1M IPTG, and protein sample 2 was induced by adding 0.5M. No induction agent was added to the negative control group.</p>

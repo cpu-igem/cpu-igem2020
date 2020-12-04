@@ -508,7 +508,7 @@ const Enterprise_interaction = (<>
         </Panel>
 
         <Panel header="Weihai Baihe Biotechnology Co., Ltd." key="4">
-            <ImageWithShadow noShadow src={hp.fig42$jpg} />
+            <ImageWithShadow noShadow src={hp.fig40$jpg} />
             <p>Weihai Baihe Biotechnology Co., Ltd. is a leading global health food manufacturer. The company has obtained many qualification registrations and certifications including FDA registration in the United States, and its products have obtained market access qualifications in 65 countries including Europe and the United States.</p>
             <p>We interviewed the company’s manager, Sun Pengfei, and learned about the current domestic regulatory knowledge and relevant precautions for the listing of health products.</p>
             <p>What we learned:</p>

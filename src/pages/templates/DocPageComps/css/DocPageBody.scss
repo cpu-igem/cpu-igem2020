@@ -411,7 +411,7 @@ $border-radius     : 18px 18px 0 0/#{12px};
 
    & * {
       .lighttheme-doc &::selection {
-         background: darken(rgb(154, 197, 194), 5%);
+         background: darken(#B35A5A, 5%);
          color     : #FFF;
       }
 

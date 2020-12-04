@@ -98,12 +98,12 @@ export const body = {
 
                 </DocOrderedList>
 
-                <H2>Bacteriocins killing activity against E.faecalis</H2>
-                <p>1.Culture <em>E.faecalis</em> overnight, then dilute it to OD600=0.2 using BHI Broth.</p>
-                <p>2.Activate <em>E.faecalis</em> for 4h in 37℃, 200rpm.</p>
+                <H2>Bacteriocins killing activity against E. faecalis</H2>
+                <p>1.Culture <em>E. faecalis</em> overnight, then dilute it to OD600=0.2 using BHI Broth.</p>
+                <p>2.Activate <em>E. faecalis</em> for 4h in 37℃, 200rpm.</p>
                 <p>3.Centrifuge the culture, 12000rpm, 1min, keep the supernatant.</p>
                 <p>4.Filter the supernatant with 0.22μm microvoid filter film.</p>
-                <p>5.Add 500μl filtered supernatant into 2ml <em>E.faecalis</em> culture, memsure its OD600 every hour.</p>
+                <p>5.Add 500μl filtered supernatant into 2ml <em>E. faecalis</em> culture, memsure its OD600 every hour.</p>
 
                 <H2>Improvement </H2>
                 <h3>EZtrans transfection protocol  </h3>

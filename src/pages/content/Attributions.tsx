@@ -107,7 +107,7 @@ const items = [
         },
         {
             url: '',
-            text: 'She devotes herself to human practices. Her duty is to contact different parts and thinking about many other ways to make our research impact society, such as integrated human practice, surveys, and public education.'
+            text: 'She devotes herself to human practices. She participated in part of the questionnaire design work.'
         }
     ],
     [
