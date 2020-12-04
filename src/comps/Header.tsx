@@ -73,6 +73,7 @@ const links = [
          { text: 'Members', url: '/Team' },
          { text: 'Attributions', url: '/Attributions' },
          { text: 'Collaborations', url: '/Collaborations' },
+         { text: 'Awards', url: '/Awards' },
       ],
    },
    {

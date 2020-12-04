@@ -28,6 +28,7 @@ import {Composite_Part} from './pages/Composite_Part';
 import { Demonstrate} from './pages/Demonstrate';
 import { Safety} from './pages/Safety';
 import {JudgingForm} from './pages/JudgingForm';
+import {Awards} from './pages/Awards';
 
 
 
@@ -66,6 +67,7 @@ export function queryPage(path: string): Page {
       '/Team':Member,
       '/Attributions': Attributions,
       '/Collaborations': Collaborations,
+      '/Awards': Awards,
 
       '/Judging_Form': JudgingForm,
       '/Proof_Of_Concept': Demonstrate,
