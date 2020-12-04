@@ -62,12 +62,12 @@ export default class Footer extends React.Component<IFooterProps> {
                               @2020CPU_CHINA
                            </div>
                            </div>
-                           <div className='footer-contact-item' onClick={() => this.onClickLogoBtn('mailto:iGEMTEAMCPU@163.com')}>
+                           <div className='footer-contact-item' onClick={() => this.onClickLogoBtn('mailto:igemteamcpu@163.com')}>
                               <div className='footer-contact-img'>
                                  <img src={assets.footer.email$png} alt="" />
                               </div>
                               <div className='footer-contact-text'>
-                                 iGEMTEAMCPU@163.com
+                              igemteamcpu@163.com
                            </div>
                            </div>
                            <div className='footer-contact-item' onClick={() => this.onClickLogoBtn('https://github.com/cpu-igem/cpu-igem2020')}>
