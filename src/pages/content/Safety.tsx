@@ -29,7 +29,7 @@ export const body = {
                     <p>According to our design, plenty of experiments involving bacteria and cells are required. In order to keep the cell lines and stains away from unwanted pollution,  aseptic processing procedures are vital: Firstly, biological safety cabinet will be exposed to UV light for half an hour, aiming to create a sterile environment. Secondly,  all consumable items must undergo corresponding sterile procedure before putting into the biological safety cabinet. Before operating in the biological safety cabinet, gloves are coverd with 75% ethanol. An examine must be passed before conducting cell experiments independently.</p>
                     <p><ImageWithShadow noShadow src={sf.SafetyFigure2Biologicalsafetycabinet$jpg} caption="biological safety cabinet" /></p>
                     <p><ImageWithShadow noShadow src={sf.SafetyFigure2Cellchamber$jpg} caption="Cell chamber" /></p>
-                    <p> <ImageWithShadow noShadow src={sf.SafetyFigure2Flammableliquidstoragecabinet$jpg} caption="Safety-Figure 2-flammable liquid storage cabinet"/></p>
+                    <p> <ImageWithShadow noShadow src={sf.SafetyFigure2Flammableliquidstoragecabinet$jpg} caption="flammable liquid storage cabinet"/></p>
                         <p><ImageWithShadow noShadow src={sf.SafetyFigure2Uniforms$jpg} caption="Figure 2. Generally security assurance"/></p>
                             <H2>Experimental Design</H2>
                             <p>Our therapy is to treat our patients by using engineered bacteria, and it is important to note whether other infections can be caused during use. But the <em>E. coli Nissle 1917</em> we use here is not normally harmful to the human body, and we will monitor the patient&#39;s physical health in a timely manner during the application process. <em>E. coli BL21(DE3)</em> is only used for preliminary experiment, and will not be put into use.</p>
@@ -41,8 +41,8 @@ export const body = {
                                 <p><Link href='http://www.nhc.gov.cn/ewebeditor/uploadfile/2014/12/20141217161248966.pdf'>General biosafety standard for microbiological and biomedical laboratories</Link></p>
                                 <H2>Safety in HP</H2>
                                 <p>In order to ensure the members&#39; health during COVID-19, all of us were asked to wear masks during the visit. The machines at the gate of the hospital collected information about every visitor&#39;s identity information and body temperature, making sure that everyone getting indoor is in good health. In addition, we complied with the hospital&#39;s epidemic prevention regulations.</p>
-                                <p><ImageWithShadow noShadow src={sf.SafetyFigure4Gate1$jpg} caption="Safety-Figure 4-gate1" /></p>
-                                <p><ImageWithShadow noShadow src={sf.SafetyFigure4Gate2$jpg} caption=">Figure 4. Safety in HP" /></p>
+                                <p><ImageWithShadow noShadow src={sf.SafetyFigure4Gate1$jpg} /></p> 
+                                <p><ImageWithShadow noShadow src={sf.SafetyFigure4Gate2$jpg} caption="Figure 4. Safety in HP" /></p>
 
                                 <div className='doc-refer'>
                                     <div className='text'>Reference</div>

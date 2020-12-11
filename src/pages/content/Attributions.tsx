@@ -37,7 +37,7 @@ const items = [
         },
         {
             url: '',
-            text: 'She is the leader and treasurer of wet lab group, head of the cell experiment. She ensures the propitious progress of the experiment. She also participates in project design, visiting doctors and patients, wiki paperwork. She ensured the smooth running of all parts of the experiment.'
+            text: 'She is the leader and treasurer of wet lab group, head of the cell experiment. She ensures the propitious progress of the experiment. She also participates in project design, visiting doctors and patients, wiki paperwork.'
         }
     ],
     [
@@ -268,6 +268,7 @@ export const body = {
 
                 <H2>Other support</H2>
 
+                <p>Thanks to Peiwei Yang, a graduate student at China Pharmaceutical University. He has given us instructions on experimental operations and has supported us with experimental materials.</p>
                 <p>Thanks to Ms. Leyi Liang, a student at China Pharmaceutical University. She helps us with our group photo shooting.</p>
                 <p>Thanks to Ms. Mengdi Liu, Key Laboratory of Cancer Genesis and Intervention of Jiangsu Province, she provides us with <em>THP</em>-<em>1</em> cell to make the successful demonstration.</p>
                 <p>Thanks to Lingfeng Guo, a student at China Pharmaceutical University. He helps us about determination of antimicrobial activity vitro.</p>
