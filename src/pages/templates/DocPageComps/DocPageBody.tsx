@@ -375,7 +375,7 @@ export default class DocPageBody extends React.Component<IDocPageProps, IDocPage
             className={themeClassName + ' ' + hasAsideClassName + ' ' + hasInfoBarClassName}>
             {ReactDOM.createPortal(elementsInPortal, $fixedBelowHeader)}
             {/* <article id='doc-article' ref={el => this.$docArticle = el!} className='show-doc-3-bg'> */}
-            <article id='doc-article' ref={el => this.$docArticle = el!} >
+            <article id='doc-article' ref={el => this.$docArticle = el!}>
                {/* {this.state.translationMsgBar.show &&
                   <MessageBar
                      messageBarType={this.state.translationMsgBar.state === 'error' ? MessageBarType.error : MessageBarType.info}
@@ -414,7 +414,7 @@ export default class DocPageBody extends React.Component<IDocPageProps, IDocPage
                   />
                } */}
 
-               <div style={{ height: this.state.hasInfobar ? 'calc(1em)' : '0' }}></div>
+               {/* <div style={{ height: this.state.hasInfobar ? 'calc(1em)' : '0' }}></div> */}
             </article>
             <BackTop>
                   <div className='backtop'>

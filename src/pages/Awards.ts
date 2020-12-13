@@ -7,6 +7,7 @@ export const Awards = new DocPage(
       imgUrl: assets.cover.Description$jpg,
       tbimgUrl: assets.cover.tnDescription$jpg,
       title: 'Award',
+      hasfooter: false,
    },
    lazy(() => import('./content/Awards'))
 );

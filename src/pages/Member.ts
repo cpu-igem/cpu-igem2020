@@ -7,6 +7,8 @@ export const Member = new DocPage(
       imgUrl: assets.cover.Description$jpg,
       tbimgUrl: assets.cover.tnDescription$jpg,
       title: 'Member',
+      hasfooter: true,
+
    },
    lazy(() => import('./content/Member'))
 );

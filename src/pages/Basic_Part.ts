@@ -7,6 +7,7 @@ export const Basic_Part = new DocPage(
       imgUrl: assets.cover.Description$jpg,
       tbimgUrl: assets.cover.tnDescription$jpg,
       title: 'Description',
+      hasfooter: true,
    },
    lazy(() => import('./content/Basic_Part'))
 );

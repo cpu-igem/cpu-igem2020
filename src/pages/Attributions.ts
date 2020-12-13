@@ -7,6 +7,7 @@ export const Attributions = new DocPage(
       imgUrl: assets.cover.Description$jpg,
       tbimgUrl: assets.cover.tnDescription$jpg,
       title: 'Attributions',
+      hasfooter: true,
    },
    lazy(() => import('./content/Attributions'))
 );

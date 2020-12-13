@@ -7,6 +7,8 @@ export const Safety = new DocPage(
       imgUrl: assets.cover.Description$jpg,
       tbimgUrl: assets.cover.tnDescription$jpg,
       title: 'Safety',
+      hasfooter: true,
+
    },
    lazy(() => import('./content/Safety'))
 );

@@ -7,6 +7,8 @@ export const Model_IL22 = new DocPage(
       imgUrl: assets.cover.Description$jpg,
       tbimgUrl: assets.cover.tnDescription$jpg,
       title: 'Description',
+      hasfooter: true,
+
    },
    lazy(() => import('./content/Model_IL22'))
 );

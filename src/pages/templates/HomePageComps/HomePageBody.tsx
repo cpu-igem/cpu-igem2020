@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import { delay } from '@/util';
 // import { augmentCanvas } from './augment-canvas';
@@ -9,6 +9,11 @@ import Lottie from 'lottie-web'
 // import { HomePageSpinner } from './HomePageSpinner';
 
 import { NavBox } from '../../content/comps/NavBox';
+
+import { Affix, Button } from 'antd';
+import 'antd/es/affix/style/css';
+import 'antd/es/button/style/css';
+import { locaCtrl } from '../../../event/loca-ctrl';
 
 // import './css/home.scss';
 // import './css/home-1.scss';
@@ -100,6 +105,8 @@ export class HomePageBody extends React.Component<{}, IHomePageState> {
       ch6Line: null,
    };
 
+
+
    render() {
       const homeText = {
          ch0: {
@@ -160,9 +167,19 @@ export class HomePageBody extends React.Component<{}, IHomePageState> {
          }
       ];
 
+      // const [top, setTop] = useState(10);
+      // const [bottom, setBottom] = useState(10);
 
       return (<>
          <div className='home-page' ref={e => this.$homePage = e!}>
+         <Affix  style={{ position: 'fixed', bottom: 20, right: 0, zIndex:9999}}>
+               <div style={{display:'flex', flexDirection:'row', alignItems:'center', width:'100px', cursor:'pointer'}} onClick={() => locaCtrl.navTo('/Awards')}>
+                  <img style={{width:'70%'}} src="https://2020.igem.org/wiki/images/9/94/T--CPU_CHINA--awardsicon.png" alt=""/>
+                  {/* <div>
+                     Awards
+                  </div> */}
+               </div>
+            </Affix>
             <div className="home-block">
                <div className="div-block">
                   <div className="div-block-2">
@@ -413,7 +430,7 @@ export class HomePageBody extends React.Component<{}, IHomePageState> {
                   height: '6em'
                }
             }>
-
+            
             </div>
          </div>
       </>)

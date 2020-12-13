@@ -7,6 +7,8 @@ export const Implementation = new DocPage(
       imgUrl: assets.cover.Description$jpg,
       tbimgUrl: assets.cover.tnDescription$jpg,
       title: 'Implementation',
+      hasfooter: true,
+
    },
    lazy(() => import('./content/Implementation'))
 );

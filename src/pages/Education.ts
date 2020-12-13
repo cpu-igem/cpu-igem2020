@@ -7,6 +7,8 @@ export const Education = new DocPage(
       imgUrl: assets.cover.Description$jpg,
       tbimgUrl: assets.cover.tnDescription$jpg,
       title: 'Education',
+      hasfooter: true,
+
    },
    lazy(() => import('./content/Education'))
 );

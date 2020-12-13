@@ -7,6 +7,8 @@ export const Entrepreneurship = new DocPage(
       imgUrl: assets.cover.Description$jpg,
       tbimgUrl: assets.cover.tnDescription$jpg,
       title: 'Entrepreneurship',
+      hasfooter: true,
+
    },
    lazy(() => import('./content/Entrepreneurship'))
 );

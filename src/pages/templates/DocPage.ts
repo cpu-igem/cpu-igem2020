@@ -34,6 +34,7 @@ export class DocPage implements Page {
          imgUrl: string;
          tbimgUrl: string;
          title: string;
+         hasfooter: boolean;
       },
       private getResrc: () => Promise<any>
    ) {}
@@ -76,7 +77,7 @@ export class DocPage implements Page {
       // 渲染上资源
       this.App!.setState({
          BeforeHeaderProps: this.beforeHeaderProps,
-         showFooter: true,
+         showFooter: this.beforeHeaderProps.hasfooter,
       });
       this.App!.$body.setContent(this.resrc.body);
    }

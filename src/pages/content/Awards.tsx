@@ -16,17 +16,13 @@ export const body = {
    hasAside: false,
    content: (
       <>
-         <div>
-            <div className="no-aside-container">
-               <div className="no-aside-content">
-
-
-                  <h2>This is CPU_CHINA 2020 Awards Page</h2>
-
-                  
-               </div>
-            </div>
-         </div>
+                  <div style={
+                     {
+                        margin:'0',
+                        width:'100%'
+                     }}>
+                     <img style={{width:'100%'}} src="https://2020.igem.org/wiki/images/3/3b/T--CPU_CHINA--95382cab.png" alt=""/>
+                  </div>
       </>
    )
 };

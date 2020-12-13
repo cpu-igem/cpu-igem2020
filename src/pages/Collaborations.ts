@@ -7,6 +7,8 @@ export const Collaborations = new DocPage(
       imgUrl: assets.cover.Description$jpg,
       tbimgUrl: assets.cover.tnDescription$jpg,
       title: 'Collaborations',
+      hasfooter: true,
+
    },
    lazy(() => import('./content/Collaborations'))
 );
