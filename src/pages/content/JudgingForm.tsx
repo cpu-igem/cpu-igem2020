@@ -21,10 +21,10 @@ export const body = {
             <h3>Competition Deliverables</h3>
             <DocOrderedList items={[
                 <p>Wiki  <Link href='/'> Wiki Page</Link></p>,
-                <p>Poster  <Link href='/'> Poster Page</Link> </p>,
-                <p>Presentation Video  <Link href='/'> Presentation Video Page</Link></p>,
-                <p>Project Promotion Video  <Link href='/'> Project Promotion Video Page</Link></p>,
-                <p>Judging Form  <Link href='/'> Judgin Form Page</Link></p>,
+                <p>Poster  <Link href='https://2020.igem.org/Team:CPU_CHINA/Poster'> Poster Page</Link> </p>,
+                <p>Presentation Video  <Link href='https://video.igem.org/videos/embed/f12b1f97-cec9-455c-b5d3-6b957eff6355?subtitle=en'> Presentation Video Page</Link></p>,
+                <p>Project Promotion Video  <Link href='https://video.igem.org/videos/embed/e087d35b-b444-4df2-993a-88cdbcbd647a?subtitle=en'> Project Promotion Video Page</Link></p>,
+                <p>Judging Form  <Link href='/Judging_Form'> Judging Form Page</Link></p>,
             ]}>
             </DocOrderedList>
 

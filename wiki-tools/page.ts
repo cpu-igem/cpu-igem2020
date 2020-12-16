@@ -18,7 +18,7 @@ const pages: string[] = [
 
    'Team:CPU_CHINA',
    'Team:CPU_CHINA/',
-   'Team:CPU_CHINA/Poster',
+   // 'Team:CPU_CHINA/Poster',
 
    'Team:CPU_CHINA/Description',
    'Team:CPU_CHINA/Design',
@@ -50,8 +50,9 @@ const pages: string[] = [
    'Team:CPU_CHINA/Team',
    'Team:CPU_CHINA/Attributions',
    'Team:CPU_CHINA/Collaborations',
+   'Team:CPU_CHINA/Awards',
    
-   'Team:CPU_CHINA/Juding_Form',
+   'Team:CPU_CHINA/Judging_Form',
    // 'Team:CPU_CHINA/Sustainable',
 
 ];

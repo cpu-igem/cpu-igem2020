@@ -157,7 +157,7 @@ const items = [
         },
         {
             url: '',
-            text: 'He has great interest in programming languages, and is proficient in using multiple programming languages. Since he is responsible for programming the wiki, his skills regarding the software are irreplaceable.'
+            text: 'He has great interest in programming languages, and is proficient in using multiple programming languages. Since he leads the development of wiki, his skills regarding the software are irreplaceable.'
         }
     ],
     [
