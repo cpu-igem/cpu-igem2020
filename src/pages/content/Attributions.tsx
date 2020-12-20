@@ -117,7 +117,7 @@ const items = [
         },
         {
             url: '',
-            text: 'As a loving girl with a lively mind, she spends most of her time working on Human Practices and comes up with many ideas... that never go through. She devotes herself to the organization of the 7th CCiC, high school education, doctor and patient questionnaires, public education brochure, wiki paperwork, and so on.'
+            text: 'As a loving girl with a lively mind, she spends most of her time working on Human Practices and comes up with many ideas... that never go through, LOL... She devotes herself to the organization of the 7th CCiC, high school education, doctor and patient questionnaires, public education brochure, and so on. She also assists some experiments in the project and participates in paperwork both in wiki and presentations.'
         }
     ],
     [

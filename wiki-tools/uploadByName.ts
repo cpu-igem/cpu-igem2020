@@ -9,7 +9,7 @@ import { delay, concurrencyRestrictify } from './util';
 //指定个别打包文件上传！
 const names = [
    // '../dist/static/js/19-e8f25464-chunk.js',
-   '../dist/static/js/2-400d09ed-chunk.js'
+   '../dist/static/js/2-7e818d55-chunk.js'
    // '../dist/static/js/11-21b755a3-chunk.js'
 ];
 

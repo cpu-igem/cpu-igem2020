@@ -86,7 +86,7 @@ export const body = {
             <p>Done! We have functional improved part <Link href='http://parts.igem.org/Part:BBa_K2976009'>BBa_K2976009</Link> into <Link href='http://parts.igem.org/Part:BBa_K3661006'>BBa_K3661006</Link>.</p>
 
             <h3>Project Modeling</h3>
-            <p>Done! We selected ideal TLR receptors through structural bioinformatic analysis, screened out anti-bacterial agents through in vitro bacteria growth model, and stimulated in vivo immune dynamic change of anti-bacteria process. Click see our <Link href='/Model'>Project Modeling Page!</Link></p>
+            <p>Done! Click see our <Link href='/Model'>Project Modeling Page!</Link></p>
 
 
             <h3>Proof of Concept</h3>

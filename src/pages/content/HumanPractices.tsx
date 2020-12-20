@@ -355,12 +355,12 @@ const Expert_visits = (<>
                 To illustrate this point, we classified the alcohol concentration of the researchers.<br />
                 The results show that the alcohol content of 10% by volume is the most common, which also indicates the amount of alcohol consumed per day, the so-called &quot;small drinking&quot;, this is a fact. Among them, 0-100ml is the most, the second is 250-500ml, and the third is 100-250ml, which once again confirms this statement, supplementing and supplementing the data survey of drinking habits and drinking frequency.<br />
                 In addition,there are more data results showing that the volume fraction is between 41-50%,which also indicates the existence and damage of high-concentration alcoholic beverages, and provides guidance for future patient data.<br />
-                    <ImageWithShadow noShadow src={hp.fig18$png} caption='Fig 4. Alcohol volume versus content' />
+                    <ImageWithShadow noShadow src={hp.fig18$png} caption='Fig 3. Alcohol volume versus content' />
                 4.The frequency of drinking during dinner is relatively high, and the frequency of drinking in the middle week of the survey respondents is as high as 50%.<br />
                 In the investigation on the purpose of drinking and the reasons for supporting drinking, we found that the prevalence of wine table culture led to the need for drinking at work dinner was the important reason for most people to drink alcohol. In addition, Figure 6 shows that the interest in drinking also accounts for a large proportion in the investigation of drinking reasons.Combining with Figure 5, it is not difficult to find that this is related to people&#39;s cognition More people think that proper drinking is a kind of healthy behavior and will not cause harm to human body. This result reveals the necessity, practicality and importance of strengthening public education.<br />
                 Drinking frequency was 46.5% above one week, 19.75% never alcohol, 14.65% above interval of one week, 19.11% frequently drinking, two severe differentiation, which was positively correlated with male occupation ratio, occupational investigation and age in our survey, complementing with previous research results. Drinking age and drinking range, and daily average drinking volume all showed long duration, low degree and large alcohol consumption. The main reasons for drinking were 35.98% party atmosphere and 29.17% work entertainment. It shows the necessity and uncontrollability of drinking, while the attitude towards drinking is understandable but does not support active drinking or encouraging appropriate drinking, but does not support excessive drinking, which conforms to the initial design ideas, leads to disease cognition and lays the foundation.<br />
-                    <ImageWithShadow noShadow src={hp.fig19$png} caption='Fig 5. Purpose' />
-                    <ImageWithShadow noShadow src={hp.fig20$png} caption='Fig 6. Why support drinking' />
+                    <ImageWithShadow noShadow src={hp.fig19$png} caption='Fig 4. Purpose' />
+                    <ImageWithShadow noShadow src={hp.fig20$png} caption='Fig 5. Why support drinking' />
                 </p>
             ]}></DocUnorderedList></p>
 
@@ -376,12 +376,12 @@ const Expert_visits = (<>
     We want to explain the necessary public acceptance and popularity of our project, indirectly explain the necessity of our human practice, and directly explain the positive significance of our engineering bacteria preparation and genetic engineering treatment project.</p>,
         <p>Result: <br />
     1.For the knowledge of alcoholic hepatitis disease, the survey results showed that 4%thought they knew very well, 31% said they knew relatively understand, 12% said they knew little and 53% did not know at all. It shows that the popularization of alcoholic hepatitis is not enough, which inspires us to strengthen this aspect after human practice.
-    <ImageWithShadow noShadow src={hp.fig21$png} caption='Fig 7. Knowledge of alcoholic liver disease' />
+    <ImageWithShadow noShadow src={hp.fig21$png} caption='Fig 6. Knowledge of alcoholic liver disease' />
     2.We have a simple understanding of the commercial sales and the price accepted by the public after the industrialization of the project.<br />
     The results show that most of the support is within 2-15, followed by more than 50. This shows that, firstly, the public&#39;s understanding of the project cost is not enough, and at the same time, the knowledge of liver disease health is not enough, which leads to wrong judgment and makes itself in the trial stage, that is, low consumption investment;secondly, the public has not fully understood the project cost, The public&#39;s expectation of good products is high, and the recipients above 50 yuan may pursue better quality and effect. However, it will be a major challenge for us to make the pricing of project products generally satisfactory and acceptable to the public, but the data of this questionnaire undoubtedly provide guidance for us to solve the problem.
-    <ImageWithShadow noShadow src={hp.fig22$png} caption='Fig 8. Ideal Price' />
+    <ImageWithShadow noShadow src={hp.fig22$png} caption='Fig 7. Ideal Price' />
     3.The research results show that the most concerned aspect of the product is: Taking the significant curative effect as the obvious indicator, which is also related to the two-level differentiation of price acceptance, that is, low price recipients fear high price but are not practical, which leads to the trend of low consumption purchase; the high price recipients hope that the project investment will be higher, so as to get better product quality and use effect.
-    <ImageWithShadow noShadow src={hp.fig23$png} caption='Fig 9. Most concerned aspects about product' />
+    <ImageWithShadow noShadow src={hp.fig23$png} caption='Fig 8. Most concerned aspects about product' />
         </p>
     ]}>
     </DocUnorderedList>
@@ -421,7 +421,7 @@ const Expert_visits = (<>
             ]}></DocUnorderedList>
         </p>
     ]}></DocUnorderedList>
-    <ImageWithShadow noShadow src={hp.fig24$jpg} caption='Fig 10. Why support drinking' />
+    <ImageWithShadow noShadow src={hp.fig24$jpg} caption='Fig 9. Why support drinking' />
 
     <H2>Social group interaction</H2>
     <h3>Alcoholics Anonymous</h3>
@@ -581,7 +581,7 @@ const Enterprise_interaction = (<>
                 <p>We did a competitive product analysis.</p>
             ]}></DocOrderedList>
         </Panel>
-    </Collapse>,
+    </Collapse>
 </>);
 
 const Pharmacy = (<>
